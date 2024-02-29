@@ -1,3 +1,5 @@
+import Layout from "@/components/ui/Layout";
+
 export default function Properties() {
-  return <div>Properties</div>;
+  return <Layout>Properties</Layout>;
 }

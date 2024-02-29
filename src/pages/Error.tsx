@@ -1,3 +1,5 @@
+import Layout from "@/components/ui/Layout";
+
 export default function Error() {
-  return <div>Error</div>;
+  return <Layout>Error</Layout>;
 }

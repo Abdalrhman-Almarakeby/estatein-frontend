@@ -1,3 +1,5 @@
+import Layout from "@/components/ui/Layout";
+
 export default function Services() {
-  return <div>Services</div>;
+  return <Layout>Services</Layout>;
 }

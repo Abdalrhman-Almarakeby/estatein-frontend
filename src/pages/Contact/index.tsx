@@ -1,3 +1,5 @@
+import Layout from "@/components/ui/Layout";
+
 export default function Contact() {
-  return <div>Contact</div>;
+  return <Layout>Contact</Layout>;
 }

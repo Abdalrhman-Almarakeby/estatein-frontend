@@ -1,3 +1,5 @@
+import Layout from "@/components/ui/Layout";
+
 export default function About() {
-  return <div>About</div>;
+  return <Layout>About</Layout>;
 }
