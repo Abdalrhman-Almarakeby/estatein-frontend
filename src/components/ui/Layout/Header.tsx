@@ -1,47 +1,39 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useMenu } from "./useMenu";
+import { useShowHeader } from "./useShowHeader";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.svg";
 import burgerIcon from "@/assets/icons/burger-menu.svg";
 import xIcon from "@/assets/icons/x.svg";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
   const menuRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
-  function toggleMenu() {
-    setIsOpen((isOpen) => !isOpen);
-  }
-
-  function handleTransitionEnd(e: React.TransitionEvent<HTMLElement>) {
-    const target = e.target as Element;
-    if (menuRef.current !== target) return;
-
-    if (isOpen) {
-      target.classList.add("visible");
-      target.classList.remove("invisible");
-    } else {
-      target.classList.add("invisible");
-      target.classList.remove("visible");
-    }
-  }
+  const showHeader = useShowHeader();
+  const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef, pathname, showHeader);
 
   return (
-    <header className="border-y border-y-gray-15 bg-gray-10 py-5 text-sm text-white 2xl:py-5 2xl:text-lg">
+    <header
+      className={cn(
+        "border-y border-y-gray-15 fixed  w-full left-0 md:static transition-[top] duration-300 bg-gray-10 py-5 text-sm text-white 2xl:py-5 2xl:text-lg",
+        showHeader ? "top-0" : "-top-full md:top-0"
+      )}
+    >
       <div className="container flex items-center justify-between md:block">
         <img src={logo} alt="Logo of Estatein" className="w-[100px] md:hidden" />
         <nav
+          id="main-menu"
+          aria-label="Main menu"
+          aria-expanded={isOpen}
+          role="menu"
           ref={menuRef}
           className={cn(
-            "flex absolute md:backdrop-blur-none  pt-20 md:visible  md:static duration-300 items-center transition-[right] gap-10 text-3xl md:text-base flex-col md:flex-row  top-0  h-svh  w-svw md:size-auto  backdrop-blur-md  md:pt-0 md:gap-1 self-stretch md:flex 2xl:gap-1.5",
+            "absolute top-0 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
             isOpen ? "right-0" : "-right-[110%]"
           )}
-          onTransitionEnd={handleTransitionEnd}
+          onTransitionEnd={menuTransitionEnd}
         >
           <img
             src={logo}
@@ -49,49 +41,60 @@ export default function Header() {
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
           />
           <Link
+            onClick={() => isOpen && toggle()}
             to="/"
             className={cn(
-              "py-3 px-5 2xl:px-6 2xl:py-3.5 rounded-[0.625rem] border border-transparent transition duration-300",
-              pathname === "/" && "md:border-gray-15 md:bg-gray-08"
+              "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
+              pathname === "/" && "md:bg-gray-08 md:border-gray-15"
             )}
           >
             Home
           </Link>
           <Link
+            onClick={() => isOpen && toggle()}
             to="/about"
             className={cn(
-              "py-3 px-5 2xl:px-6 2xl:py-3.5 rounded-[0.625rem] border border-transparent transition duration-300",
-              pathname === "/about" && " md:border-gray-15 md:bg-gray-08"
+              "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
+              pathname === "/about" && "md:bg-gray-0 md:border-gray-158"
             )}
           >
             About Us
           </Link>
           <Link
+            onClick={() => isOpen && toggle()}
             to="/properties"
             className={cn(
-              "py-3 px-5 2xl:px-6 2xl:py-3.5 rounded-[0.625rem] border border-transparent transition duration-300",
-              pathname === "/properties" && " md:border-gray-15 md:bg-gray-08"
+              "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
+              pathname === "/properties" && "md:bg-gray-08 md:border-gray-15"
             )}
           >
             Properties
           </Link>
           <Link
+            onClick={() => isOpen && toggle()}
             to="/services"
             className={cn(
-              "py-3 px-5 2xl:px-6 2xl:py-3.5 rounded-[0.625rem] border border-transparent transition duration-300",
-              pathname === "/services" && " md:border-gray-15 md:bg-gray-08"
+              "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
+              pathname === "/services" && "md:bg-gray-08 md:border-gray-15"
             )}
           >
             Services
           </Link>
           <Link
+            onClick={() => isOpen && toggle()}
             to="/contact"
             className="rounded-[0.625rem] px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
           >
             Contact Us
           </Link>
         </nav>
-        <button className="z-[99999] md:hidden" onClick={toggleMenu}>
+        <button
+          aria-expanded={isOpen}
+          aria-controls="main-menu"
+          aria-label="Toggle menu"
+          onClick={toggle}
+          className="z-[99999] md:hidden"
+        >
           <img src={isOpen ? xIcon : burgerIcon} alt="Icon menu" className="size-10" />
           <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
         </button>
