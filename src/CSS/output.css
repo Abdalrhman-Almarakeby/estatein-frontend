@@ -459,6 +459,18 @@ html,
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  font-style: italic;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -672,10 +684,6 @@ html,
   height: 2.5rem;
 }
 
-.h-\[100svh\] {
-  height: 100svh;
-}
-
 .h-svh {
   height: 100svh;
 }
@@ -686,10 +694,6 @@ html,
 
 .w-\[100px\] {
   width: 100px;
-}
-
-.w-\[100svw\] {
-  width: 100svw;
 }
 
 .w-svw {

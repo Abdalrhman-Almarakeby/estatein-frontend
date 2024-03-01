@@ -11,4 +11,8 @@
   body {
     @apply relative w-full overflow-x-hidden bg-gray-15;
   }
+
+  img {
+    @apply h-auto max-w-full select-none bg-cover bg-no-repeat align-middle italic;
+  }
 }
