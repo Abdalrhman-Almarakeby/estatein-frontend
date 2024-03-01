@@ -7,9 +7,14 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        md: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+        "3xl": "7rem",
       },
     },
     extend: {
@@ -51,6 +56,9 @@ module.exports = {
         "gray-40": "#666666",
         "gray-50": "#808080",
         "gray-60": "#999999",
+      },
+      screens: {
+        "3xl": "1600px",
       },
     },
   },

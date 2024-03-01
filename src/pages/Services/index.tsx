@@ -1,5 +1,3 @@
-import Layout from "@/components/ui/Layout";
-
 export default function Services() {
-  return <Layout>Services</Layout>;
+  return <div className="flex-grow">Services</div>;
 }

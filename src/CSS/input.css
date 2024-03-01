@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply motion-safe:scroll-smooth;
+  }
+
+  html,
+  body {
+    @apply relative w-full overflow-x-hidden bg-gray-15;
+  }
+}
