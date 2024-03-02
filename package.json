@@ -6,6 +6,7 @@
   "homepage": "https://abdalrhman-almarakeby.github.io/estatein",
   "scripts": {
     "dev": "vite",
+    "tailwindcss": "npx tailwindcss -i ./src/CSS/input.css -o ./src/CSS/output.css --watch",
     "build": "tsc && vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
