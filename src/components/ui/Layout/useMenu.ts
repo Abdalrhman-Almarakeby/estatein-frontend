@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-
+import { useEffect } from "react";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 export function useMenu(menuRef: React.RefObject<HTMLElement>, ...dependencies: unknown[]) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [debounceIsOpen, isOpen, setIsOpen] = useDebounce<boolean>(false);
 
   function toggle() {
-    setIsOpen((prev) => !prev);
+    setIsOpen(!debounceIsOpen);
   }
 
   function menuTransitionEnd(e: React.TransitionEvent<HTMLElement>) {

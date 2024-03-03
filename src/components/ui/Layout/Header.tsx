@@ -27,6 +27,7 @@ export default function Header() {
           id="main-menu"
           aria-label="Main menu"
           aria-expanded={isOpen}
+          aria-hidden={!isOpen}
           role="menu"
           ref={menuRef}
           className={cn(
