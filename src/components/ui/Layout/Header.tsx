@@ -5,7 +5,7 @@ import { useShowHeader } from "./useShowHeader";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.svg";
 import burgerIcon from "@/assets/icons/burger-menu.svg";
-import xIcon from "@/assets/icons/x.svg";
+import xIcon from "@/assets/icons/x-mark.svg";
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "border-y border-y-gray-15 fixed  w-full left-0 md:static transition-[top] duration-300 bg-gray-10 py-5 text-sm text-white 2xl:py-5 2xl:text-lg",
+        "border-y z-40 border-y-gray-15 fixed  w-full left-0 md:static transition-[top] duration-300 bg-gray-10 py-5 text-sm text-white 2xl:py-5 2xl:text-lg",
         showHeader ? "top-0" : "-top-full md:top-0"
       )}
     >
@@ -30,7 +30,7 @@ export default function Header() {
           role="menu"
           ref={menuRef}
           className={cn(
-            "absolute top-0 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
+            "absolute z-50 top-0 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
             isOpen ? "right-0" : "-right-[110%]"
           )}
           onTransitionEnd={menuTransitionEnd}
@@ -43,6 +43,7 @@ export default function Header() {
           <Link
             onClick={() => isOpen && toggle()}
             to="/"
+            role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
               pathname === "/" && "md:bg-gray-08 md:border-gray-15"
@@ -55,7 +56,7 @@ export default function Header() {
             to="/about"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
-              pathname === "/about" && "md:bg-gray-0 md:border-gray-158"
+              pathname === "/about" && "md:bg-gray-08 md:border-gray-15"
             )}
           >
             About Us
