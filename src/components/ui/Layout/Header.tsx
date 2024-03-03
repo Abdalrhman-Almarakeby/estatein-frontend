@@ -54,6 +54,7 @@ export default function Header() {
           <Link
             onClick={() => isOpen && toggle()}
             to="/about"
+            role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
               pathname === "/about" && "md:bg-gray-08 md:border-gray-15"
@@ -64,6 +65,7 @@ export default function Header() {
           <Link
             onClick={() => isOpen && toggle()}
             to="/properties"
+            role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
               pathname === "/properties" && "md:bg-gray-08 md:border-gray-15"
@@ -74,6 +76,7 @@ export default function Header() {
           <Link
             onClick={() => isOpen && toggle()}
             to="/services"
+            role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
               pathname === "/services" && "md:bg-gray-08 md:border-gray-15"
@@ -84,6 +87,7 @@ export default function Header() {
           <Link
             onClick={() => isOpen && toggle()}
             to="/contact"
+            role="menuitem"
             className="rounded-[0.625rem] px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
           >
             Contact Us
