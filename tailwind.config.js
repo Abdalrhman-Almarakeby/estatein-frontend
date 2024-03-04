@@ -34,14 +34,14 @@ module.exports = {
       },
       colors: {
         // purple shades
-        "purple-60": "#FF7A00",
-        "purple-65": "#1A64FF",
-        "purple-70": "#FF9533",
-        "purple-75": "#FFCA99",
-        "purple-90": "#FFE4CC",
-        "purple-95": "#FFF1E5",
-        "purple-97": "#FFF7F0",
-        "purple-99": "#FFFCFA",
+        "purple-60": "#703BF7",
+        "purple-65": "#8254F8",
+        "purple-70": "#946CF9",
+        "purple-75": "#A685FA",
+        "purple-90": "#DBCEFD",
+        "purple-95": "#EDE7FE",
+        "purple-97": "#F4F0FE",
+        "purple-99": "#FBFAFF",
         // white shades
         "white-90": "#E4E4E7",
         "white-95": "#F1F1F3",
