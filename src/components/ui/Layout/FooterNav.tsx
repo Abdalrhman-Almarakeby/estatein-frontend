@@ -3,7 +3,7 @@ import FooterLinks from "./FooterLinks";
 
 export default function FooterNav() {
   return (
-    <nav className="grid grid-cols-2 grid-rows-11 gap-5 md:grid-cols-3 md:gap-x-10 lg:grid-cols-5 lg:grid-rows-1 lg:gap-5 xl:m-0 2xl:flex 2xl:gap-20">
+    <nav className="grid grid-cols-2 grid-rows-11 gap-5 md:grid-cols-3 md:grid-rows-2 md:gap-x-10 lg:grid-cols-5 lg:grid-rows-1 lg:gap-5 xl:m-0 2xl:flex 2xl:gap-20">
       <FooterLinks pageName="Home" className="row-span-5 md:order-1">
         <Link to="/">Home</Link>
         <Link to="/#hero">Hero Section</Link>
