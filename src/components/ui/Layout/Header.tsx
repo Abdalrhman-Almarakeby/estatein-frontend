@@ -22,7 +22,11 @@ export default function Header() {
       )}
     >
       <div className="container flex items-center justify-between md:block">
-        <img src={logo} alt="Logo of Estatein" className="w-[100px] md:hidden" />
+        <img
+          src={logo}
+          alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+          className="w-[100px] md:hidden"
+        />
         <nav
           id="main-menu"
           aria-label="Main menu"
@@ -38,7 +42,7 @@ export default function Header() {
         >
           <img
             src={logo}
-            alt="Logo of Estatein"
+            alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
           />
           <Link
@@ -101,7 +105,15 @@ export default function Header() {
           onClick={toggle}
           className="z-[99999] md:hidden"
         >
-          <img src={isOpen ? xIcon : burgerIcon} alt="Icon menu" className="size-10" />
+          <img
+            src={isOpen ? xIcon : burgerIcon}
+            alt={
+              isOpen
+                ? "Close navigation menu."
+                : "Menu icon consisting of three horizontal white lines on a black background, which opens the navigation menu when clicked."
+            }
+            className="size-10"
+          />
           <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
         </button>
       </div>

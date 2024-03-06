@@ -13,7 +13,11 @@ export default function Footer() {
     <footer className="bg-gray-08 text-sm text-white lg:text-base">
       <div className="container flex flex-col space-y-[50px] py-[50px] md:py-8 xl:flex-row xl:gap-20 xl:space-y-0 2xl:py-20">
         <div className="space-y-5">
-          <img src={logo} alt="Logo of Estatein" className="w-[100px]" />
+          <img
+            src={logo}
+            alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+            className="w-[100px]"
+          />
           <form className="relative lg:w-[300px]">
             <MailPlusIconSVG className="absolute left-5 top-1/2 -translate-y-1/2" />
             <Input
