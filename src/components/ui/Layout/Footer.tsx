@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-08 text-sm text-white lg:text-base">
-      <div className="container flex flex-col space-y-[50px] py-[50px] md:py-8 xl:flex-row xl:gap-20 xl:space-y-0 2xl:py-20">
+      <div className="space-y-12.5py-12.5 container flex flex-col md:py-8 xl:flex-row xl:gap-20 xl:space-y-0 2xl:py-20">
         <div className="space-y-5">
           <img
             src={logo}

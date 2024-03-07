@@ -18,6 +18,12 @@ module.exports = {
       },
     },
     extend: {
+      spacing: {
+        4.5: "1.125rem",
+        12.5: "3.125rem",
+        15: "3.75rem",
+        24.5: "6.125rem",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -60,7 +66,10 @@ module.exports = {
       screens: {
         "3xl": "1600px",
       },
+      transitionDuration: {
+        "10s": "10s",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-container-break-out")],
 };
