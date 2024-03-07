@@ -1,3 +1,11 @@
+import HeroSection from "./HeroSection";
+
 export default function Home() {
-  return <div className="flex-grow">Home</div>;
+  return (
+    <main className="flex-grow bg-gray-08">
+      <div className="container">
+        <HeroSection />
+      </div>
+    </main>
+  );
 }
