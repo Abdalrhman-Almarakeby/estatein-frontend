@@ -1938,6 +1938,14 @@ img {
     margin-top: 6.125rem;
   }
 
+  .\32xl\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .\32xl\:mt-12\.5 {
+    margin-top: 3.125rem;
+  }
+
   .\32xl\:block {
     display: block;
   }
@@ -2070,6 +2078,10 @@ img {
     margin-bottom: 0px;
   }
 
+  .min-\[1700px\]\:mt-0 {
+    margin-top: 0px;
+  }
+
   .min-\[1700px\]\:gap-y-16 {
     row-gap: 4rem;
   }
@@ -2084,6 +2096,10 @@ img {
 
   .min-\[1700px\]\:pt-0 {
     padding-top: 0px;
+  }
+
+  .min-\[1700px\]\:pt-24\.5 {
+    padding-top: 6.125rem;
   }
 }
 

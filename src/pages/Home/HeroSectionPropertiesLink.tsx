@@ -15,6 +15,7 @@ export default function HeroSectionPropertiesLink() {
         height={size}
         viewBox={`0 0 ${size} ${size}`}
         className="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 fill-white text-xs font-semibold tracking-widest"
+        aria-hidden="true"
       >
         <defs>
           <path
@@ -33,7 +34,10 @@ export default function HeroSectionPropertiesLink() {
           </textPath>
         </text>
       </svg>
-      <span className="absolute right-1/2 top-1/2 grid size-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-gray-15 bg-gray-10">
+      <span
+        aria-hidden="true"
+        className="absolute right-1/2 top-1/2 grid size-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-gray-15 bg-gray-10"
+      >
         <DiagonalArrowIconSVG className="size-5 stroke-white" />
       </span>
       <span className="sr-only">Browse Properties</span>

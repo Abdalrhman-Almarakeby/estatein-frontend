@@ -10,7 +10,10 @@ import SunIconSVG from "@/assets/icons/sun.svg?react";
 
 export default function Hero() {
   return (
-    <section className="min-[1700px]:pt- grid gap-10 py-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 min-[1700px]:mt-24.5 min-[1700px]:gap-y-16 min-[1700px]:pt-0">
+    <section
+      id="hero"
+      className="grid gap-10 py-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 2xl:pt-0 min-[1700px]:gap-y-16 min-[1700px]:pt-24.5"
+    >
       <section className="relative mb-4 2xl:mr-break-out min-[1700px]:container lg:order-2 lg:row-span-2 xl:row-span-3 xl:mb-0 min-[1700px]:!p-0">
         <img
           src={heroImg}
@@ -19,7 +22,7 @@ export default function Hero() {
         />
         <HeroSectionPropertiesLink />
       </section>
-      <section className="flex flex-col gap-4 sm:gap-6 lg:order-1 lg:mt-auto 2xl:mb-12.5 3xl:mt-0">
+      <section className="flex flex-col gap-4 sm:gap-6 lg:order-1 lg:mt-auto 2xl:mb-12.5 2xl:mt-24.5 min-[1700px]:mt-0">
         <h1 className="text-[1.75rem] font-medium leading-tight min-[450px]:text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl">
           Discover Your Dream Property with Estatein
         </h1>
@@ -30,12 +33,14 @@ export default function Hero() {
       </section>
       <nav className="flex flex-col gap-4 text-center text-sm sm:flex-row sm:text-base md:col-span-2 lg:order-3 lg:col-span-1 lg:items-start 2xl:mb-12.5 3xl:text-lg">
         <Link
+          aria-label="Learn more about Estatein"
           className="flex-grow rounded-lg border border-gray-15 py-3.5 lg:flex-grow-0 lg:px-5 3xl:px-6 3xl:py-4.5"
           to="/about"
         >
           Learn More
         </Link>
         <Link
+          aria-label="Browse properties "
           className="flex-grow rounded-lg bg-purple-60 py-3.5 lg:flex-grow-0 lg:px-5 3xl:px-6 3xl:py-4.5"
           to="/properties"
         >
