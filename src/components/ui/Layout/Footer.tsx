@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/form/Input.tsx";
 import FooterNav from "./FooterNav.tsx";
 import SocialMediaLinks from "./SocialMediaLinks";
 import logo from "@/assets/logo.svg";
