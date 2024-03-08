@@ -7,8 +7,7 @@ export default function FooterNav() {
       <FooterLinks pageName="Home" className="row-span-5 md:order-1">
         <Link to="/">Home</Link>
         <Link to="/#hero">Hero Section</Link>
-        <Link to="/#features">Features</Link>
-        <Link to="/#properties">Properties</Link>
+        <Link to="/#featured-properties">Featured Properties</Link>
         <Link to="/#testimonials">Testimonials</Link>
         <Link to="/#faq">FAQ's</Link>
       </FooterLinks>
