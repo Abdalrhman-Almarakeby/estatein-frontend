@@ -26,6 +26,7 @@ module.exports = {
         12.5: "3.125rem",
         15: "3.75rem",
         24.5: "6.125rem",
+        30: "7.5rem",
       },
       keyframes: {
         "accordion-down": {
