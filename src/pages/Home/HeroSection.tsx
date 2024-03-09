@@ -5,14 +5,14 @@ import Achievement from "./Achievement";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import HomeIconSVG from "@/assets/icons/home.svg?react";
 import CashIconSVG from "@/assets/icons/cash.svg?react";
-import BuildingIconSVG from "@/assets/icons/building.svg?react";
+import BuildingsIconSVG from "@/assets/icons/buildings.svg?react";
 import SunIconSVG from "@/assets/icons/sun.svg?react";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="grid gap-10 py-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 2xl:pt-0 min-[1700px]:gap-y-16 min-[1700px]:pt-24.5"
+      className="grid gap-10 pt-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 2xl:pt-0 min-[1700px]:gap-y-16 min-[1700px]:pt-24.5"
     >
       <section className="relative mb-4 2xl:mr-break-out min-[1700px]:container lg:order-2 lg:row-span-2 xl:row-span-3 xl:mb-0 min-[1700px]:!p-0">
         <img
@@ -56,7 +56,7 @@ export default function Hero() {
         {/* // TODO: Add the right links */}
         <HeroSectionLink to="/" Icon={HomeIconSVG} label="Find Your Dream Home" />
         <HeroSectionLink to="/" Icon={CashIconSVG} label="Unlock Property Value" />
-        <HeroSectionLink to="/" Icon={BuildingIconSVG} label="Effortless Property Management" />
+        <HeroSectionLink to="/" Icon={BuildingsIconSVG} label="Effortless Property Management" />
         <HeroSectionLink to="/" Icon={SunIconSVG} label="Smart Investments, Informed Decisions" />
       </section>
     </section>
