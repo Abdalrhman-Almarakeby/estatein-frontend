@@ -5,20 +5,24 @@ import About from "./pages/About";
 import Properties from "./pages/Properties";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import "./CSS/output.css";
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/properties" element={<Properties />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
-      </Routes>
-    </Layout>
+      </Route>
+      <Route path="/dashboard">
+        <Route index element={<Dashboard />} />
+      </Route>
+    </Routes>
   );
 }

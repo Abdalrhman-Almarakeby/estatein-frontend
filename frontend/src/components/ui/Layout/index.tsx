@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   const { pathname } = useLocation();
   useEffect(() => {
     document.documentElement.scrollTo({
@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-svh flex-col pt-[82px] md:p-0">
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </div>
   );
