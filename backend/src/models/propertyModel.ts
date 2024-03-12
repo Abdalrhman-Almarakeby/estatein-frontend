@@ -3,7 +3,7 @@ import Joi from "joi";
 
 const propertySchema = new Schema(
   {
-    name: {
+    title: {
       type: String,
       required: true,
     },
@@ -72,7 +72,7 @@ const propertySchema = new Schema(
 );
 
 export const JoiSchema = Joi.object({
-  name: Joi.string().required(),
+  title: Joi.string().required(),
   description: Joi.string().required(),
   location: Joi.string().required(),
   bedrooms: Joi.number().required(),
