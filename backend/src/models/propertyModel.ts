@@ -33,15 +33,9 @@ const propertySchema = new Schema(
     },
     features: {
       type: [String],
-      require: true,
-      min: 5,
-      max: 10,
+      required: true,
     },
     price: {
-      listingPrice: {
-        type: Number,
-        required: true,
-      },
       fees: {
         transferTax: {
           type: Number,
@@ -59,10 +53,46 @@ const propertySchema = new Schema(
           type: Number,
           required: true,
         },
-        mortgageFees: {
+        mortgage: {
           type: Number,
           required: true,
         },
+      },
+      costs: {
+        taxes: {
+          type: Number,
+          required: true,
+        },
+        homeownersAssociationFee: {
+          type: Number,
+          required: true,
+        },
+        insurance: {
+          type: Number,
+          required: true,
+        },
+      },
+      initialCosts: {
+        listingPrice: {
+          type: Number,
+          required: true,
+        },
+        additionalFees: {
+          type: Number,
+          required: true,
+        },
+        downPayment: {
+          type: Number,
+          required: true,
+        },
+        mortgage: {
+          type: Number,
+          required: true,
+        },
+      },
+      listingPrice: {
+        type: Number,
+        required: true,
       },
     },
   },
@@ -79,17 +109,28 @@ export const JoiSchema = Joi.object({
   bathrooms: Joi.number().required(),
   area: Joi.number().required(),
   image: Joi.string().required(),
-  features: Joi.array().items(Joi.string()).min(5).max(10).required(),
+  features: Joi.array().items(Joi.string()).required(),
   price: Joi.object({
-    listingPrice: Joi.number().required(),
     fees: Joi.object({
       transferTax: Joi.number().required(),
       legalFees: Joi.number().required(),
       homeInspection: Joi.number().required(),
       insurance: Joi.number().required(),
-      mortgageFees: Joi.number().required(),
+      mortgage: Joi.number().required(),
     }),
-  }),
+    costs: Joi.object({
+      taxes: Joi.number().required(),
+      homeownersAssociationFee: Joi.number().required(),
+      insurance: Joi.number().required(),
+    }),
+    initialCosts: Joi.object({
+      listingPrice: Joi.number().required(),
+      additionalFees: Joi.number().required(),
+      downPayment: Joi.number().required(),
+      mortgage: Joi.number().required(),
+    }),
+    listingPrice: Joi.number().required(),
+  }).required(),
 }).required();
 
 export const PropertyModel = model("Property", propertySchema);
