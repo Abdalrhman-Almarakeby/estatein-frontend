@@ -55,7 +55,7 @@ const propertySchema = new Schema(
           type: Number,
           required: true,
         },
-        propertyInsurance: {
+        insurance: {
           type: Number,
           required: true,
         },
@@ -86,7 +86,7 @@ export const JoiSchema = Joi.object({
       transferTax: Joi.number().required(),
       legalFees: Joi.number().required(),
       homeInspection: Joi.number().required(),
-      propertyInsurance: Joi.number().required(),
+      insurance: Joi.number().required(),
       mortgageFees: Joi.number().required(),
     }),
   }),
