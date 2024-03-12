@@ -27,11 +27,9 @@ const propertySchema = new Schema(
       type: Number,
       required: true,
     },
-    images: {
-      type: [String],
+    image: {
+      type: String,
       required: true,
-      min: 5,
-      max: 10,
     },
     keyFeatures: {
       type: [String],
@@ -80,7 +78,7 @@ export const JoiSchema = Joi.object({
   bedrooms: Joi.number().required(),
   bathrooms: Joi.number().required(),
   area: Joi.number().required(),
-  images: Joi.array().items(Joi.string()).min(5).max(10).required(),
+  image: Joi.string().required(),
   keyFeatures: Joi.array().items(Joi.string()).min(5).max(10).required(),
   price: Joi.object({
     listingPrice: Joi.number().required(),
