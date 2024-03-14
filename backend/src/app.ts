@@ -4,6 +4,7 @@ import helmet from "helmet";
 import ExpressMongoSanitize from "express-mongo-sanitize";
 import compression from "compression";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 import propertiesRoutes from "./routes/propertiesRoutes";
 
@@ -18,6 +19,7 @@ app.use(
   })
 );
 app.use(ExpressMongoSanitize());
+app.use(cors());
 
 // Compression
 app.use(compression());
