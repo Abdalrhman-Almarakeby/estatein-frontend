@@ -62,7 +62,7 @@ function HomeCarouselSection({
         className="flex flex-col gap-7.5"
       >
         <CarouselContent className="md:-ml-5">{children}</CarouselContent>
-        <div className="flex items-center border-t border-t-gray-15 pt-4 text-sm min-[450px]:flex-row lg:gap-2.5">
+        <div className="flex items-center gap-2.5 border-t border-t-gray-15 pt-4 text-sm min-[450px]:flex-row md:justify-end md:gap-5">
           <Link
             to={link}
             className="mr-auto rounded-lg border border-gray-15 px-5 py-3.5 text-center lg:hidden"
@@ -70,7 +70,7 @@ function HomeCarouselSection({
             View All {sectionName}
           </Link>
           <CarouselPrevious className="static translate-x-0 translate-y-0 lg:order-2" />
-          <p className="px-5 text-gray-60 lg:order-1 lg:mr-auto lg:text-base">
+          <p className="px-5 text-gray-60 md:hidden">
             <span className="text-white">{current}</span> of {count}
           </p>
           <CarouselNext className="static translate-x-0 translate-y-0 lg:order-3" />
