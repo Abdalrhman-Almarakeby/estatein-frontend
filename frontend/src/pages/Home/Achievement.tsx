@@ -14,8 +14,8 @@ export default function Achievement({ achievement, label, className }: Achieveme
         className
       )}
     >
-      <h2 className="text-2xl font-bold xl:text-3xl 3xl:text-4xl">{achievement}</h2>
-      <p className="text-sm font-medium text-gray-60 2xl:text-base 3xl:text-lg">{label}</p>
+      <h4 className="block text-2xl font-bold xl:text-3xl 3xl:text-4xl">{achievement}</h4>
+      <p className="block text-sm font-medium text-gray-60 2xl:text-base 3xl:text-lg">{label}</p>
     </div>
   );
 }

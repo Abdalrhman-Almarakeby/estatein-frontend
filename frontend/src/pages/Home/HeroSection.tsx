@@ -40,7 +40,7 @@ export default function Hero() {
           Learn More
         </Link>
         <Link
-          aria-label="Browse properties "
+          aria-label="Browse properties"
           className="flex-grow rounded-lg bg-purple-60 py-3.5 lg:flex-grow-0 lg:px-5 3xl:px-6 3xl:py-4.5"
           to="/properties"
         >

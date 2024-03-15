@@ -806,6 +806,10 @@ p,
   -webkit-line-clamp: 2;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -1478,6 +1482,11 @@ p,
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .shadow-\[\#191919_0px_0px_0px_5px\] {
