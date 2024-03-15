@@ -5,12 +5,12 @@ export function useDebounce<T>(initialValue: T, time?: number): [T, T, React.Dis
   const [debouncedValue, setDebouncedValue] = useState<T>(initialValue);
 
   useEffect(() => {
-    const debounce = setTimeout(() => {
+    const id = setTimeout(() => {
       setDebouncedValue(value);
     }, time ?? 500);
 
     return () => {
-      clearTimeout(debounce);
+      clearTimeout(id);
     };
   }, [value, time]);
 
