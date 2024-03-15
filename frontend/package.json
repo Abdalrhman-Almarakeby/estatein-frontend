@@ -22,6 +22,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.1",
+    "react-router-hash-link": "^2.4.3",
     "tailwind-container-break-out": "^2.0.6",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
@@ -30,6 +31,7 @@
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
+    "@types/react-router-hash-link": "^2.4.9",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react-swc": "^3.5.0",

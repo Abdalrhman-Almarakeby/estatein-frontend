@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/form/Input.tsx";
 import FooterNav from "./FooterNav.tsx";
@@ -13,11 +14,13 @@ export default function Footer() {
     <footer className="bg-gray-08 text-sm text-white lg:text-base">
       <div className="space-y-12.5py-12.5 container flex flex-col md:py-8 xl:flex-row xl:gap-20 xl:space-y-0 2xl:py-20">
         <div className="space-y-5">
-          <img
-            src={logo}
-            alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
-            className="w-[100px]"
-          />
+          <HashLink to="/#hero">
+            <img
+              src={logo}
+              alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+              className="w-[100px]"
+            />
+          </HashLink>
           <form className="relative lg:w-[300px]">
             <MailPlusIconSVG className="absolute left-5 top-1/2 -translate-y-1/2" />
             <Input
