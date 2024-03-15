@@ -12,7 +12,7 @@ export default function Header() {
   const menuRef = useRef<HTMLElement>(null);
 
   const showHeader = useShowHeader();
-  const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef, pathname, showHeader);
+  const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef);
 
   return (
     <header

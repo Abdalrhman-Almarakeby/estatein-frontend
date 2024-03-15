@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDebounce } from "@/lib/hooks/useDebounce";
-export function useMenu(menuRef: React.RefObject<HTMLElement>, ...dependencies: unknown[]) {
-  const [debounceIsOpen, isOpen, setIsOpen] = useDebounce<boolean>(false);
+export function useMenu(menuRef: React.RefObject<HTMLElement>) {
+  const [debounceIsOpen, isOpen, setIsOpen] = useDebounce(false);
 
   function toggle() {
     setIsOpen(!debounceIsOpen);
@@ -19,10 +19,6 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>, ...dependencies: 
       target.classList.remove("visible");
     }
   }
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, dependencies);
 
   useEffect(() => {
     // close the menu when the window is scrolled by down or up more than 50px
@@ -44,7 +40,7 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>, ...dependencies: 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isOpen]);
+  }, [isOpen, setIsOpen]);
 
   return {
     isOpen,

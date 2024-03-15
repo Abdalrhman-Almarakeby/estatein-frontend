@@ -5,6 +5,7 @@ import Footer from "./Footer";
 
 export default function Layout() {
   const { pathname } = useLocation();
+
   useEffect(() => {
     document.documentElement.scrollTo({
       top: 0,
