@@ -46,7 +46,7 @@ export default function Home() {
           id="testimonials"
           title="What Our Clients Say"
           paragraph="Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs."
-          link="/"
+          link="/about#clients"
           sectionName="Testimonials"
         >
           {testimonials.map((testimonial) => (
@@ -57,10 +57,10 @@ export default function Home() {
         </HomeCarouselSection>
 
         <HomeCarouselSection
-          id="featured-properties"
+          id="faqs"
           title="Frequently Asked Questions"
           paragraph="Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way."
-          link="/"
+          link="/about"
           sectionName="FAQs"
         >
           {faqs.map((faq) => (
