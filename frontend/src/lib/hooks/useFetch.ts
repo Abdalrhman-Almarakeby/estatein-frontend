@@ -18,7 +18,6 @@ export function useFetch<T>(url: string, options?: Options): FetchState<T> {
       try {
         setIsPending(true);
 
-        console.log("Did Fetch");
         const response = await fetch(url, options);
         if (!response.ok) {
           throw new Error(`Request failed with status: ${response.status}`);
