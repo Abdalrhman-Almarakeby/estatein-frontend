@@ -7,6 +7,7 @@ export default function HeroSectionPropertiesLink() {
 
   return (
     <Link
+      aria-label="Browse properties"
       className="absolute bottom-0 left-0 size-[130px] translate-y-1/3 rounded-full border border-gray-15 bg-gray-08 p-4 md:hidden 2xl:top-[95px] 2xl:block 2xl:-translate-x-1/2"
       to="/properties"
     >

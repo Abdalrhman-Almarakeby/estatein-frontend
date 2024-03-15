@@ -5,7 +5,7 @@ import BathSVG from "@/assets/icons/bath.svg?react";
 import BuildingSVG from "@/assets/icons/building.svg?react";
 import { formatCurrency } from "@/lib/utils";
 
-export default function PropertyCard({
+export function PropertyCard({
   _id,
   title,
   description,
@@ -45,6 +45,39 @@ export default function PropertyCard({
           >
             View Details
           </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function PropertyCardSkelton() {
+  return (
+    <div
+      className="flex flex-col gap-4 rounded-xl border border-gray-15 p-5 lg:gap-5 lg:p-7.5"
+      aria-busy="true"
+    >
+      <div
+        className="aspect-[31/21] animate-pulse rounded-[0.625rem] bg-gray-300"
+        aria-hidden="true"
+      ></div>
+      <div className="space-y-5">
+        <div className="space-y-1">
+          <div className="h-5 w-1/2 animate-pulse rounded-lg bg-gray-300" aria-hidden="true"></div>
+          <div className="h-5 animate-pulse rounded-lg bg-gray-300" aria-hidden="true"></div>
+          <div className="h-5 animate-pulse rounded-lg bg-gray-300" aria-hidden="true"></div>
+        </div>
+        <div className="flex flex-wrap gap-1.5 text-sm">
+          <div className="h-5 w-32 animate-pulse rounded-3xl bg-gray-300" aria-hidden="true"></div>
+          <div className="h-5 w-32 animate-pulse rounded-3xl bg-gray-300" aria-hidden="true"></div>
+          <div className="h-5 w-12 animate-pulse rounded-3xl bg-gray-300" aria-hidden="true"></div>
+        </div>
+        <div className="flex gap-7.5">
+          <div className="grid gap-3">
+            <span className="h-3 w-15 animate-pulse rounded bg-gray-300" aria-hidden="true"></span>
+            <span className="h-5 w-20 animate-pulse rounded bg-gray-300" aria-hidden="true"></span>
+          </div>
+          <div className="flex-grow animate-pulse rounded-lg bg-gray-300" aria-hidden="true"></div>
         </div>
       </div>
     </div>
