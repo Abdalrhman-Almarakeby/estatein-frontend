@@ -25,9 +25,9 @@ export default function HeroSectionLink({ to, Icon, label, className }: HeroSect
       </span>
       <p className="text-center text-sm font-medium sm:text-base">{label}</p>
       <DiagonalArrowIconSVG
-        className="absolute right-5 top-6 size-5 stroke-gray-30"
+        className="absolute right-3 top-4 size-5 stroke-gray-30 lg:right-5 lg:top-6"
         role="img"
-        aria-label="Go to page"
+        aria-hidden="true"
       />
     </Link>
   );
