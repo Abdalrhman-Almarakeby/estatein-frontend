@@ -1,9 +1,10 @@
 import { type Request, type Response } from "express";
 import { PropertyModel, JoiSchema } from "../models/propertyModel";
+import { validateLimit } from "../utils/validateLimit";
 
 export async function getAllProperties(req: Request, res: Response) {
   try {
-    const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+    const limit = req.query.limit && validateLimit(+req.query.limit) ? +req.query.limit : 100;
     const properties = await PropertyModel.find().limit(limit);
 
     res.send(properties);
