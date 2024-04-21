@@ -1,3 +1,3 @@
-export default function Dashboard() {
-  return <section className="text-6xl text-center">Dashboard</section>;
+export function Dashboard() {
+  return <section className="text-center text-6xl">Dashboard</section>;
 }

@@ -30,7 +30,7 @@ const SOCIAL_LINKS: readonly {
   },
 ];
 
-export default function SocialMediaLinks() {
+export function SocialMediaLinks() {
   return (
     <div className="mb-5 flex justify-center gap-2 md:order-3 md:mb-0 md:ml-auto">
       {SOCIAL_LINKS.map(({ href, name, icon }) => (

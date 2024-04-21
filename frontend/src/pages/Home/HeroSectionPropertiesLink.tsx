@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
-export default function HeroSectionPropertiesLink() {
+export function HeroSectionPropertiesLink() {
   const size = 95;
   const radius = size / 2 - 10;
 

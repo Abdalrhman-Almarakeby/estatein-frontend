@@ -1,3 +1,3 @@
-export default function Properties() {
+export function Properties() {
   return <div className="flex-grow">Properties</div>;
 }

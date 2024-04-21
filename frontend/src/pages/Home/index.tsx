@@ -4,15 +4,15 @@ import { type Property } from "@/types/property";
 import { testimonials } from "@/constant/testimonials";
 import { faqs } from "@/constant/faqs";
 import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
-import TestimonialCard from "@/components/ui/TestimonialCard";
-import FAQCard from "@/components/ui/FAQCard";
-import HeroSection from "./HeroSection";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { FAQCard } from "@/components/ui/FAQCard";
+import { HeroSection } from "./HeroSection";
 import { HomeCarouselSection, CarouselItem } from "./HomeCarouselSection";
-import CTASection from "./CTASection";
+import { CTASection } from "./CTASection";
 
 const PROPERTIES_TO_DISPLAY = 60;
 
-export default function Home() {
+export function Home() {
   const {
     data: properties,
     isLoading,

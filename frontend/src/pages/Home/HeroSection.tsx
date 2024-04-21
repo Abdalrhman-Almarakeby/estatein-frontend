@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import HeroSectionPropertiesLink from "./HeroSectionPropertiesLink";
-import HeroSectionLink from "./HeroSectionLink";
-import Achievement from "./Achievement";
+import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
+import { HeroSectionLink } from "./HeroSectionLink";
+import { Achievement } from "./Achievement";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import HomeIconSVG from "@/assets/icons/home.svg?react";
 import CashIconSVG from "@/assets/icons/cash.svg?react";
 import BuildingsIconSVG from "@/assets/icons/buildings.svg?react";
 import SunIconSVG from "@/assets/icons/sun.svg?react";
 
-export default function Hero() {
+export function HeroSection() {
   return (
     <section
       id="hero"

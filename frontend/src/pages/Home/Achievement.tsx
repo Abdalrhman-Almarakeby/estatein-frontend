@@ -6,7 +6,7 @@ type AchievementProps = {
   className?: string;
 };
 
-export default function Achievement({ achievement, label, className }: AchievementProps) {
+export function Achievement({ achievement, label, className }: AchievementProps) {
   return (
     <h2
       className={cn(

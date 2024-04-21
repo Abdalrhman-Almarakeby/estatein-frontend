@@ -3,7 +3,7 @@ import StarSVG from "@/assets/icons/star.svg?react";
 
 type TestimonialCardProps = testimonial;
 
-export default function TestimonialCard({
+export function TestimonialCard({
   rating,
   title,
   body,

@@ -7,7 +7,7 @@ type FooterLinksProps = {
   className?: string;
 };
 
-export default function FooterLinks({ pageName, children, className }: FooterLinksProps) {
+export function FooterLinks({ pageName, children, className }: FooterLinksProps) {
   return (
     <nav
       aria-label={`${pageName} Page Links`}

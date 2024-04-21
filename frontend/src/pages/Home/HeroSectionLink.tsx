@@ -10,7 +10,7 @@ type HeroSectionLinkProps = {
   className?: string;
 };
 
-export default function HeroSectionLink({ to, Icon, label, className }: HeroSectionLinkProps) {
+export function HeroSectionLink({ to, Icon, label, className }: HeroSectionLinkProps) {
   return (
     <Link
       to={to}

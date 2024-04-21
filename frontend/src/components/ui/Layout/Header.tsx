@@ -7,7 +7,7 @@ import logo from "@/assets/logo.svg";
 import burgerIcon from "@/assets/icons/burger-menu.svg";
 import xIcon from "@/assets/icons/x-mark.svg";
 
-export default function Header() {
+export function Header() {
   const { pathname } = useLocation();
   const menuRef = useRef<HTMLElement>(null);
 

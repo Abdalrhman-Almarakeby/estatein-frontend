@@ -5,7 +5,7 @@ type SectionTitleProps = {
   paragraph: string;
 };
 
-export default function SectionTitle({ title, paragraph }: SectionTitleProps) {
+export function SectionTitle({ title, paragraph }: SectionTitleProps) {
   return (
     <div className="relative space-y-1.5 lg:space-y-2.5">
       <StarsSVG className="absolute -left-2 -translate-y-full lg:h-6" />

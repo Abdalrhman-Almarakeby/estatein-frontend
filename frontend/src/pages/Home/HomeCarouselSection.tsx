@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SectionTitle from "@/components/ui/SectionTitle";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import {
   type CarouselApi,
   Carousel,

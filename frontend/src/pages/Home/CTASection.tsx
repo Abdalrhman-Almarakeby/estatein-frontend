@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function CTASection() {
+export function CTASection() {
   return (
     <section className="flex flex-col gap-12.5 px-4 py-12.5">
       <div className="flex flex-col gap-1.5">

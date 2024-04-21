@@ -1,13 +1,13 @@
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/form/Input.tsx";
-import FooterNav from "./FooterNav.tsx";
-import SocialMediaLinks from "./SocialMediaLinks";
+import { FooterNav } from "./FooterNav.tsx";
+import { SocialMediaLinks } from "./SocialMediaLinks";
 import logo from "@/assets/logo.svg";
 import MailPlusIconSVG from "@/assets/icons/email-plus.svg?react";
 import MailSendingIconSVG from "@/assets/icons/mail-sending.svg?react";
 
-export default function Footer() {
+export function Footer() {
   const year = new Date().getFullYear();
 
   return (

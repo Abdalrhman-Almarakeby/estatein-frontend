@@ -1,3 +1,3 @@
-export default function Services() {
+export function Services() {
   return <div className="flex-grow">Services</div>;
 }

@@ -5,7 +5,7 @@ type FAQCardProps = {
   answer: string;
 };
 
-export default function FAQCard({ question, answer }: FAQCardProps) {
+export function FAQCard({ question, answer }: FAQCardProps) {
   return (
     <div className="flex flex-col justify-between gap-5 rounded-xl border border-gray-15 p-7.5 lg:gap-6 lg:p-10">
       <p className="text-lg lg:text-xl">{question}</p>
