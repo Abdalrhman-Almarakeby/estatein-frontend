@@ -54,7 +54,7 @@ export function PropertyCard({
 export function PropertyCardSkelton() {
   return (
     <div
-      className="flex flex-col gap-4 rounded-xl border border-gray-15 p-5 lg:gap-5 lg:p-7.5"
+      className="flex flex-col gap-4 basis-full rounded-xl border border-gray-15 p-5 lg:gap-5 lg:p-7.5"
       aria-busy="true"
     >
       <div
