@@ -12,7 +12,7 @@ export default function TestimonialCard({
   avatar,
 }: TestimonialCardProps) {
   return (
-    <div className="space-y-6 rounded-xl border border-gray-15 p-7.5 lg:space-y-7.5 lg:p-10">
+    <div className="flex flex-col justify-between gap-6 rounded-xl border border-gray-15 p-7.5 lg:gap-7.5 lg:p-10">
       <div className="flex gap-2">
         {Array.from({ length: rating }).map((_, index) => (
           <span
