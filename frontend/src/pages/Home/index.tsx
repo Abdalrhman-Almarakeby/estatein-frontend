@@ -1,4 +1,5 @@
-import { useFetch } from "@/lib/hooks/useFetch";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import { type Property } from "@/types/property";
 import { testimonials } from "@/constant/testimonials";
 import { faqs } from "@/constant/faqs";
@@ -12,9 +13,20 @@ import CTASection from "./CTASection";
 const PROPERTIES_TO_DISPLAY = 60;
 
 export default function Home() {
-  const { data: propertiesData } = useFetch<Property[]>(
-    `http://localhost:8080/properties?limit=${PROPERTIES_TO_DISPLAY}`
-  );
+  const {
+    data: properties,
+    isLoading,
+    isError,
+    refetch,
+  } = useQuery({
+    queryKey: ["properties"],
+    queryFn: async () => {
+      const { data } = await axios.get<Property[]>(
+        `http://localhost:8080/properties?limit=${PROPERTIES_TO_DISPLAY}`
+      );
+      return data;
+    },
+  });
 
   return (
     <main className="flex-grow bg-gray-08">
@@ -27,23 +39,24 @@ export default function Home() {
           paragraph="Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein."
           link="/properties"
           sectionName="Properties"
+          isError={isError}
+          retry={refetch}
         >
-          {propertiesData
-            ? propertiesData.map((propertyData) => {
-                return (
-                  <CarouselItem
-                    key={propertyData._id}
-                    className="md:basis-1/2 md:pl-5 xl:basis-1/3"
-                  >
-                    <PropertyCard {...propertyData} />
-                  </CarouselItem>
-                );
-              })
-            : Array.from({ length: PROPERTIES_TO_DISPLAY }).map((_, i) => (
-                <CarouselItem key={i} className="md:basis-1/2 md:pl-5 xl:basis-1/3">
-                  <PropertyCardSkelton />
+          {properties &&
+            properties.map((propertyData) => {
+              return (
+                <CarouselItem key={propertyData._id} className="md:basis-1/2 md:pl-5 xl:basis-1/3">
+                  <PropertyCard {...propertyData} />
                 </CarouselItem>
-              ))}
+              );
+            })}
+
+          {isLoading &&
+            Array.from({ length: PROPERTIES_TO_DISPLAY }).map((_, i) => (
+              <CarouselItem key={i} className="md:basis-1/2 md:pl-5 xl:basis-1/3">
+                <PropertyCardSkelton />
+              </CarouselItem>
+            ))}
         </HomeCarouselSection>
 
         <HomeCarouselSection
