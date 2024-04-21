@@ -1175,6 +1175,12 @@ p,
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
+.space-y-12\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3.125rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3.125rem * var(--tw-space-y-reverse));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2061,20 +2067,8 @@ p,
     order: 0;
   }
 
-  .min-450\:mr-0 {
-    margin-right: 0px;
-  }
-
-  .min-450\:basis-0 {
-    flex-basis: 0px;
-  }
-
   .min-450\:basis-auto {
     flex-basis: auto;
-  }
-
-  .min-450\:flex-row {
-    flex-direction: row;
   }
 
   .min-450\:flex-nowrap {
@@ -2083,10 +2077,6 @@ p,
 
   .min-450\:justify-normal {
     justify-content: normal;
-  }
-
-  .min-\[450px\]\:flex-row {
-    flex-direction: row;
   }
 
   .min-\[450px\]\:text-3xl {
