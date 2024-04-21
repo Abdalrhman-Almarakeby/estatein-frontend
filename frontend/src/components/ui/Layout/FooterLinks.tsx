@@ -10,7 +10,7 @@ type FooterLinksProps = {
 export default function FooterLinks({ pageName, children, className }: FooterLinksProps) {
   return (
     <nav
-      aria-label={`Footer ${pageName} Page Links`}
+      aria-label={`${pageName} Page Links`}
       className={cn(
         "flex flex-col [&>*]:py-1  border-b border-gray-15 pb-5  lg:border-none lg:p-0 2xl:[&>*]:py-2 lg:order-none [&>*:nth-child(1)]:mb-2 [&>*:nth-child(1)]:text-gray-60",
         className

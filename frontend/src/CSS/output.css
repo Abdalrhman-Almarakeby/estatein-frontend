@@ -927,16 +927,16 @@ p,
   height: 2.25rem;
 }
 
+.h-\[485px\] {
+  height: 485px;
+}
+
 .h-full {
   height: 100%;
 }
 
 .h-svh {
   height: 100svh;
-}
-
-.h-\[485px\] {
-  height: 485px;
 }
 
 .min-h-svh {
@@ -1465,11 +1465,6 @@ p,
 .py-\[0\.40625rem\] {
   padding-top: 0.40625rem;
   padding-bottom: 0.40625rem;
-}
-
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
 }
 
 .pb-5 {

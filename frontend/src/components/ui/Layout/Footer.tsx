@@ -22,7 +22,7 @@ export default function Footer() {
             />
           </HashLink>
           <form className="space-y-3 lg:w-[300px]">
-            <p className="px-1 text-lg">Subscribe to our news letter!</p>
+            <p className="px-1 text-lg">Subscribe to our newsletter!</p>
             <div className="relative">
               <MailPlusIconSVG
                 className="absolute left-5 top-1/2 -translate-y-1/2"
