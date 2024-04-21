@@ -28,7 +28,11 @@ export default function TestimonialCard({
         <p className="text-sm text-gray-60">{body}</p>
       </div>
       <div className="flex gap-2.5">
-        <img src={`/estatein/${avatar}`} alt="" className="aspect-[1/1] size-[50px] rounded-full" />
+        <img
+          src={`/estatein/${avatar}`}
+          aria-hidden="true"
+          className="aspect-[1/1] size-[50px] rounded-full"
+        />
         <p className="grid lg:text-lg">
           <span>{name}</span>
           <span className="text-gray-60">{location}</span>

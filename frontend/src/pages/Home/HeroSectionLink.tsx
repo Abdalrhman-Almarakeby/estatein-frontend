@@ -19,7 +19,7 @@ export default function HeroSectionLink({ to, Icon, label, className }: HeroSect
         className
       )}
     >
-      <span className="relative" role="img" aria-label={label}>
+      <span className="relative" aria-hidden="true">
         <IconContainerSVG className="animate-spin duration-10s" />
         <Icon className="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2" />
       </span>
