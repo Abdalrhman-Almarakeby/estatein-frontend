@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 import propertiesRoutes from "./routes/propertiesRoutes";
+import newsletterRoutes from "./routes/newsletterRoutes";
 
 dotenv.config();
 
@@ -32,6 +33,7 @@ app.use(express.static("public"));
 // Routes
 
 app.use("/properties", propertiesRoutes);
+app.use("/newsletter", newsletterRoutes);
 
 // Error handling
 app.use((error: Error, req: Request, res: Response, next: NextFunction): void => {
