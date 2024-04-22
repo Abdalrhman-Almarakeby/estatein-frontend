@@ -1316,6 +1316,10 @@ input:-webkit-autofill,
   border-top-width: 1px;
 }
 
+.border-solid {
+  border-style: solid;
+}
+
 .border-gray-15 {
   --tw-border-opacity: 1;
   border-color: rgb(38 38 38 / var(--tw-border-opacity));
@@ -1339,6 +1343,11 @@ input:-webkit-autofill,
 .border-t-gray-15 {
   --tw-border-opacity: 1;
   border-top-color: rgb(38 38 38 / var(--tw-border-opacity));
+}
+
+.border-t-gray-08 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(20 20 20 / var(--tw-border-opacity));
 }
 
 .bg-gray-08 {
