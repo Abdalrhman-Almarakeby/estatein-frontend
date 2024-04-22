@@ -11,22 +11,9 @@ import { Error } from "./pages/Error";
 import "./CSS/output.css";
 
 export default function App() {
-  const toastOptions = {
-    className: "toast",
-    loading: {
-      className: "toast loading",
-    },
-    success: {
-      className: "toast success",
-    },
-    error: {
-      className: "toast error",
-    },
-  };
-
   return (
     <>
-      <Toaster toastOptions={toastOptions} />
+      <Toaster toastOptions={{ className: "toast" }} />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

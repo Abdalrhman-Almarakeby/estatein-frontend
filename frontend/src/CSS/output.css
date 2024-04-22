@@ -663,6 +663,8 @@ input:-webkit-autofill,
   }
 }
 
+/* style toast in react hoot toast */
+
 .toast {
   border-radius: 0.375rem;
   border-width: 2px;

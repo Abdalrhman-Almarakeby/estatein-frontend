@@ -40,6 +40,7 @@
 }
 
 @layer components {
+  /* style toast in react hoot toast */
   .toast {
     @apply rounded-md bg-gray-15 text-white border-white border-solid border-2;
   }
