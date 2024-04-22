@@ -11,10 +11,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteProperty = exports.updateProperty = exports.getProperty = exports.createProperty = exports.getAllProperties = void 0;
 const propertyModel_1 = require("../models/propertyModel");
+const validateLimit_1 = require("../utils/validateLimit");
 function getAllProperties(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const limit = req.query.limit ? parseInt(req.query.limit) : 100;
+            const limit = req.query.limit && (0, validateLimit_1.validateLimit)(+req.query.limit) ? +req.query.limit : 100;
             const properties = yield propertyModel_1.PropertyModel.find().limit(limit);
             res.send(properties);
         }
