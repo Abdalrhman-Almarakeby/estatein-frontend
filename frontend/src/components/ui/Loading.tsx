@@ -1,6 +1,6 @@
 import LoadingSVG from "@/assets/loading.svg?react";
 
-export 
+export function Loading() {
   return (
     <div
       aria-live="polite"
