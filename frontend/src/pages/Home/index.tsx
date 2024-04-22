@@ -22,7 +22,7 @@ export function Home() {
     queryKey: ["properties"],
     queryFn: async () => {
       const { data } = await axios.get<Property[]>(
-        `http://localhost:1111/properties?limit=${PROPERTIES_TO_DISPLAY}`
+        `https://estatein-zgvy.onrender.com/properties?limit=${PROPERTIES_TO_DISPLAY}`
       );
       return data;
     },
