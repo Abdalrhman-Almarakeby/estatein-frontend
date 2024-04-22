@@ -26,3 +26,9 @@
     @apply max-w-[75ch];
   }
 }
+
+@layer components {
+  .toast {
+    @apply rounded-md bg-gray-15 text-white border-white border-solid border-2;
+  }
+}
