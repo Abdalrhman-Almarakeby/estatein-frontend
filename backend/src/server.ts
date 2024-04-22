@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import app from "./app";
 
 const dbURI = process.env.DB_URI as string;
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 1111;
 
 (async () => {
   try {

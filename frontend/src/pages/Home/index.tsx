@@ -22,7 +22,7 @@ export function Home() {
     queryKey: ["properties"],
     queryFn: async () => {
       const { data } = await axios.get<Property[]>(
-        `http://localhost:8080/properties?limit=${PROPERTIES_TO_DISPLAY}`
+        `http://localhost:1111/properties?limit=${PROPERTIES_TO_DISPLAY}`
       );
       return data;
     },
