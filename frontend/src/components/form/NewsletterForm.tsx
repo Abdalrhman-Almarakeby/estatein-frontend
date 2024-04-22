@@ -21,7 +21,7 @@ export function NewsletterForm() {
   });
   const { mutate, isPending } = useMutation({
     mutationFn: async (email: string) =>
-      axios.post("https://estatein-zgvy.onrender.com//newsletter", {
+      axios.post("https://estatein-zgvy.onrender.com/newsletter", {
         email,
       }),
     onMutate: () => {
