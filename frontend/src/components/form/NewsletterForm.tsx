@@ -1,13 +1,16 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import { toast } from "react-hot-toast";
 import { Input } from "./Input.tsx";
 import MailPlusIconSVG from "@/assets/icons/email-plus.svg?react";
 import MailSendingIconSVG from "@/assets/icons/mail-sending.svg?react";
 import { EmailSchema, emailSchema } from "@/types/emailSchema.ts";
 
 export function NewsletterForm() {
+  const [toastId, setToastId] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -16,13 +19,23 @@ export function NewsletterForm() {
   } = useForm<EmailSchema>({
     resolver: zodResolver(emailSchema),
   });
-
   const { mutate, isPending } = useMutation({
-    mutationFn: async (email: string) => {
-      const { data } = await axios.post("http://localhost:1111/newsletter", {
+    mutationFn: async (email: string) =>
+      axios.post("http://localhost:1111/newsletter", {
         email,
+      }),
+    onMutate: () => {
+      setToastId(toast.loading("subscribing to the newsletter..."));
+    },
+    onSuccess: () => {
+      toast.success("subscribed successfully!", {
+        id: toastId || undefined,
       });
-      console.log(data);
+    },
+    onError: () => {
+      toast.error("something went wrong, please try again later!", {
+        id: toastId || undefined,
+      });
     },
   });
 
@@ -51,7 +64,7 @@ export function NewsletterForm() {
           <span className="sr-only">Subscribe To Our News Letter</span>
         </button>
       </div>
-      {errors.email && <p className=" text-sm text-red-500">{errors.email.message}</p>}
+      {errors.email && <p className="text-sm text-red-500">{errors.email.message}</p>}
     </form>
   );
 }
