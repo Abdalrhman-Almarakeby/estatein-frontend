@@ -1,17 +1,18 @@
 import { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useMenu } from "./useMenu";
-import { useShowHeader } from "./useShowHeader";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.svg";
 import burgerIcon from "@/assets/icons/burger-menu.svg";
 import xIcon from "@/assets/icons/x-mark.svg";
 
-export function Header() {
+type HeaderProps = {
+  showHeader: boolean;
+};
+export function Header({ showHeader }: HeaderProps) {
   const { pathname } = useLocation();
   const menuRef = useRef<HTMLElement>(null);
 
-  const showHeader = useShowHeader();
   const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef);
 
   return (

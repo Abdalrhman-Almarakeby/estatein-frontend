@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
 import { Layout } from "./components/ui/Layout";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -13,7 +12,6 @@ import "./CSS/output.css";
 export default function App() {
   return (
     <>
-      <Toaster toastOptions={{ className: "toast" }} />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
