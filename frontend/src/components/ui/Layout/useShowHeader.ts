@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ScrollDirection } from "@/types/scrollDirection";
+import { ScrollDirection } from "@/lib/types/scrollDirection";
 import { getScrollDirection } from "./getScrollDirection";
 
 export function useShowHeader() {

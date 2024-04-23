@@ -1,4 +1,4 @@
-import { testimonial } from "@/types/testimonial";
+import { testimonial } from "@/lib/types/testimonial";
 import StarSVG from "@/assets/icons/star.svg?react";
 
 type TestimonialCardProps = testimonial;
