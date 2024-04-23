@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
-import { NewsletterForm } from "@/components/form/NewsletterForm.tsx";
+import { NewsletterForm } from "@/components/form/NewsletterForm";
 import { FooterNav } from "./FooterNav.tsx";
 import { SocialMediaLinks } from "./SocialMediaLinks";
 import logo from "@/assets/logo.svg";
@@ -9,7 +9,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-08 text-sm border-t border-t-gray-15 text-white lg:text-base">
+    <footer className="border-t border-t-gray-15 bg-gray-08 text-sm text-white lg:text-base">
       <div className="container flex flex-col space-y-12.5 py-12.5 md:py-8 xl:flex-row xl:gap-20 xl:space-y-0 2xl:py-20">
         <div className="space-y-7">
           <HashLink to="/#hero">
