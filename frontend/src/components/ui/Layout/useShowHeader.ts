@@ -1,28 +1,19 @@
 import { useEffect, useState } from "react";
+import { ScrollDirection } from "@/types/scrollDirection";
+import { getScrollDirection } from "./getScrollDirection";
 
 export function useShowHeader() {
-  const [onTop, setOnTop] = useState(true);
-  const [scrollDirection, setScrollDirection] = useState<"up" | "down" | null>(null);
+  const [isOnTop, setIsOnTop] = useState(true);
+  const [scrollDirection, setScrollDirection] = useState<ScrollDirection | null>(null);
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
+    let lastScrollPosition = window.scrollY;
 
     function handleScroll() {
-      if (window.scrollY > 100) {
-        setOnTop(false);
-      } else {
-        setOnTop(true);
-      }
+      setIsOnTop(window.scrollY < 100);
+      setScrollDirection(getScrollDirection(lastScrollPosition, scrollDirection || "up"));
 
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
-      if (
-        direction !== scrollDirection &&
-        (scrollY - lastScrollY > 15 || scrollY - lastScrollY < -5)
-      ) {
-        setScrollDirection(direction);
-      }
-      lastScrollY = scrollY > 0 ? scrollY : 0;
+      lastScrollPosition = window.scrollY > 0 ? window.scrollY : 0;
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -30,5 +21,5 @@ export function useShowHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollDirection]);
 
-  return !(scrollDirection === "down") || onTop;
+  return scrollDirection === "up" || isOnTop;
 }

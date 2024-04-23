@@ -9,6 +9,7 @@ import xIcon from "@/assets/icons/x-mark.svg";
 type HeaderProps = {
   showHeader: boolean;
 };
+
 export function Header({ showHeader }: HeaderProps) {
   const { pathname } = useLocation();
   const menuRef = useRef<HTMLElement>(null);

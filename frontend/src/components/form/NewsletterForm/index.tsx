@@ -19,7 +19,7 @@ export function NewsletterForm() {
         />
         <button
           disabled={isPending}
-          aria-label="Subscribe"
+          type="submit"
           className="absolute right-5 top-1/2 -translate-y-1/2"
         >
           <MailSendingIconSVG aria-hidden="true" />

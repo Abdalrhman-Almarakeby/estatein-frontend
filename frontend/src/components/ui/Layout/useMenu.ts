@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDebounce } from "@/lib/hooks/useDebounce";
+
 export function useMenu(menuRef: React.RefObject<HTMLElement>) {
   const [debounceIsOpen, isOpen, setIsOpen] = useDebounce(false);
 
@@ -22,19 +23,24 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>) {
 
   useEffect(() => {
     // close the menu when the window is scrolled by down or up more than 50px
-    let prevScrollPos = 0;
+    let prevScrollPosition = 0;
 
     function handleScroll() {
       const currentScrollPos = window.scrollY;
-      const scrollDown = currentScrollPos > prevScrollPos;
-      const scrollUp = currentScrollPos < prevScrollPos;
-      const scrollAmount = Math.abs(currentScrollPos - prevScrollPos);
+      const scrollDown = currentScrollPos > prevScrollPosition;
+      const scrollUp = currentScrollPos < prevScrollPosition;
 
-      if ((isOpen && scrollDown && scrollAmount > 5) || (scrollUp && scrollAmount > 5)) {
+      // Only close menu if scrolling a significant amount
+      const minScrollAmount = 50;
+      const scrollAmount = Math.abs(currentScrollPos - prevScrollPosition);
+      if (
+        (isOpen && scrollDown && scrollAmount > minScrollAmount) ||
+        (scrollUp && scrollAmount > minScrollAmount)
+      ) {
         setIsOpen(false);
       }
 
-      prevScrollPos = currentScrollPos;
+      prevScrollPosition = currentScrollPos;
     }
 
     window.addEventListener("scroll", handleScroll);
