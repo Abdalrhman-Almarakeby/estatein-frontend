@@ -5,7 +5,6 @@ import { About } from "./pages/About";
 import { Properties } from "./pages/Properties";
 import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
-import { Dashboard } from "./pages/Dashboard";
 import { Error } from "./pages/Error";
 import "./CSS/output.css";
 
@@ -20,9 +19,6 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
-        </Route>
-        <Route path="/dashboard">
-          <Route index element={<Dashboard />} />
         </Route>
       </Routes>
     </>
