@@ -2562,6 +2562,10 @@ input:-webkit-autofill,
     justify-content: flex-end;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:gap-1 {
     gap: 0.25rem;
   }
