@@ -8,7 +8,7 @@ import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import { FAQCard } from "@/components/ui/FAQCard";
 import { HeroSection } from "./HeroSection";
 import { HomeCarouselSection, CarouselItem } from "./HomeCarouselSection";
-import { CTASection } from "./CTASection";
+import { CTA } from "@/components/ui/CTA";
 
 const PROPERTIES_TO_DISPLAY = 60;
 
@@ -86,7 +86,7 @@ export function Home() {
             </CarouselItem>
           ))}
         </HomeCarouselSection>
-        <CTASection />
+        <CTA />
       </div>
     </main>
   );

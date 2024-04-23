@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import GridDesign1SVG from "@/assets/abstractDesigns/grid-1.svg?react";
 import GridDesign2SVG from "@/assets/abstractDesigns/grid-2.svg?react";
 
-export function CTASection() {
+export function CTA() {
   return (
     <section className="mx-break-out px-break-out relative flex flex-col gap-12.5 overflow-hidden py-12.5 3xl:container lg:flex-row lg:items-center lg:justify-between">
       <div className="z-10 flex flex-col gap-1.5 md:gap-2.5 lg:grow xl:gap-5">
