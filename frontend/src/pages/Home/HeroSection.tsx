@@ -54,11 +54,18 @@ export function HeroSection() {
         <Achievement achievement="16+" label="Years Of Experience" />
       </section>
       <section className="grid grid-cols-2 gap-2.5 rounded-xl border border-gray-15 bg-gray-08 p-2.5 shadow-[#191919_0px_0px_0px_5px] lg:mx-break-out min-[1700px]:container md:col-span-2 lg:order-5 lg:grid-cols-4 min-[1700px]:!p-2.5">
-        {/* // TODO: Add the right links */}
-        <HeroSectionLink to="/" Icon={HomeIconSVG} label="Find Your Dream Home" />
-        <HeroSectionLink to="/" Icon={CashIconSVG} label="Unlock Property Value" />
-        <HeroSectionLink to="/" Icon={BuildingsIconSVG} label="Effortless Property Management" />
-        <HeroSectionLink to="/" Icon={SunIconSVG} label="Smart Investments, Informed Decisions" />
+        <HeroSectionLink to="/properties" Icon={HomeIconSVG} label="Find Your Dream Home" />
+        <HeroSectionLink to="/properties" Icon={CashIconSVG} label="Unlock Property Value" />
+        <HeroSectionLink
+          to="/properties"
+          Icon={BuildingsIconSVG}
+          label="Effortless Property Management"
+        />
+        <HeroSectionLink
+          to="/properties"
+          Icon={SunIconSVG}
+          label="Smart Investments, Informed Decisions"
+        />
       </section>
     </section>
   );
