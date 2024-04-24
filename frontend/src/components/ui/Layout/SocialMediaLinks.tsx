@@ -3,7 +3,7 @@ import LinkedinLogoSVG from "@/assets/socialmedia/linkedin.svg?react";
 import XLogoSVG from "@/assets/socialmedia/x-twitter.svg?react";
 import YoutubeLogoSVG from "@/assets/socialmedia/youtube.svg?react";
 
-const SOCIAL_LINKS: readonly {
+const SOCIAL_LINKS: {
   href: string;
   icon: React.ReactNode;
   name: string;
@@ -28,7 +28,7 @@ const SOCIAL_LINKS: readonly {
     icon: <YoutubeLogoSVG className="size-5 fill-white" />,
     name: "Youtube",
   },
-];
+] as const;
 
 export function SocialMediaLinks() {
   return (

@@ -1,6 +1,6 @@
 import { testimonial } from "../lib/types/testimonial";
 
-export const testimonials: testimonial[] = [
+export const TESTIMONIALS: testimonial[] = [
   {
     rating: 5,
     title: "Exceptional Service!",
@@ -82,4 +82,4 @@ export const testimonials: testimonial[] = [
     location: "USA, New York",
     avatar: "/avatars/john-mans.webp",
   },
-];
+] as const;

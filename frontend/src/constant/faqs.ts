@@ -1,4 +1,4 @@
-export const faqs = [
+export const FAQS = [
   {
     question: "How do I search for properties on Estatein?",
     answer:
@@ -45,4 +45,4 @@ export const faqs = [
     answer:
       "Every listing has a contact button to easily reach out to the agent representing that property.",
   },
-];
+] as const;

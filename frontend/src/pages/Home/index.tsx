@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { type Property } from "@/lib/types/property";
-import { testimonials } from "@/constant/testimonials";
-import { faqs } from "@/constant/faqs";
+import { TESTIMONIALS } from "@/constant/testimonials";
+import { FAQS } from "@/constant/faqs";
 import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import { FAQCard } from "@/components/ui/FAQCard";
@@ -66,7 +66,7 @@ export function Home() {
           link="/about#clients"
           sectionName="Testimonials"
         >
-          {testimonials.map((testimonial) => (
+          {TESTIMONIALS.map((testimonial) => (
             <CarouselItem key={testimonial.name} className="md:basis-1/2 md:pl-5 xl:basis-1/3">
               <TestimonialCard {...testimonial} />
             </CarouselItem>
@@ -80,7 +80,7 @@ export function Home() {
           link="/about"
           sectionName="FAQs"
         >
-          {faqs.map((faq) => (
+          {FAQS.map((faq) => (
             <CarouselItem key={faq.question} className="md:basis-1/2 md:pl-5 xl:basis-1/3">
               <FAQCard {...faq} />
             </CarouselItem>
