@@ -26,21 +26,15 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>) {
     let prevScrollPosition = 0;
 
     function handleScroll() {
-      const currentScrollPos = window.scrollY;
-      const scrollDown = currentScrollPos > prevScrollPosition;
-      const scrollUp = currentScrollPos < prevScrollPosition;
+      const currentScrollPosition = window.scrollY;
 
-      // Only close menu if scrolling a significant amount
-      const minScrollAmount = 50;
-      const scrollAmount = Math.abs(currentScrollPos - prevScrollPosition);
-      if (
-        (isOpen && scrollDown && scrollAmount > minScrollAmount) ||
-        (scrollUp && scrollAmount > minScrollAmount)
-      ) {
-        setIsOpen(false);
-      }
+      const MIN_SCROLL_AMOUNT = 50;
+      const scrollAmount = Math.abs(currentScrollPosition - prevScrollPosition);
 
-      prevScrollPosition = currentScrollPos;
+      const scrolledALot = scrollAmount > MIN_SCROLL_AMOUNT;
+      if (isOpen && scrolledALot) setIsOpen(false);
+
+      prevScrollPosition = currentScrollPosition;
     }
 
     window.addEventListener("scroll", handleScroll);
