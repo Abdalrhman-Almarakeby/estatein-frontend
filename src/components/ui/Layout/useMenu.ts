@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { useDebounce } from "@/lib/hooks/useDebounce";
 
 export function useMenu(menuRef: React.RefObject<HTMLElement>) {
-  const [debounceIsOpen, isOpen, setIsOpen] = useDebounce(false);
+  const { debouncedValue: debounceIsOpen, value: isOpen, setValue: setIsOpen } = useDebounce(false);
 
   function toggle() {
     setIsOpen(!debounceIsOpen);
   }
+  console.log("debounceIsOpen", debounceIsOpen);
+  console.log("isOpen", isOpen);
 
   function menuTransitionEnd(e: React.TransitionEvent<HTMLElement>) {
     const target = e.target as Element;
