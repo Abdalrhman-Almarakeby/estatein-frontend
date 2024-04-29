@@ -1746,11 +1746,6 @@ input:-webkit-autofill,
   line-height: 2.25rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .text-\[1\.75rem\] {
   font-size: 1.75rem;
 }
@@ -2562,10 +2557,6 @@ input:-webkit-autofill,
     justify-content: flex-end;
   }
 
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
   .md\:gap-1 {
     gap: 0.25rem;
   }
@@ -3068,18 +3059,6 @@ input:-webkit-autofill,
 }
 
 @media (min-width: 1600px) {
-  .\33xl\:gap-3 {
-    gap: 0.75rem;
-  }
-
-  .\33xl\:gap-3\.5 {
-    gap: 0.875rem;
-  }
-
-  .\33xl\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .\33xl\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
