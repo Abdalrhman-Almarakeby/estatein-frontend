@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useMenu } from "./useMenu";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.svg";
@@ -47,9 +48,9 @@ export function Header({ showHeader }: HeaderProps) {
             alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
           />
-          <Link
+          <HashLink
             onClick={() => isOpen && toggle()}
-            to="/"
+            to="/#"
             role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
@@ -57,10 +58,10 @@ export function Header({ showHeader }: HeaderProps) {
             )}
           >
             Home
-          </Link>
-          <Link
+          </HashLink>
+          <HashLink
             onClick={() => isOpen && toggle()}
-            to="/about"
+            to="/about#"
             role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
@@ -68,10 +69,10 @@ export function Header({ showHeader }: HeaderProps) {
             )}
           >
             About Us
-          </Link>
-          <Link
+          </HashLink>
+          <HashLink
             onClick={() => isOpen && toggle()}
-            to="/properties"
+            to="/properties#"
             role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
@@ -79,10 +80,10 @@ export function Header({ showHeader }: HeaderProps) {
             )}
           >
             Properties
-          </Link>
-          <Link
+          </HashLink>
+          <HashLink
             onClick={() => isOpen && toggle()}
-            to="/services"
+            to="/services#"
             role="menuitem"
             className={cn(
               "rounded-[0.625rem] border border-transparent px-5 py-3 transition duration-300 2xl:px-6 2xl:py-3.5",
@@ -90,15 +91,15 @@ export function Header({ showHeader }: HeaderProps) {
             )}
           >
             Services
-          </Link>
-          <Link
+          </HashLink>
+          <HashLink
             onClick={() => isOpen && toggle()}
-            to="/contact"
+            to="/contact#"
             role="menuitem"
             className="rounded-[0.625rem] px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
           >
             Contact Us
-          </Link>
+          </HashLink>
         </nav>
         <button
           aria-expanded={isOpen}
