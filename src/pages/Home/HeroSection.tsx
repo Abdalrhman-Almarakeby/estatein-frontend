@@ -1,12 +1,35 @@
 import { Link } from "react-router-dom";
 import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
-import { HeroSectionLink } from "./HeroSectionLink";
+import { LinksSection } from "@/components/ui/LinksSection";
 import { Achievement } from "./Achievement";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import HomeIconSVG from "@/assets/icons/home.svg?react";
 import CashIconSVG from "@/assets/icons/cash.svg?react";
 import BuildingsIconSVG from "@/assets/icons/buildings.svg?react";
 import SunIconSVG from "@/assets/icons/sun.svg?react";
+
+const LINKS_DATA = [
+  {
+    to: "/properties",
+    Icon: HomeIconSVG,
+    label: "Find Your Dream Home",
+  },
+  {
+    to: "/properties",
+    Icon: CashIconSVG,
+    label: "Unlock Property Value",
+  },
+  {
+    to: "/properties",
+    Icon: BuildingsIconSVG,
+    label: "Effortless Property Management",
+  },
+  {
+    to: "/properties",
+    Icon: SunIconSVG,
+    label: "Smart Investments, Informed Decisions",
+  },
+] as const;
 
 export function HeroSection() {
   return (
@@ -53,20 +76,7 @@ export function HeroSection() {
         <Achievement achievement="10K+" label="Years Of Experience" />
         <Achievement achievement="16+" label="Years Of Experience" />
       </section>
-      <section className="grid grid-cols-2 gap-2.5 rounded-xl border border-gray-15 bg-gray-08 p-2.5 shadow-[#191919_0px_0px_0px_5px] lg:mx-break-out min-[1700px]:container md:col-span-2 lg:order-5 lg:grid-cols-4 min-[1700px]:!p-2.5">
-        <HeroSectionLink to="/properties" Icon={HomeIconSVG} label="Find Your Dream Home" />
-        <HeroSectionLink to="/properties" Icon={CashIconSVG} label="Unlock Property Value" />
-        <HeroSectionLink
-          to="/properties"
-          Icon={BuildingsIconSVG}
-          label="Effortless Property Management"
-        />
-        <HeroSectionLink
-          to="/properties"
-          Icon={SunIconSVG}
-          label="Smart Investments, Informed Decisions"
-        />
-      </section>
+      <LinksSection linksData={LINKS_DATA} />
     </section>
   );
 }
