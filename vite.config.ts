@@ -10,7 +10,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/estatein",
+  base: "/estatein-frontend",
   server: {
     port: 3000,
   },
