@@ -7,8 +7,6 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>) {
   function toggle() {
     setIsOpen(!debounceIsOpen);
   }
-  console.log("debounceIsOpen", debounceIsOpen);
-  console.log("isOpen", isOpen);
 
   function menuTransitionEnd(e: React.TransitionEvent<HTMLElement>) {
     const target = e.target as Element;
