@@ -1634,6 +1634,14 @@ input:-webkit-autofill,
   fill: #fff;
 }
 
+.fill-purple-75 {
+  fill: #A685FA;
+}
+
+.\!fill-purple-75 {
+  fill: #A685FA !important;
+}
+
 .stroke-gray-30 {
   stroke: #4D4D4D;
 }
