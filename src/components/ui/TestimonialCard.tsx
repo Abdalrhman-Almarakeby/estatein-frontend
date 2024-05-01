@@ -29,7 +29,7 @@ export function TestimonialCard({
       </div>
       <div className="flex gap-2.5">
         <img
-          src={`/estatein/${avatar}`}
+          src={`/estatein-frontend/${avatar}`}
           aria-hidden="true"
           className="aspect-[1/1] size-[50px] rounded-full"
         />
