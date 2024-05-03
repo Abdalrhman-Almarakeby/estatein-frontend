@@ -18,7 +18,7 @@ const SelectTrigger = forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-10  items-center justify-between rounded-md border px-3 py-2 text-sm  focus:outline-none focus:ring-2  focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 border-gray-15  ring-offset-white text-white  !w-full focus:ring-transparent",
+      "flex h-10 capitalize 3xl:py-6 lg:py-5 bg-gray-10 px-5 py-4 items-center justify-between rounded-md border text-sm  focus:outline-none focus:ring-2  focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 border-gray-15  ring-offset-white text-white w-full focus:ring-transparent",
       "data-[placeholder]:text-gray-40",
       className
     )}
@@ -26,7 +26,7 @@ const SelectTrigger = forwardRef<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDownSVG className="size-4 stroke-2" />
+      <ChevronDownSVG className="size-4 stroke-[3px]" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
@@ -41,7 +41,7 @@ const SelectScrollUpButton = forwardRef<
     className={cn("flex cursor-default items-center justify-center py-1", className)}
     {...props}
   >
-    <ChevronUpSVG className="size-4 stroke-2" />
+    <ChevronUpSVG className="size-4 stroke-[3px]" />
   </SelectPrimitive.ScrollUpButton>
 ));
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
@@ -55,7 +55,7 @@ const SelectScrollDownButton = forwardRef<
     className={cn("flex cursor-default items-center justify-center py-1", className)}
     {...props}
   >
-    <ChevronDownSVG className="size-4 stroke-2" />
+    <ChevronDownSVG className="size-4 stroke-[3px]" />
   </SelectPrimitive.ScrollDownButton>
 ));
 SelectScrollDownButton.displayName = SelectPrimitive.ScrollDownButton.displayName;
@@ -111,7 +111,7 @@ const SelectItem = forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none  data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-gray-10  focus:ring-2 focus:ring-offset-white focus:ring-white",
+      "relative capitalize flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none  data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-gray-10  focus:ring-2 focus:ring-offset-white focus:ring-white",
       className
     )}
     {...props}
