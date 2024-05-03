@@ -1,5 +1,6 @@
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { LinksSection } from "@/components/ui/LinksSection";
+import { ContactFormSection } from "./ContactFormSection";
 import PhoneIconsSVG from "@/assets/icons/phone.svg?react";
 import MailIconSVG from "@/assets/icons/mail.svg?react";
 import LocationIconSVG from "@/assets/icons/location.svg?react";
@@ -41,6 +42,7 @@ export function Contact() {
         />
         <LinksSection linksData={LINKS_DATA} />
       </div>
+      <ContactFormSection />
     </div>
   );
 }
