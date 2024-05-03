@@ -1044,6 +1044,10 @@ input:-webkit-autofill,
   margin-bottom: 0.25rem;
 }
 
+.\!mt-1 {
+  margin-top: 0.25rem !important;
+}
+
 .-ml-4 {
   margin-left: -1rem;
 }
@@ -1179,11 +1183,6 @@ input:-webkit-autofill,
   height: 50px;
 }
 
-.size-full {
-  width: 100%;
-  height: 100%;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -1226,15 +1225,6 @@ input:-webkit-autofill,
 
 .h-svh {
   height: 100svh;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .max-h-96 {
@@ -1295,10 +1285,6 @@ input:-webkit-autofill,
 
 .w-svw {
   width: 100svw;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .min-w-0 {
@@ -1662,11 +1648,6 @@ input:-webkit-autofill,
   border-color: transparent;
 }
 
-.border-slate-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(15 23 42 / var(--tw-border-opacity));
-}
-
 .border-y-gray-15 {
   --tw-border-opacity: 1;
   border-top-color: rgb(38 38 38 / var(--tw-border-opacity));
@@ -1760,16 +1741,16 @@ input:-webkit-autofill,
   stroke: #fff;
 }
 
-.stroke-2 {
-  stroke-width: 2;
-}
-
 .stroke-\[3px\] {
   stroke-width: 3px;
 }
 
 .stroke-\[4px\] {
   stroke-width: 4px;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-1 {
@@ -1798,14 +1779,6 @@ input:-webkit-autofill,
 
 .p-7\.5 {
   padding: 1.875rem;
-}
-
-.p-0 {
-  padding: 0px;
-}
-
-.\!p-0 {
-  padding: 0px !important;
 }
 
 .px-1 {
@@ -2016,16 +1989,8 @@ input:-webkit-autofill,
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-current {
-  color: currentColor;
-}
-
 .underline {
   text-decoration-line: underline;
-}
-
-.accent-gray-10 {
-  accent-color: #1A1A1A;
 }
 
 .shadow-\[\#191919_0px_0px_0px_5px\] {
@@ -2526,11 +2491,6 @@ input:-webkit-autofill,
   grid-column: span 2 / span 2;
 }
 
-.checked\:bg-purple-60:checked {
-  --tw-bg-opacity: 1;
-  background-color: rgb(112 59 247 / var(--tw-bg-opacity));
-}
-
 .focus\:bg-gray-10:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(26 26 26 / var(--tw-bg-opacity));
@@ -2629,19 +2589,9 @@ input:-webkit-autofill,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.data-\[state\=checked\]\:bg-slate-900[data-state=checked] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
 .data-\[placeholder\]\:text-gray-40[data-placeholder] {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
-}
-
-.data-\[state\=checked\]\:text-slate-50[data-state=checked] {
-  --tw-text-opacity: 1;
-  color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 
 .data-\[disabled\]\:opacity-50[data-disabled] {
@@ -2700,35 +2650,6 @@ input:-webkit-autofill,
   --tw-enter-translate-y: 0.5rem;
 }
 
-:is(.dark .dark\:border-slate-50) {
-  --tw-border-opacity: 1;
-  border-color: rgb(248 250 252 / var(--tw-border-opacity));
-}
-
-:is(.dark .dark\:border-slate-800) {
-  --tw-border-opacity: 1;
-  border-color: rgb(30 41 59 / var(--tw-border-opacity));
-}
-
-:is(.dark .dark\:ring-offset-slate-950) {
-  --tw-ring-offset-color: #020617;
-}
-
-:is(.dark .dark\:focus-visible\:ring-slate-300:focus-visible) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(203 213 225 / var(--tw-ring-opacity));
-}
-
-:is(.dark .dark\:data-\[state\=checked\]\:bg-slate-50[data-state=checked]) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
-}
-
-:is(.dark .dark\:data-\[state\=checked\]\:text-slate-900[data-state=checked]) {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
 @media (min-width: 450px) {
   .min-450\:order-none {
     order: 0;
@@ -2780,10 +2701,6 @@ input:-webkit-autofill,
 
   .sm\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .sm\:gap-4 {
-    gap: 1rem;
   }
 
   .sm\:text-4xl {
@@ -3179,16 +3096,16 @@ input:-webkit-autofill,
     padding: 2.5rem;
   }
 
+  .lg\:p-20 {
+    padding: 5rem;
+  }
+
   .lg\:p-7 {
     padding: 1.75rem;
   }
 
   .lg\:p-7\.5 {
     padding: 1.875rem;
-  }
-
-  .lg\:p-20 {
-    padding: 5rem;
   }
 
   .lg\:px-5 {
@@ -3265,10 +3182,6 @@ input:-webkit-autofill,
 
   .xl\:flex-row {
     flex-direction: row;
-  }
-
-  .xl\:justify-between {
-    justify-content: space-between;
   }
 
   .xl\:gap-20 {
