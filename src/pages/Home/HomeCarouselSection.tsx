@@ -52,10 +52,10 @@ const HomeCarouselSection = memo(
             className="flex flex-col gap-7.5"
           >
             <CarouselContent className="md:-ml-5">{children}</CarouselContent>
-            <div className="flex flex-wrap items-center justify-between gap-2.5 border-t border-t-gray-15 pt-4 text-sm min-450:flex-nowrap min-450:justify-normal md:justify-end md:gap-5">
+            <div className="flex flex-wrap items-center justify-between gap-2.5 border-t border-t-gray-15 pt-4 text-sm min-[450px]:flex-nowrap min-[450px]:justify-normal md:justify-end md:gap-5">
               <Link
                 to={link}
-                className="order-last mr-auto basis-full rounded-lg border border-gray-15 px-5 py-3.5 text-center min-450:order-none min-450:basis-auto lg:hidden"
+                className="order-last mr-auto basis-full rounded-lg border border-gray-15 px-5 py-3.5 text-center min-[450px]:order-none min-[450px]:basis-auto lg:hidden"
               >
                 View All {sectionName}
               </Link>

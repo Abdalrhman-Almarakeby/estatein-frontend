@@ -69,7 +69,6 @@ module.exports = {
       },
       screens: {
         "3xl": "1600px",
-        "min-450": "450px",
       },
       transitionDuration: {
         "10s": "10s",

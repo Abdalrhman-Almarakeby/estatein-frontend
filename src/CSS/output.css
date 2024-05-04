@@ -609,12 +609,6 @@ input:-webkit-autofill,
   padding-left: 1rem;
 }
 
-@media (min-width: 450px) {
-  .container {
-    max-width: 450px;
-  }
-}
-
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -671,34 +665,6 @@ input:-webkit-autofill,
 .px-break-out {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-@media (min-width: 450px) {
-  .mx-break-out {
-    margin-left: calc((-100vw + var(--twcb-scrollbar-width)) / 2 + 450px / 2 - 7rem );
-    margin-right: calc((-100vw + var(--twcb-scrollbar-width)) / 2 + 450px / 2 - 7rem );
-  }
-
-  .ml-break-out {
-    margin-left: calc((-100vw + var(--twcb-scrollbar-width)) / 2 + 450px / 2 - 7rem );
-  }
-
-  .mr-break-out {
-    margin-right: calc((-100vw + var(--twcb-scrollbar-width)) / 2 + 450px / 2 - 7rem );
-  }
-
-  .px-break-out {
-    padding-left: calc((100vw - var(--twcb-scrollbar-width)) / 2 - 450px / 2 + 7rem );
-    padding-right: calc((100vw - var(--twcb-scrollbar-width)) / 2 - 450px / 2 + 7rem );
-  }
-
-  .pl-break-out {
-    padding-left: calc((100vw - var(--twcb-scrollbar-width)) / 2 - 450px / 2 + 7rem );
-  }
-
-  .pr-break-out {
-    padding-right: calc((100vw - var(--twcb-scrollbar-width)) / 2 - 450px / 2 + 7rem );
-  }
 }
 
 @media (min-width: 640px) {
@@ -2085,12 +2051,6 @@ input:-webkit-autofill,
     margin-right: -1rem;
   }
 
-  @media (min-width: 450px) {
-    .\32xl\:mr-break-out {
-      margin-right: calc((-100vw + var(--twcb-scrollbar-width)) / 2 + 450px / 2 - 7rem );
-    }
-  }
-
   @media (min-width: 640px) {
     .\32xl\:mr-break-out {
       margin-right: calc((-100vw + var(--twcb-scrollbar-width)) / 2 + 640px / 2 - 2rem );
@@ -2135,12 +2095,6 @@ input:-webkit-autofill,
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .\33xl\:container {
-      max-width: 450px;
-    }
   }
 
   @media (min-width: 640px) {
@@ -2201,26 +2155,6 @@ input:-webkit-autofill,
     padding-left: 1rem;
   }
 
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
-  }
-
-  .min-\[1700px\]\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
-  }
-
   @media (min-width: 640px) {
     .min-\[1700px\]\:container {
       max-width: 640px;
@@ -2235,12 +2169,6 @@ input:-webkit-autofill,
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
   }
 
   @media (min-width: 640px) {
@@ -2265,12 +2193,6 @@ input:-webkit-autofill,
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
   }
 
   @media (min-width: 640px) {
@@ -2303,12 +2225,6 @@ input:-webkit-autofill,
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
   }
 
   @media (min-width: 640px) {
@@ -2349,12 +2265,6 @@ input:-webkit-autofill,
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
   }
 
   @media (min-width: 640px) {
@@ -2403,12 +2313,6 @@ input:-webkit-autofill,
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-
-  @media (min-width: 450px) {
-    .min-\[1700px\]\:container {
-      max-width: 450px;
-    }
   }
 
   @media (min-width: 640px) {
@@ -2651,19 +2555,19 @@ input:-webkit-autofill,
 }
 
 @media (min-width: 450px) {
-  .min-450\:order-none {
+  .min-\[450px\]\:order-none {
     order: 0;
   }
 
-  .min-450\:basis-auto {
+  .min-\[450px\]\:basis-auto {
     flex-basis: auto;
   }
 
-  .min-450\:flex-nowrap {
+  .min-\[450px\]\:flex-nowrap {
     flex-wrap: nowrap;
   }
 
-  .min-450\:justify-normal {
+  .min-\[450px\]\:justify-normal {
     justify-content: normal;
   }
 
