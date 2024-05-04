@@ -3,7 +3,7 @@ import { type Property } from "@/lib/types/property";
 import BedSVG from "@/assets/icons/bed.svg?react";
 import BathSVG from "@/assets/icons/bath.svg?react";
 import BuildingSVG from "@/assets/icons/building.svg?react";
-import { formatCurrency } from "@/lib/utils";
+import { formatCurrency } from "@/lib/utils/currency";
 
 export function PropertyCard({
   _id,
