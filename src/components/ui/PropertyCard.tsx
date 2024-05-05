@@ -20,7 +20,7 @@ export function PropertyCard({
 
       <div className="space-y-5">
         <div className="space-y-1">
-          <h4 className="text-lg">{title}</h4>
+          <h4 className="text-lg lg:text-xl 3xl:text-2xl">{title}</h4>
           <p className="text-primary line-clamp-2">{description}</p>
         </div>
         <div className="flex flex-wrap gap-1.5 text-sm">
@@ -34,14 +34,14 @@ export function PropertyCard({
             <BuildingSVG /> <span>villa</span>
           </span>
         </div>
-        <div className="flex gap-7.5">
+        <div className="flex items-center gap-7.5">
           <p className="grid">
             <span className="text-primary">Price</span>
             <span className="text-lg">{formatCurrency(price.listingPrice)}</span>
           </p>
           <Link
             to={`/properties/${_id}`}
-            className="btn-primary btn-sm 3xl:btn-md 3xl:text-lg flex-grow text-center"
+            className="btn-primary btn-sm 3xl:btn-md flex-grow text-center 3xl:text-lg"
           >
             View Details
           </Link>
