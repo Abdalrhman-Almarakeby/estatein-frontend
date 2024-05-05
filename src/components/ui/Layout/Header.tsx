@@ -22,7 +22,7 @@ export function Header({ showHeader }: HeaderProps) {
   return (
     <header
       className={cn(
-        "fixed left-0 z-40 w-full border-y border-y-gray-15 bg-gray-10 text-sm text-white transition-[top] duration-300 md:static md:py-5 2xl:text-lg",
+        "fixed left-0  z-40 w-full border-y border-y-gray-15 bg-gray-10 text-sm text-white transition-[top] duration-300 md:static md:py-5 2xl:text-lg",
         showHeader ? "top-0" : "-top-full md:top-0"
       )}
     >
@@ -40,7 +40,7 @@ export function Header({ showHeader }: HeaderProps) {
           role="menu"
           ref={menuRef}
           className={cn(
-            "absolute top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
+            "absolute invisible top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
             isOpen ? "right-0" : "-right-[110%]"
           )}
           onTransitionEnd={menuTransitionEnd}
