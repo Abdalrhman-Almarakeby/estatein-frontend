@@ -20,7 +20,7 @@ export function Header({ showHeader }: HeaderProps) {
   return (
     <header
       className={cn(
-        "border-y z-40 border-y-gray-15 fixed  w-full left-0 md:static transition-[top] duration-300 bg-gray-10 py-5 text-sm text-white 2xl:py-5 2xl:text-lg",
+        "fixed left-0 z-40 w-full border-y border-y-gray-15 bg-gray-10 text-sm text-white transition-[top] duration-300 md:static md:py-5 2xl:text-lg",
         showHeader ? "top-0" : "-top-full md:top-0"
       )}
     >
@@ -38,7 +38,7 @@ export function Header({ showHeader }: HeaderProps) {
           role="menu"
           ref={menuRef}
           className={cn(
-            "absolute z-50 top-0 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
+            "absolute top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
             isOpen ? "right-0" : "-right-[110%]"
           )}
           onTransitionEnd={menuTransitionEnd}
@@ -96,7 +96,7 @@ export function Header({ showHeader }: HeaderProps) {
             onClick={() => isOpen && toggle()}
             to="/contact#"
             role="menuitem"
-            className="rounded-[0.625rem] btn-secondary px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
+            className="btn-secondary rounded-[0.625rem] px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
           >
             Contact Us
           </HashLink>
@@ -106,7 +106,7 @@ export function Header({ showHeader }: HeaderProps) {
           aria-controls="main-menu"
           aria-label="Toggle menu"
           onClick={toggle}
-          className="z-[99999] md:hidden"
+          className="z-[99999] py-5 pl-5 md:hidden"
         >
           <img
             src={isOpen ? xIcon : burgerIcon}

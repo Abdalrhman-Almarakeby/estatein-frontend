@@ -1985,6 +1985,10 @@ input:-webkit-autofill,
   padding-top: 82px;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2912,6 +2916,11 @@ input:-webkit-autofill,
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
   .md\:pl-5 {
