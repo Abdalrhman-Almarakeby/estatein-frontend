@@ -9,7 +9,7 @@
 
   html,
   body {
-    @apply relative w-full overflow-x-hidden bg-gray-08 text-white font-urbanist;
+    @apply relative w-full overflow-x-hidden bg-gray-08 font-urbanist font-normal text-white;
   }
 
   img {
@@ -43,5 +43,51 @@
   /* style toast in react hoot toast */
   .toast {
     @apply rounded-md border-2 border-solid border-white bg-gray-15 text-white transition-all;
+  }
+
+  /* buttons */
+  .btn {
+    @apply rounded-lg;
+  }
+
+  .btn-sm {
+    @apply px-5 py-3.5 text-sm;
+  }
+
+  .btn-md {
+    @apply px-5 py-3.5 text-base;
+  }
+
+  .btn-lg {
+    @apply px-6 py-4.5 text-lg;
+  }
+
+  .btn-primary {
+    @apply btn bg-purple-60;
+  }
+
+  .btn-secondary {
+    @apply btn border bg-gray-08;
+  }
+
+  .btn-tertiary {
+    @apply btn border bg-gray-10;
+  }
+
+  /* text */
+  .text {
+    @apply text-sm leading-normal lg:text-base 2xl:text-lg;
+  }
+  .text-primary {
+    @apply text font-medium text-gray-60;
+  }
+
+  .test-secondary {
+    @apply text text-white;
+  }
+
+  /* headers */
+  .h-primary {
+    @apply font-semibold text-[1.75rem] leading-tight lg:text-[2.375rem] text-white 2xl:text-[3rem];
   }
 }

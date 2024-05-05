@@ -38,7 +38,7 @@ const HomeCarouselSection = memo(
           <SectionTitle title={title} paragraph={paragraph} />
           <Link
             to={link}
-            className="hidden self-end rounded-lg border border-gray-15 px-5 py-3.5 text-center text-sm lg:block"
+            className="btn-tertiary btn-sm 3xl:btn-lg  hidden self-end text-center lg:block"
           >
             View All {sectionName}
           </Link>
@@ -55,7 +55,7 @@ const HomeCarouselSection = memo(
             <div className="flex flex-wrap items-center justify-between gap-2.5 border-t border-t-gray-15 pt-4 text-sm min-[450px]:flex-nowrap min-[450px]:justify-normal md:justify-end md:gap-5">
               <Link
                 to={link}
-                className="order-last mr-auto basis-full rounded-lg border border-gray-15 px-5 py-3.5 text-center min-[450px]:order-none min-[450px]:basis-auto lg:hidden"
+                className="btn-tertiary btn-sm 3xl:btn-lg order-last mr-auto basis-full text-center min-[450px]:order-none min-[450px]:basis-auto lg:hidden"
               >
                 View All {sectionName}
               </Link>
@@ -64,11 +64,11 @@ const HomeCarouselSection = memo(
             </div>
           </Carousel>
         ) : (
-          <div className="flex h-[485px] flex-col items-center justify-center gap-4 text-balance rounded-md border border-gray-15 text-center text-lg sm:h-[580px] md:h-[454px] lg:h-[500px] xl:h-[480px] 2xl:h-[510px]">
+          <div className="flex h-[485px] flex-col items-center justify-center gap-4 text-balance rounded-md border text-center text-lg sm:h-[580px] md:h-[454px] lg:h-[500px] xl:h-[480px] 2xl:h-[510px]">
             <ErrorSVG />
             There was a problem connecting to the server. Please check your internet connection and
             try again.
-            <button onClick={retry} className="rounded-lg bg-purple-60 px-5 py-2 text-base">
+            <button onClick={retry} className="btn-primary btn-sm 3xl:btn-lg text-base">
               Try agin
             </button>
           </div>

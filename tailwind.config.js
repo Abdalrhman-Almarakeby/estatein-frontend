@@ -34,6 +34,7 @@ module.exports = {
       fontFamily: {
         urbanist: ["Urbanist", ...defaultTheme.fontFamily.sans],
       },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -78,6 +79,9 @@ module.exports = {
       },
       transitionDuration: {
         "10s": "10s",
+      },
+      borderColor: {
+        DEFAULT: "#262626",
       },
     },
   },

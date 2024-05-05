@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils/cn";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
 export function HeroSectionPropertiesLink() {
@@ -8,7 +9,10 @@ export function HeroSectionPropertiesLink() {
   return (
     <Link
       aria-label="Browse properties"
-      className="absolute bottom-0 left-0 size-[130px] translate-y-1/3 rounded-full border border-gray-15 bg-gray-08 p-4 md:hidden 2xl:top-[95px] 2xl:block 2xl:-translate-x-1/2"
+      className={cn(
+        "absolute bottom-0 left-0 size-[130px] translate-y-1/3 rounded-full btn-secondary btn-sm 3xl:btn-lg  md:hidden 2xl:top-[95px] 2xl:block 2xl:-translate-x-1/2",
+        "p-4"
+      )}
       to="/properties"
     >
       <svg
@@ -37,7 +41,7 @@ export function HeroSectionPropertiesLink() {
       </svg>
       <span
         aria-hidden="true"
-        className="absolute right-1/2 top-1/2 grid size-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-gray-15 bg-gray-10"
+        className="absolute right-1/2 top-1/2 grid size-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border bg-gray-10"
       >
         <DiagonalArrowIconSVG className="size-5 stroke-white" />
       </span>

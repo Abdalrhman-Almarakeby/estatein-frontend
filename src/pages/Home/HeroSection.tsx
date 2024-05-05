@@ -47,10 +47,10 @@ export function HeroSection() {
         <HeroSectionPropertiesLink />
       </section>
       <section className="flex flex-col gap-4 sm:gap-6 lg:order-1 lg:mt-auto 2xl:mb-12.5 2xl:mt-24.5 min-[1700px]:mt-0">
-        <h1 className="text-[1.75rem] font-medium leading-tight min-[450px]:text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl">
+        <h1 className="text-[1.75rem] font-semibold leading-tight min-[450px]:text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl">
           Discover Your Dream Property with Estatein
         </h1>
-        <p className="text-sm text-gray-60 min-[450px]:text-base sm:text-xl 3xl:text-lg">
+        <p className="text-primary min-[450px]:text-base sm:text-xl 3xl:text-lg">
           Your journey to finding the perfect property begins here. Explore our listings to find the
           home that matches your dreams.
         </p>
@@ -58,14 +58,14 @@ export function HeroSection() {
       <nav className="flex flex-col gap-4 text-center text-sm sm:flex-row sm:text-base md:col-span-2 lg:order-3 lg:col-span-1 lg:items-start 2xl:mb-12.5 3xl:text-lg">
         <Link
           aria-label="Learn more about Estatein"
-          className="flex-grow rounded-lg border border-gray-15 py-3.5 lg:flex-grow-0 lg:px-5 3xl:px-6 3xl:py-4.5"
+          className="btn-secondary btn-sm 3xl:btn-lg flex-grow lg:flex-grow-0"
           to="/about"
         >
           Learn More
         </Link>
         <Link
           aria-label="Browse properties"
-          className="flex-grow rounded-lg bg-purple-60 py-3.5 lg:flex-grow-0 lg:px-5 3xl:px-6 3xl:py-4.5"
+          className="btn-primary  btn-sm 3xl:btn-lg flex-grow lg:flex-grow-0"
           to="/properties"
         >
           Browse Properties

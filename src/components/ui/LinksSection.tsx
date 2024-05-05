@@ -16,14 +16,14 @@ type LinksSectionProps = {
 
 export function LinksSection({ linksData }: LinksSectionProps) {
   return (
-    <section className="mx-break-out px-break-out grid grid-cols-2 gap-2.5 rounded-xl border border-gray-15 bg-gray-08 p-2.5 shadow-[#191919_0px_0px_0px_5px] min-[1700px]:container md:col-span-2 lg:order-5 lg:grid-cols-4 min-[1700px]:!p-2.5">
+    <section className="mx-break-out px-break-out grid grid-cols-2 gap-2.5 rounded-xl border  bg-gray-08 p-2.5 shadow-[#191919_0px_0px_0px_5px] min-[1700px]:container md:col-span-2 lg:order-5 lg:grid-cols-4 min-[1700px]:!p-2.5">
       {linksData.map(({ to, Icon, label, target, ariaLabel }) => (
         <Link
           target={target}
           aria-label={ariaLabel}
           key={label}
           to={to}
-          className="relative flex flex-col items-center justify-center gap-3.5 rounded-[10px] border border-gray-15 bg-gray-10 px-4 py-5"
+          className="relative flex flex-col items-center justify-center gap-3.5 rounded-[10px] border  bg-gray-10 px-4 py-5"
         >
           <span className="relative" aria-hidden="true">
             <IconContainerSVG className="animate-spin duration-10s" />

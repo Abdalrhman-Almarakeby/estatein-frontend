@@ -7,12 +7,12 @@ type FAQCardProps = {
 
 export function FAQCard({ question, answer }: FAQCardProps) {
   return (
-    <div className="flex flex-col justify-between gap-5 rounded-xl border border-gray-15 p-7.5 lg:gap-6 lg:p-10">
+    <div className="flex flex-col justify-between gap-5 rounded-xl border p-7.5 lg:gap-6 lg:p-10">
       <p className="text-lg lg:text-xl">{question}</p>
-      <p className="text-sm text-gray-60 lg:text-base">{answer}</p>
+      <p className="text-primary">{answer}</p>
       <Link
         to="/about#how-it-is-work"
-        className="rounded-lg border border-gray-15 px-5 py-3.5 text-center"
+        className="btn-tertiary btn-sm 3xl:btn-md 3xl:text-lg text-center"
       >
         Read More
       </Link>

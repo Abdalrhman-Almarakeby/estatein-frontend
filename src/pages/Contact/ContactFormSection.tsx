@@ -26,7 +26,7 @@ export function ContactFormSection() {
       />
       <form
         onSubmit={onSubmit}
-        className="grid gap-5 rounded-xl border border-gray-15 p-5 sm:gap-6 md:grid-cols-2 lg:gap-7.5 lg:p-20 xl:grid-cols-3 3xl:gap-12.5 3xl:p-24"
+        className="grid gap-5 rounded-xl border p-5 sm:gap-6 md:grid-cols-2 lg:gap-7.5 lg:p-20 xl:grid-cols-3 3xl:gap-12.5 3xl:p-24"
       >
         <div className="space-y-2.5 lg:space-y-4">
           <label className="lg:text-lg 3xl:text-xl" htmlFor="first-name">
@@ -130,10 +130,7 @@ export function ContactFormSection() {
           <div>
             <div className="flex items-center gap-2">
               <Checkbox {...register("agreeOnTerms")} id="agree-on-terms" />
-              <label
-                htmlFor="agree-on-terms"
-                className="text-sm text-gray-60 md:text-base 3xl:text-lg"
-              >
+              <label htmlFor="agree-on-terms" className="text-primary">
                 I agree with<>&nbsp;</>
                 <Link to="/" className="underline">
                   Terms of Use
@@ -151,10 +148,7 @@ export function ContactFormSection() {
               </p>
             )}
           </div>
-          <button
-            type="submit"
-            className="rounded-lg bg-purple-60 py-3.5 text-sm lg:px-5 lg:text-base 3xl:px-6 3xl:py-4.5 3xl:text-lg"
-          >
+          <button type="submit" className="btn-primary btn-sm 3xl:btn-lg">
             Send Your Message
           </button>
         </div>
