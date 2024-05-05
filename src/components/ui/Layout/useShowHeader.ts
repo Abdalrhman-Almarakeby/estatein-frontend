@@ -12,6 +12,7 @@ export function useShowHeader() {
     let lastScrollPosition = window.scrollY;
 
     function handleScroll() {
+      if (window.innerWidth > 768) return;
       setIsOnTop(window.scrollY < MAX_TOP_POSITION);
       setScrollDirection(getScrollDirection(lastScrollPosition, scrollDirection || "up"));
 
@@ -22,6 +23,8 @@ export function useShowHeader() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollDirection]);
+
+  if (window.innerWidth > 768) return false;
 
   return scrollDirection === "up" || isOnTop;
 }
