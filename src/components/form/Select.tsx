@@ -30,7 +30,6 @@ const SelectTrigger = forwardRef<
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
-SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
 const SelectScrollUpButton = forwardRef<
   ElementRef<typeof SelectPrimitive.ScrollUpButton>,
@@ -44,7 +43,6 @@ const SelectScrollUpButton = forwardRef<
     <ChevronUpSVG className="size-4 stroke-[3px]" />
   </SelectPrimitive.ScrollUpButton>
 ));
-SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
 
 const SelectScrollDownButton = forwardRef<
   ElementRef<typeof SelectPrimitive.ScrollDownButton>,
@@ -58,7 +56,6 @@ const SelectScrollDownButton = forwardRef<
     <ChevronDownSVG className="size-4 stroke-[3px]" />
   </SelectPrimitive.ScrollDownButton>
 ));
-SelectScrollDownButton.displayName = SelectPrimitive.ScrollDownButton.displayName;
 
 const SelectContent = forwardRef<
   ElementRef<typeof SelectPrimitive.Content>,
@@ -90,7 +87,6 @@ const SelectContent = forwardRef<
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
 ));
-SelectContent.displayName = SelectPrimitive.Content.displayName;
 
 const SelectLabel = forwardRef<
   ElementRef<typeof SelectPrimitive.Label>,
@@ -102,7 +98,6 @@ const SelectLabel = forwardRef<
     {...props}
   />
 ));
-SelectLabel.displayName = SelectPrimitive.Label.displayName;
 
 const SelectItem = forwardRef<
   ElementRef<typeof SelectPrimitive.Item>,
@@ -125,7 +120,6 @@ const SelectItem = forwardRef<
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ));
-SelectItem.displayName = SelectPrimitive.Item.displayName;
 
 const SelectSeparator = forwardRef<
   ElementRef<typeof SelectPrimitive.Separator>,
@@ -137,7 +131,6 @@ const SelectSeparator = forwardRef<
     {...props}
   />
 ));
-SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
 export {
   Select,
