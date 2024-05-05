@@ -98,7 +98,7 @@ export function Header({ showHeader }: HeaderProps) {
             onClick={() => isOpen && toggle()}
             to="/contact#"
             role="menuitem"
-            className="btn-secondary rounded-[0.625rem] px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
+            className="rounded-[0.625rem] px-5 py-3 md:ml-auto md:border md:border-gray-15 md:bg-gray-08 2xl:px-6 2xl:py-3.5"
           >
             Contact Us
           </HashLink>
