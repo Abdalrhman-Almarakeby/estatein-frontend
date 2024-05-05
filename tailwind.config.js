@@ -85,5 +85,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwind-container-break-out")],
+  plugins: [require("tailwind-container-break-out")],
 };
