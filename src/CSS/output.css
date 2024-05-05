@@ -2035,6 +2035,10 @@ input:-webkit-autofill,
   font-weight: 600;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -3446,6 +3450,11 @@ input:-webkit-autofill,
   .\33xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .\33xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
