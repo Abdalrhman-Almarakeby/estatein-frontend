@@ -4,12 +4,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { EmailSchema, emailSchema } from "@/lib/schemas/emailSchema";
+import { emailZodSchema, type Email } from "@/lib/schemas/emailSchema";
 
 export function useNewsletter(): {
-  register: UseFormRegister<EmailSchema>;
+  register: UseFormRegister<Email>;
   onSubmit: (e?: BaseSyntheticEvent<object> | undefined) => Promise<void>;
-  errors: FieldErrors<EmailSchema>;
+  errors: FieldErrors<Email>;
   isPending: boolean;
 } {
   const [toastId, setToastId] = useState<string | null>(null);
@@ -18,8 +18,8 @@ export function useNewsletter(): {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<EmailSchema>({
-    resolver: zodResolver(emailSchema),
+  } = useForm<Email>({
+    resolver: zodResolver(emailZodSchema),
   });
 
   const { mutate, isPending } = useMutation({
@@ -42,7 +42,7 @@ export function useNewsletter(): {
     },
   });
 
-  function onSubmit(data: EmailSchema) {
+  function onSubmit(data: Email) {
     mutate(data.email);
     reset();
   }

@@ -2,7 +2,7 @@ import { z } from "zod";
 import { INQUIRY_TYPES } from "@/constant/inquiryTypes";
 import { HEAR_ABOUT_US } from "@/constant/hearAboutUs";
 
-export const contactSchema = z.object({
+const inquiryZodSchema = z.object({
   firstName: z
     .string({ required_error: "First Name is required", invalid_type_error: "Invalid First Name" })
     .min(1, "First Name is required")
@@ -43,4 +43,6 @@ export const contactSchema = z.object({
   }),
 });
 
-export type ContactSchema = z.infer<typeof contactSchema>;
+type Inquiry = z.infer<typeof inquiryZodSchema>;
+
+export { inquiryZodSchema, type Inquiry };

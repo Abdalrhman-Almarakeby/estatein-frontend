@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-export const emailSchema = z.object({
+export const emailZodSchema = z.object({
   email: z.string().email(),
 });
 
-export type EmailSchema = z.infer<typeof emailSchema>;
+export type Email = z.infer<typeof emailZodSchema>;
