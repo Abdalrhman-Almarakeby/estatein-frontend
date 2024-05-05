@@ -3180,12 +3180,20 @@ input:-webkit-autofill,
     margin-bottom: 0px;
   }
 
+  .xl\:flex {
+    display: flex;
+  }
+
   .xl\:h-\[480px\] {
     height: 480px;
   }
 
   .xl\:w-\[130px\] {
     width: 130px;
+  }
+
+  .xl\:flex-grow {
+    flex-grow: 1;
   }
 
   .xl\:basis-1\/3 {
@@ -3198,6 +3206,10 @@ input:-webkit-autofill,
 
   .xl\:flex-row {
     flex-direction: row;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
   }
 
   .xl\:gap-20 {
