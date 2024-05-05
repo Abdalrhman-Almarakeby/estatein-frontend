@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 /* eslint-env node */
+
+import defaultTheme from "tailwindcss/defaultTheme";
+
 module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],
@@ -27,6 +30,9 @@ module.exports = {
         15: "3.75rem",
         24.5: "6.125rem",
         30: "7.5rem",
+      },
+      fontFamily: {
+        urbanist: ["Urbanist", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
