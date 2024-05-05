@@ -29,7 +29,7 @@ export function useContactForm(): {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (inquiryData: InquirySchema) =>
-      axios.post("http://localhost:1111/inquiries", {
+      axios.post("https://estatein-zgvy.onrender.com/inquiries", {
         inquiryData,
       }),
     onMutate: () => setToastId(toast.loading("Sending Your Message...")),
