@@ -17,6 +17,8 @@ export function Header({ showHeader }: HeaderProps) {
 
   const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef);
 
+  const isMenuHidden = !(window.innerWidth < 768 && isOpen);
+
   return (
     <header
       className={cn(
@@ -34,7 +36,7 @@ export function Header({ showHeader }: HeaderProps) {
           id="main-menu"
           aria-label="Main menu"
           aria-expanded={isOpen}
-          aria-hidden={window.innerWidth < 768 && !isOpen}
+          aria-hidden={isMenuHidden}
           role="menu"
           ref={menuRef}
           className={cn(
