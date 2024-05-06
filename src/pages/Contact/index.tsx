@@ -11,24 +11,27 @@ const LINKS_DATA = [
     to: "mailto:info@estatein.com",
     Icon: MailIconSVG,
     label: "info@estatein.com",
+    ariaLabel: "Estatein Email Address",
   },
   {
     to: "tel:+1 (123) 456-7890",
     Icon: PhoneIconsSVG,
     label: "+1 (123) 456-7890",
+    ariaLabel: "Estatein Phone Number",
   },
   {
     to: "https://maps.google.com",
     Icon: LocationIconSVG,
     label: "Main Headquarters",
-    ariaLabel: "Main Headquarters Location",
     target: "_blank",
+    ariaLabel: "Estatein Main Headquarters Location",
   },
   {
     to: "https://facebook.com",
     Icon: FacebookIconSVG,
     label: "Facebook",
     target: "_blank",
+    ariaLabel: "Estatein Facebook Page",
   },
 ] as const;
 
