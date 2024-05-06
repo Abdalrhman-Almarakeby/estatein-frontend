@@ -82,12 +82,30 @@
     @apply text font-medium text-gray-60;
   }
 
-  .test-secondary {
+  .text-secondary {
     @apply text text-white;
   }
 
   /* headers */
   .h-primary {
     @apply font-semibold text-[1.75rem] leading-tight lg:text-[2.375rem] text-white 2xl:text-[3rem];
+  }
+
+  /* badges */
+
+  .badges-container {
+    @apply text-secondary flex flex-wrap gap-1.5 3xl:text-base;
+  }
+
+  .badge {
+    @apply flex gap-1 3xl:gap-1.5 items-center rounded-3xl border bg-gray-10 px-3.5 py-[0.40625rem] 3xl:px-4 3xl:py-2.5;
+  }
+
+  .badge > svg {
+    @apply 3xl:size-6;
+  }
+
+  .badges-container > span {
+    @apply badge;
   }
 }

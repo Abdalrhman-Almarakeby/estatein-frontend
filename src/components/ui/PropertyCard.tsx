@@ -23,15 +23,15 @@ export function PropertyCard({
           <h4 className="text-lg lg:text-xl 3xl:text-2xl">{title}</h4>
           <p className="text-primary line-clamp-2">{description}</p>
         </div>
-        <div className="flex flex-wrap gap-1.5 text-sm">
-          <span className="flex gap-1 rounded-3xl border bg-gray-10 px-3.5 py-[0.40625rem]">
-            <BedSVG /> <span>{bedrooms}-Bedroom</span>
+        <div className="badges-container">
+          <span>
+            <BedSVG aria-hidden="true" /> <span>{bedrooms}-Bedroom</span>
           </span>
-          <span className="flex gap-1 rounded-3xl border bg-gray-10 px-3.5 py-[0.40625rem]">
-            <BathSVG /> <span>{bathrooms}-Bathroom</span>
+          <span>
+            <BathSVG aria-hidden="true" /> <span>{bathrooms}-Bathroom</span>
           </span>
-          <span className="flex gap-1 rounded-3xl border bg-gray-10 px-3.5 py-[0.40625rem]">
-            <BuildingSVG /> <span>villa</span>
+          <span>
+            <BuildingSVG aria-hidden="true" /> <span>villa</span>
           </span>
         </div>
         <div className="flex items-center gap-7.5">

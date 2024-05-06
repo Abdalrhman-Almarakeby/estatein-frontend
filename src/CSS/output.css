@@ -935,6 +935,31 @@ input:-webkit-autofill,
   color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
+.text-secondary {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .text-secondary {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .text-secondary {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /* headers */
 
 .h-primary {
@@ -954,6 +979,72 @@ input:-webkit-autofill,
 @media (min-width: 1536px) {
   .h-primary {
     font-size: 3rem;
+  }
+}
+
+/* badges */
+
+.badges-container {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .badges-container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .badges-container {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.badges-container {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+@media (min-width: 1600px) {
+  .badges-container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.badges-container > span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity));
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+  padding-top: 0.40625rem;
+  padding-bottom: 0.40625rem;
+}
+
+@media (min-width: 1600px) {
+  .badges-container > span {
+    gap: 0.375rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .badges-container > span > svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -1143,8 +1234,16 @@ input:-webkit-autofill,
   margin-bottom: 1.25rem;
 }
 
+.mb-auto {
+  margin-bottom: auto;
+}
+
 .mr-auto {
   margin-right: auto;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-2 {
@@ -1153,6 +1252,10 @@ input:-webkit-autofill,
 
 .mt-2\.5 {
   margin-top: 0.625rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .line-clamp-2 {
@@ -1448,6 +1551,10 @@ input:-webkit-autofill,
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-11 {
@@ -1789,6 +1896,10 @@ input:-webkit-autofill,
   padding: 1.25rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-7 {
   padding: 1.75rem;
 }
@@ -1941,6 +2052,11 @@ input:-webkit-autofill,
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2003,6 +2119,10 @@ input:-webkit-autofill,
 
 .ring-offset-white {
   --tw-ring-offset-color: #fff;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur-md {
@@ -2801,6 +2921,30 @@ input:-webkit-autofill,
     margin-bottom: 1.5rem;
   }
 
+  .lg\:mt-1 {
+    margin-top: 0.25rem;
+  }
+
+  .lg\:mt-1\.5 {
+    margin-top: 0.375rem;
+  }
+
+  .lg\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .lg\:mt-2\.5 {
+    margin-top: 0.625rem;
+  }
+
+  .lg\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
+  .lg\:mt-7\.5 {
+    margin-top: 1.875rem;
+  }
+
   .lg\:mt-auto {
     margin-top: auto;
   }
@@ -2851,6 +2995,10 @@ input:-webkit-autofill,
     flex-grow: 1;
   }
 
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2877,6 +3025,10 @@ input:-webkit-autofill,
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:gap-10 {
+    gap: 2.5rem;
   }
 
   .lg\:gap-5 {
@@ -2935,6 +3087,10 @@ input:-webkit-autofill,
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:self-start {
+    align-self: flex-start;
+  }
+
   .lg\:border-none {
     border-style: none;
   }
@@ -2959,6 +3115,11 @@ input:-webkit-autofill,
     padding: 1.875rem;
   }
 
+  .lg\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -2967,6 +3128,11 @@ input:-webkit-autofill,
   .lg\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-base {
@@ -3193,6 +3359,22 @@ input:-webkit-autofill,
 }
 
 @media (min-width: 1600px) {
+  .\33xl\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .\33xl\:mt-2\.5 {
+    margin-top: 0.625rem;
+  }
+
+  .\33xl\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
+  .\33xl\:mt-3\.5 {
+    margin-top: 0.875rem;
+  }
+
   .\33xl\:min-h-\[140px\] {
     min-height: 140px;
   }
@@ -3203,6 +3385,18 @@ input:-webkit-autofill,
 
   .\33xl\:gap-12\.5 {
     gap: 3.125rem;
+  }
+
+  .\33xl\:gap-15 {
+    gap: 3.75rem;
+  }
+
+  .\33xl\:gap-7 {
+    gap: 1.75rem;
+  }
+
+  .\33xl\:gap-7\.5 {
+    gap: 1.875rem;
   }
 
   .\33xl\:space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -3221,6 +3415,11 @@ input:-webkit-autofill,
     padding: 6rem;
   }
 
+  .\33xl\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .\33xl\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
@@ -3234,6 +3433,11 @@ input:-webkit-autofill,
   .\33xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .\33xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .\33xl\:text-4xl {
