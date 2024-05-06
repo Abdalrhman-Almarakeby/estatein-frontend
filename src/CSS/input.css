@@ -92,7 +92,6 @@
   }
 
   /* badges */
-
   .badges-container {
     @apply text-secondary flex flex-wrap gap-1.5 3xl:text-base;
   }
