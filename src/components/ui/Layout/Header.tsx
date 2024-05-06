@@ -17,7 +17,7 @@ export function Header({ showHeader }: HeaderProps) {
 
   const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef);
 
-  const isMenuHidden = !(window.innerWidth < 768 && isOpen);
+  const isMenuHidden = window.innerWidth < 768 && !isOpen;
 
   return (
     <header
@@ -40,7 +40,7 @@ export function Header({ showHeader }: HeaderProps) {
           role="menu"
           ref={menuRef}
           className={cn(
-            "absolute invisible top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
+            "absolute invisible top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:!visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
             isOpen ? "right-0" : "-right-[110%]"
           )}
           onTransitionEnd={menuTransitionEnd}
