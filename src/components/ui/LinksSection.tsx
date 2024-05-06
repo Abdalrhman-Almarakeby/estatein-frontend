@@ -26,7 +26,7 @@ export function LinksSection({ linksData }: LinksSectionProps) {
           className="relative flex flex-col items-center justify-center gap-3.5 rounded-[10px] border  bg-gray-10 px-4 py-5"
         >
           <span className="relative" aria-hidden="true">
-            <IconContainerSVG className="animate-spin duration-10s" />
+            <IconContainerSVG className="animate-[spin_10s_linear]" />
             <Icon className="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 fill-purple-75" />
           </span>
           <p className="text-center text-sm font-medium sm:text-base">{label}</p>

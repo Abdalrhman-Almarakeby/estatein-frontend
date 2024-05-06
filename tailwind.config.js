@@ -77,9 +77,6 @@ module.exports = {
       screens: {
         "3xl": "1600px",
       },
-      transitionDuration: {
-        "10s": "10s",
-      },
       borderColor: {
         DEFAULT: "#262626",
       },
