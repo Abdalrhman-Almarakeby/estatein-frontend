@@ -4,7 +4,7 @@ import WavesSVG from "@/assets/abstractDesigns/waves.svg?react";
 
 export function Gallery() {
   return (
-    <div className="relative grid grid-cols-4 gap-2.5 rounded-xl border p-6 lg:gap-5 lg:p-15 3xl:p-20">
+    <section className="relative grid grid-cols-4 gap-2.5 rounded-xl border p-6 lg:gap-5 lg:p-15 3xl:p-20">
       <WavesSVG className="absolute left-0 top-0 h-full w-full" />
       {GALLERY_IMAGES.map(({ src, alt }) => (
         <img
@@ -20,6 +20,6 @@ export function Gallery() {
         paragraph="Step inside the world of Estatein, where professionalism meets warmth, and expertise meets passion. Our gallery offers a glimpse into our team and workspaces, inviting you to get to know us better."
         className="z-10 col-span-4 mt-11 self-center md:col-span-2 md:my-7.5"
       />
-    </div>
+    </section>
   );
 }
