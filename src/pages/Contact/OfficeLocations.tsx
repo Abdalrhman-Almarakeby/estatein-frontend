@@ -31,15 +31,16 @@ export function OfficeLocations() {
       <div className="flex flex-col gap-7.5 lg:gap-10 3xl:gap-15">
         <div
           role="tablist"
-          className="grid grid-cols-3 gap-2.5 rounded-[0.625rem] bg-gray-10 p-2.5 lg:self-start"
+          className="grid grid-cols-2 gap-2.5 rounded-[0.625rem] bg-gray-10 p-2.5 min-[450px]:grid-cols-3 lg:self-start"
         >
           {LOCATIONS_TYPE.map((element) => (
             <button
+              key={element}
               role="tab"
               aria-selected={currentLocationsType === element}
               aria-label={`Show ${element} locations`}
               className={cn(
-                "btn-sm capitalize lg:px-9 3xl:px-16 3xl:btn-lg",
+                "btn-sm capitalize first:col-span-2 min-[450px]:first:col-span-1 lg:px-9 3xl:px-16 3xl:btn-lg",
                 currentLocationsType === element ? "btn-secondary" : "btn-tertiary"
               )}
               onClick={() => handleLocationsClick(element)}
