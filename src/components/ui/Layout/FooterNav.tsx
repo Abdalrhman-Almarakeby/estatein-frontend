@@ -11,6 +11,7 @@ export function FooterNav() {
         <HashLink to="/#testimonials">Testimonials</HashLink>
         <HashLink to="/#faqs">FAQ's</HashLink>
       </FooterLinks>
+      {/* // TODO: Add the right hash links in about us page   */}
       <FooterLinks pageName="About Us" className="row-span-5 md:order-2">
         <HashLink to="/about">About Us</HashLink>
         <HashLink to="/about#story">Our Story</HashLink>
@@ -19,13 +20,15 @@ export function FooterNav() {
         <HashLink to="/about#team">Our Team</HashLink>
         <HashLink to="/about#clients">Our Clients</HashLink>
       </FooterLinks>
+      {/* // TODO: Add the right hash links in properties page   */}
       <FooterLinks pageName="Properties" className="row-span-3 md:order-4">
-        <HashLink to="/properties">Properties</HashLink>
+        <HashLink to="/properties#">Properties</HashLink>
         <HashLink to="/properties#portfolio">Portfolio</HashLink>
         <HashLink to="/properties#catagories">Catagories</HashLink>
       </FooterLinks>
+      {/* // TODO: Add the right hash links in services page   */}
       <FooterLinks pageName="Services" className="row-span-5 md:order-3">
-        <HashLink to="/services">Services</HashLink>
+        <HashLink to="/services#">Services</HashLink>
         <HashLink to="/services#valuation">Valuation Mastery</HashLink>
         <HashLink to="/services#marketing">Strategic Marketing</HashLink>
         <HashLink to="/services#negotiation">Negotiation Wizardry</HashLink>
@@ -33,7 +36,7 @@ export function FooterNav() {
         <HashLink to="/services#property-management">Property Management</HashLink>
       </FooterLinks>
       <FooterLinks pageName="Contact Us" className="row-span-3 md:order-5">
-        <HashLink to="/contact">Contact Us</HashLink>
+        <HashLink to="/contact#">Contact Us</HashLink>
         <HashLink to="/contact#contact">Contact Form</HashLink>
         <HashLink to="/contact#offices">Our Offices</HashLink>
       </FooterLinks>

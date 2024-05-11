@@ -19,7 +19,7 @@ export function ContactFormSection() {
   const { register, errors, onSubmit, control } = useContactForm();
 
   return (
-    <div className="space-y-10 md:space-y-12 lg:space-y-15 2xl:space-y-20">
+    <section id="contact" className="space-y-10 md:space-y-12 lg:space-y-15 2xl:space-y-20">
       <SectionTitle
         title="Let's Connect"
         paragraph="We're excited to connect with you and learn more about your real estate goals. Use the form below to get in touch with Estatein."
@@ -153,6 +153,6 @@ export function ContactFormSection() {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

@@ -23,7 +23,7 @@ export function OfficeLocations() {
   }
 
   return (
-    <div className="space-y-10 md:space-y-12 lg:space-y-15 2xl:space-y-20">
+    <section id="offices" className="space-y-10 md:space-y-12 lg:space-y-15 2xl:space-y-20">
       <SectionTitle
         title="Discover Our Office Locations"
         paragraph="Estatein is here to serve you across multiple locations. Whether you're looking to meet our team."
@@ -55,6 +55,6 @@ export function OfficeLocations() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
