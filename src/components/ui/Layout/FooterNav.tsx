@@ -3,8 +3,8 @@ import { FooterLinks } from "./FooterLinks";
 
 export function FooterNav() {
   return (
-    <nav className="grid grid-cols-2 grid-rows-11 gap-5 md:grid-cols-3 md:grid-rows-2 md:gap-x-10 lg:grid-cols-5 lg:grid-rows-1 lg:gap-5 xl:m-0 xl:flex xl:flex-grow xl:justify-between">
-      <FooterLinks pageName="Home" className="row-span-5 md:order-1">
+    <nav className="grid grid-cols-2 grid-rows-10 gap-5 md:grid-cols-3 md:grid-rows-2 md:gap-x-10 lg:grid-cols-5 lg:grid-rows-1 lg:gap-5 xl:m-0 xl:flex xl:flex-grow xl:justify-between">
+      <FooterLinks pageName="Home" className="row-span-4 md:order-1 md:row-span-5">
         <HashLink to="/#hero">Home</HashLink>
         <HashLink to="/#hero">Hero Section</HashLink>
         <HashLink to="/#featured-properties">Featured Properties</HashLink>

@@ -1204,6 +1204,14 @@ input:-webkit-autofill,
   grid-row: span 5 / span 5;
 }
 
+.row-span-4 {
+  grid-row: span 4 / span 4;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .-mx-1 {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
@@ -1579,6 +1587,10 @@ input:-webkit-autofill,
 
 .grid-rows-11 {
   grid-template-rows: repeat(11, minmax(0, 1fr));
+}
+
+.grid-rows-10 {
+  grid-template-rows: repeat(10, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2838,6 +2850,10 @@ input:-webkit-autofill,
 
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .md\:row-span-5 {
+    grid-row: span 5 / span 5;
   }
 
   .md\:my-7 {
