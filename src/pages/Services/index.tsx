@@ -34,7 +34,7 @@ export function Services() {
       <div>
         <HeaderSection
           title="Elevate Your Real Estate Experience"
-          p="Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams."
+          paragraph="Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams."
         />
         <LinksSection linksData={LINKS_DATA} />
       </div>
