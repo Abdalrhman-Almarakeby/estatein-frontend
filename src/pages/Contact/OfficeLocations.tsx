@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { LOCATIONS, LOCATIONS_TYPE } from "@/constant/locations";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { Section, SectionTitle } from "@/components/ui/Section";
 import { LocationCard } from "./LocationCard";
 import { cn } from "@/lib/utils/cn";
 
@@ -23,7 +23,7 @@ export function OfficeLocations() {
   }
 
   return (
-    <section id="offices" className="space-y-10 md:space-y-12 lg:space-y-15 2xl:space-y-20">
+    <Section id="offices">
       <SectionTitle
         title="Discover Our Office Locations"
         paragraph="Estatein is here to serve you across multiple locations. Whether you're looking to meet our team."
@@ -55,6 +55,6 @@ export function OfficeLocations() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

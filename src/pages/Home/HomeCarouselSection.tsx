@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { Section, SectionTitle } from "@/components/ui/Section";
 import {
   Carousel,
   CarouselContent,
@@ -33,7 +33,7 @@ const HomeCarouselSection = memo(
     retry,
   }: HomeCarouselSectionProps) => {
     return (
-      <section id={id} className="space-y-10 md:space-y-12 lg:space-y-15">
+      <Section id={id} className="space-y-10 md:space-y-12 lg:space-y-15">
         <div className="flex justify-between">
           <SectionTitle title={title} paragraph={paragraph} />
           <Link
@@ -73,7 +73,7 @@ const HomeCarouselSection = memo(
             </button>
           </div>
         )}
-      </section>
+      </Section>
     );
   }
 );

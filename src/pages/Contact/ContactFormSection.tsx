@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Controller } from "react-hook-form";
 import { useContactForm } from "./useContactForm";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { Section, SectionTitle } from "@/components/ui/Section";
 import { Input } from "@/components/form/Input";
 import {
   Select,
@@ -19,7 +19,7 @@ export function ContactFormSection() {
   const { register, errors, onSubmit, control } = useContactForm();
 
   return (
-    <section id="contact" className="space-y-10 md:space-y-12 lg:space-y-15 2xl:space-y-20">
+    <Section id="contact">
       <SectionTitle
         title="Let's Connect"
         paragraph="We're excited to connect with you and learn more about your real estate goals. Use the form below to get in touch with Estatein."
@@ -153,6 +153,6 @@ export function ContactFormSection() {
           </button>
         </div>
       </form>
-    </section>
+    </Section>
   );
 }

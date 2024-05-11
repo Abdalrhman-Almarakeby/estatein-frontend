@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { SectionTitle } from "@/components/ui/Section";
 import { GALLERY_IMAGES } from "@/constant/galleryImages";
 import WavesSVG from "@/assets/abstractDesigns/waves.svg?react";
 
