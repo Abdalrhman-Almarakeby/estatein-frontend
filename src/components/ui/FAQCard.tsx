@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils/cn";
 
 type FAQCardProps = {
   question: string;
   answer: string;
+  className?: string;
 };
 
-export function FAQCard({ question, answer }: FAQCardProps) {
+export function FAQCard({ question, answer, className }: FAQCardProps) {
   return (
-    <div className="flex flex-col justify-between gap-5 rounded-xl border p-7.5 lg:gap-6 lg:p-10">
+    <div
+      className={cn(
+        "flex flex-col justify-between gap-5 rounded-xl border p-7.5 lg:gap-6 lg:p-10",
+        className
+      )}
+    >
       <p className="text-lg lg:text-xl 3xl:text-2xl">{question}</p>
       <p className="text-primary">{answer}</p>
       <Link

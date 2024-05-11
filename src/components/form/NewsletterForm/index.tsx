@@ -1,13 +1,18 @@
-import { useNewsletter } from "./useNewsletterForm.ts";
-import { Input } from "../Input.tsx";
+import { Input } from "@/components/form/Input.tsx";
+import { cn } from "@/lib/utils/cn";
 import MailPlusIconSVG from "@/assets/icons/email-plus.svg?react";
 import MailSendingIconSVG from "@/assets/icons/mail-sending.svg?react";
+import { useNewsletter } from "./useNewsletterForm";
 
-export function NewsletterForm() {
+type NewsletterFormProps = {
+  className?: string;
+};
+
+export function NewsletterForm({ className }: NewsletterFormProps) {
   const { onSubmit, register, isPending, errors } = useNewsletter();
 
   return (
-    <form onSubmit={onSubmit} className="space-y-3 lg:w-[300px]">
+    <form onSubmit={onSubmit} className={cn("space-y-3 lg:w-[300px]", className)}>
       <p className="px-1 text-lg">Subscribe to our newsletter!</p>
       <div className="relative">
         <MailPlusIconSVG className="absolute left-5 top-1/2 -translate-y-1/2" aria-hidden="true" />
