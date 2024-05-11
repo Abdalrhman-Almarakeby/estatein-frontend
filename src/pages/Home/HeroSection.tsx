@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { LinksSection } from "@/components/ui/LinksSection";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
-import { HOME_PAGE_LINKS_DATA } from "@/constant/homePageLinksData";
+import { HOME_PAGE_LINKS_DATA } from "@/constant/pageLinksData/home";
 import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
 import { Achievement } from "./Achievement";
 

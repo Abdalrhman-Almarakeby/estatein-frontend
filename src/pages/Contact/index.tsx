@@ -1,7 +1,7 @@
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { LinksSection } from "@/components/ui/LinksSection";
 import { CTA } from "@/components/ui/CTA";
-import { CONTACT_PAGE_LINKS_DATA } from "@/constant/contactPageLinksData";
+import { CONTACT_PAGE_LINKS_DATA } from "@/constant/pageLinksData/contact";
 import { ContactFormSection } from "./ContactFormSection";
 import { OfficeLocations } from "./OfficeLocations";
 import { Gallery } from "./Gallery";

@@ -1,6 +1,6 @@
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { LinksSection } from "@/components/ui/LinksSection";
-import { SERVICES_PAGE_LINKS_DATA } from "@/constant/servicesPageLinksData";
+import { SERVICES_PAGE_LINKS_DATA } from "@/constant/pageLinksData/services";
 
 export function Services() {
   return (
