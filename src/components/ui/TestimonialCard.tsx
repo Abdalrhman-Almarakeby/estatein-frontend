@@ -1,7 +1,7 @@
-import { testimonial } from "@/lib/types/testimonial";
+import { Testimonial } from "@/lib/types/testimonial";
 import { Stars } from "@/components/ui/Stars";
 
-type TestimonialCardProps = testimonial;
+type TestimonialCardProps = Testimonial;
 
 export function TestimonialCard({
   rating,
