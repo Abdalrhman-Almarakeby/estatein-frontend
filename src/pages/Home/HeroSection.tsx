@@ -1,35 +1,9 @@
 import { Link } from "react-router-dom";
-import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
 import { LinksSection } from "@/components/ui/LinksSection";
-import { Achievement } from "./Achievement";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
-import HomeIconSVG from "@/assets/icons/home.svg?react";
-import CashIconSVG from "@/assets/icons/cash.svg?react";
-import BuildingsIconSVG from "@/assets/icons/buildings.svg?react";
-import SunIconSVG from "@/assets/icons/sun.svg?react";
-
-const LINKS_DATA = [
-  {
-    to: "/properties",
-    Icon: HomeIconSVG,
-    label: "Find Your Dream Home",
-  },
-  {
-    to: "/properties",
-    Icon: CashIconSVG,
-    label: "Unlock Property Value",
-  },
-  {
-    to: "/properties",
-    Icon: BuildingsIconSVG,
-    label: "Effortless Property Management",
-  },
-  {
-    to: "/properties",
-    Icon: SunIconSVG,
-    label: "Smart Investments, Informed Decisions",
-  },
-] as const;
+import { HOME_PAGE_LINKS_DATA } from "@/constant/homePageLinksData";
+import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
+import { Achievement } from "./Achievement";
 
 export function HeroSection() {
   return (
@@ -65,7 +39,7 @@ export function HeroSection() {
         </Link>
         <Link
           aria-label="Browse properties"
-          className="btn-primary  btn-sm 3xl:btn-lg flex-grow lg:flex-grow-0"
+          className="btn-primary btn-sm 3xl:btn-lg flex-grow lg:flex-grow-0"
           to="/properties"
         >
           Browse Properties
@@ -76,7 +50,7 @@ export function HeroSection() {
         <Achievement achievement="10K+" label="Years Of Experience" />
         <Achievement achievement="16+" label="Years Of Experience" />
       </section>
-      <LinksSection linksData={LINKS_DATA} />
+      <LinksSection linksData={HOME_PAGE_LINKS_DATA} />
     </section>
   );
 }
