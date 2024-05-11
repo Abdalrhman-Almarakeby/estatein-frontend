@@ -28,16 +28,18 @@ export function useNewsletter(): {
         email,
       }),
     onMutate: () => {
-      setToastId(toast.loading("subscribing to the newsletter..."));
+      setToastId(toast.loading("subscribing to the newsletter...", { className: "toast" }));
     },
     onSuccess: () => {
       toast.success("subscribed successfully!", {
         id: toastId || undefined,
+        className: "toast",
       });
     },
     onError: () => {
       toast.error("something went wrong, please try again later!", {
         id: toastId || undefined,
+        className: "toast",
       });
     },
   });

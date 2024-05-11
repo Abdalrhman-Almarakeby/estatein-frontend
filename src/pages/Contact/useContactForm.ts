@@ -32,14 +32,16 @@ export function useContactForm(): {
       axios.post("https://estatein-zgvy.onrender.com/inquiries", {
         inquiryData,
       }),
-    onMutate: () => setToastId(toast.loading("Sending Your Message...")),
+    onMutate: () => setToastId(toast.loading("Sending Your Message...", { className: "toast" })),
     onSuccess: () =>
       toast.success("Your message is sent successfully!", {
         id: toastId || undefined,
+        className: "toast",
       }),
     onError: () =>
       toast.error("something went wrong, please try again later!", {
         id: toastId || undefined,
+        className: "toast",
       }),
   });
 
