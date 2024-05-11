@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import IconContainerSVG from "@/assets/icons/icon-container.svg?react";
+import { IconContainer } from "@/components/ui/IconContainer";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
 type LinkData = {
@@ -16,19 +16,16 @@ type LinksSectionProps = {
 
 export function LinksSection({ linksData }: LinksSectionProps) {
   return (
-    <section className="mx-break-out px-break-out grid grid-cols-2 gap-2.5 rounded-xl border  bg-gray-08 p-2.5 shadow-[#191919_0px_0px_0px_5px] min-[1700px]:container md:col-span-2 lg:order-5 lg:grid-cols-4 min-[1700px]:!p-2.5">
+    <section className="mx-break-out px-break-out grid grid-cols-2 gap-2.5 rounded-xl border bg-gray-08 p-2.5 shadow-[#191919_0px_0px_0px_5px] min-[1700px]:container md:col-span-2 lg:order-5 lg:grid-cols-4 min-[1700px]:!p-2.5">
       {linksData.map(({ to, Icon, label, target, ariaLabel }) => (
         <Link
           target={target}
           aria-label={ariaLabel}
           key={label}
           to={to}
-          className="relative flex flex-col items-center justify-center gap-3.5 rounded-[10px] border  bg-gray-10 px-4 py-5"
+          className="relative flex flex-col items-center justify-center gap-3.5 rounded-[10px] border bg-gray-10 px-4 py-5"
         >
-          <span className="relative" aria-hidden="true">
-            <IconContainerSVG className="animate-[spin_10s_linear]" />
-            <Icon className="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 fill-purple-75" />
-          </span>
+          <IconContainer Icon={Icon} />
           <p className="text-center text-sm font-medium sm:text-base">{label}</p>
           <DiagonalArrowIconSVG
             className="absolute right-3 top-4 size-5 stroke-gray-30 lg:right-5 lg:top-6"
