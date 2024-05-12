@@ -1,6 +1,6 @@
-import { testimonial } from "../lib/types/testimonial";
+import { Testimonial } from "../lib/types/testimonial";
 
-export const TESTIMONIALS: testimonial[] = [
+export const TESTIMONIALS: Testimonial[] = [
   {
     rating: 5,
     title: "Exceptional Service!",
