@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { IconContainer } from "@/components/ui/IconContainer";
+import { SVGcomponent } from "@/lib/types/svgComponent";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
 type LinkData = {
   to: string;
-  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  Icon: SVGcomponent;
   label: string;
   target?: React.HTMLAttributeAnchorTarget;
   ariaLabel?: string;

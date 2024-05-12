@@ -1,11 +1,12 @@
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { DataCard } from "@/components/ui/DataCard";
+import { SVGcomponent } from "@/lib/types/svgComponent";
 import { CTACard } from "./CTACard";
 
 type ServiceData = {
   title: string;
   paragraph: string;
-  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  Icon: SVGcomponent;
 };
 
 type ServicesSectionProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -32,7 +33,7 @@ export function ServicesSection({
         {servicesData.map((serviceData) => (
           <DataCard key={serviceData.title} {...serviceData} />
         ))}
-        <CTACard {...CTACardData} className="sm:col-span-2" extend/>
+        <CTACard {...CTACardData} className="sm:col-span-2" extend />
       </div>
     </Section>
   );

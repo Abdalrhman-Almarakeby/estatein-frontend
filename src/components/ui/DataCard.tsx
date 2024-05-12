@@ -1,10 +1,11 @@
-import { cn } from "@/lib/utils/cn";
 import { IconContainer } from "@/components/ui/IconContainer";
+import { SVGcomponent } from "@/lib/types/svgComponent";
+import { cn } from "@/lib/utils/cn";
 
 type DataCardProps = {
   title: string;
   paragraph: string;
-  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  Icon: SVGcomponent;
   className?: string;
 };
 
