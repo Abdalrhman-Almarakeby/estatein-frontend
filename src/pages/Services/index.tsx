@@ -1,11 +1,13 @@
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { LinksSection } from "@/components/ui/LinksSection";
+import { CTA } from "@/components/ui/CTA";
 import { SERVICES_PAGE_LINKS_DATA } from "@/constant/pageLinksData/services";
 import { PROPERTIES_SERVICES } from "@/constant/propertiesServices";
 import { PROPERTY_MANAGEMENT_SERVICES } from "@/constant/propertyManagementServices";
 import { PROPERTIES_SERVICES_CTA_CARD_DATA } from "@/constant/propertiesServicesCardData";
 import { PROPERTY_MANAGEMENT_SERVICES_CTA_CARD_DATA } from "@/constant/propertyManagementServicesCardData";
 import { ServicesSection } from "./ServicesSection";
+import { InvestmentSection } from "./InvestmentSection";
 
 export function Services() {
   return (
@@ -29,6 +31,8 @@ export function Services() {
         CTACardData={PROPERTY_MANAGEMENT_SERVICES_CTA_CARD_DATA}
         servicesData={PROPERTY_MANAGEMENT_SERVICES}
       />
+      <InvestmentSection />
+      <CTA />
     </div>
   );
 }

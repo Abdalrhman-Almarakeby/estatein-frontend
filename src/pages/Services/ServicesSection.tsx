@@ -28,11 +28,11 @@ export function ServicesSection({
   return (
     <Section>
       <SectionTitle title={title} paragraph={paragraph} />
-      <div className="grid auto-rows-fr gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-7.5">
+      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-7.5">
         {servicesData.map((serviceData) => (
           <DataCard key={serviceData.title} {...serviceData} />
         ))}
-        <CTACard {...CTACardData} className="sm:col-span-2" />
+        <CTACard {...CTACardData} className="sm:col-span-2" extend/>
       </div>
     </Section>
   );
