@@ -9,7 +9,7 @@ type CTACardProps = {
   className?: string;
 };
 
-export default function CTACard({ title, paragraph, link, className }: CTACardProps) {
+export function CTACard({ title, paragraph, link, className }: CTACardProps) {
   return (
     <div
       className={cn(

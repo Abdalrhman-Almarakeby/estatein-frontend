@@ -1,6 +1,6 @@
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { DataCard } from "@/components/ui/DataCard";
-import CTACard from "./CTACard";
+import { CTACard } from "./CTACard";
 
 type ServiceData = {
   title: string;
