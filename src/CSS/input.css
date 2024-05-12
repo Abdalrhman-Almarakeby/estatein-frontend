@@ -47,7 +47,7 @@
 
   /* buttons */
   .btn {
-    @apply rounded-lg;
+    @apply whitespace-nowrap rounded-lg;
   }
 
   .btn-sm {

@@ -16,7 +16,7 @@ export function CTA() {
       </div>
       <Link
         to="/properties"
-        className="btn-primary btn-sm 3xl:btn-lg z-10 text-center whitespace-nowrap"
+        className="btn-primary btn-sm 3xl:btn-lg z-10 whitespace-nowrap text-center"
       >
         Explore Properties
       </Link>
