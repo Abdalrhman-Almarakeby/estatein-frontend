@@ -3,7 +3,7 @@ import { LinksSection } from "@/components/ui/LinksSection";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import { HOME_PAGE_LINKS_DATA } from "@/constant/pageLinksData/home";
 import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
-import { Achievement } from "./Achievement";
+import { Achievement } from "@/components/ui/Achievement";
 
 export function HeroSection() {
   return (
@@ -47,7 +47,7 @@ export function HeroSection() {
       </nav>
       <section className="grid grid-cols-2 gap-3 text-center sm:grid-cols-3 md:col-span-2 lg:order-4 lg:mb-6 xl:col-span-1 xl:mb-0 2xl:col-span-1 2xl:mb-24.5 2xl:items-center min-[1700px]:mb-0">
         <Achievement achievement="200+" label="Happy Customer" />
-        <Achievement achievement="10K+" label="Years Of Experience" />
+        <Achievement achievement="10K+" label="Properties For Clients" />
         <Achievement achievement="16+" label="Years Of Experience" />
       </section>
       <LinksSection linksData={HOME_PAGE_LINKS_DATA} />
