@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils/cn";
 type DataCardProps = {
   title: string;
   paragraph: string;
-  Icon: SVGcomponent;
+  Icon?: SVGcomponent;
   className?: string;
 };
 
@@ -17,10 +17,14 @@ export function DataCard({ title, paragraph, Icon, className }: DataCardProps) {
         className
       )}
     >
-      <div className="flex items-center gap-2.5 lg:gap-4 3xl:gap-6">
-        <IconContainer Icon={Icon} />
+      {Icon ? (
+        <div className={cn("flex items-center gap-2.5 lg:gap-4 3xl:gap-6")}>
+          <IconContainer Icon={Icon} />
+          <p className="text-lg font-semibold lg:text-xl 3xl:text-2xl">{title}</p>
+        </div>
+      ) : (
         <p className="text-lg font-semibold lg:text-xl 3xl:text-2xl">{title}</p>
-      </div>
+      )}
       <p className="text-primary">{paragraph}</p>
     </div>
   );
