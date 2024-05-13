@@ -8,7 +8,7 @@ import { Gallery } from "./Gallery";
 
 export function Contact() {
   return (
-    <div className="container flex-grow space-y-20 lg:space-y-30">
+    <main className="container flex-grow space-y-20 lg:space-y-30">
       <div>
         <HeaderSection
           title="Get in Touch with Estatein"
@@ -20,6 +20,6 @@ export function Contact() {
       <OfficeLocations />
       <Gallery />
       <CTA />
-    </div>
+    </main>
   );
 }

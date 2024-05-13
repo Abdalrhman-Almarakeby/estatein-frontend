@@ -9,7 +9,7 @@ import { InvestmentSection } from "./InvestmentSection";
 
 export function Services() {
   return (
-    <div className="container flex-grow space-y-20 lg:space-y-30">
+    <main className="container flex-grow space-y-20 lg:space-y-30">
       <div>
         <HeaderSection
           title="Elevate Your Real Estate Experience"
@@ -41,6 +41,6 @@ export function Services() {
       />
       <InvestmentSection />
       <CTA />
-    </div>
+    </main>
   );
 }
