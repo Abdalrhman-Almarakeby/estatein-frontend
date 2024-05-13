@@ -1,9 +1,9 @@
-import img1 from "@/assets/imgs/1.webp";
-import img2 from "@/assets/imgs/2.webp";
-import img3 from "@/assets/imgs/3.webp";
-import img4 from "@/assets/imgs/4.webp";
-import img5 from "@/assets/imgs/5.webp";
-import img6 from "@/assets/imgs/6.webp";
+import img1 from "@/assets/gallery/1.webp";
+import img2 from "@/assets/gallery/2.webp";
+import img3 from "@/assets/gallery/3.webp";
+import img4 from "@/assets/gallery/4.webp";
+import img5 from "@/assets/gallery/5.webp";
+import img6 from "@/assets/gallery/6.webp";
 
 export const GALLERY_IMAGES = [
   {
