@@ -30,7 +30,7 @@ export function Home() {
 
   return (
     <main className="flex-grow bg-gray-08">
-      <div className="container space-y-20 lg:space-y-30">
+      <div className="page-spacing">
         <HeroSection />
 
         <HomeCarouselSection

@@ -1,3 +1,3 @@
 export function About() {
-  return <div className="flex-grow">About</div>;
+  return <main className="page-spacing flex-grow"></main>;
 }

@@ -8,7 +8,7 @@ import { Gallery } from "./Gallery";
 
 export function Contact() {
   return (
-    <main className="container flex-grow space-y-20 lg:space-y-30">
+    <main className="page-spacing flex-grow">
       <div>
         <HeaderSection
           title="Get in Touch with Estatein"

@@ -40,11 +40,6 @@
 }
 
 @layer components {
-  /* style toast in react hoot toast */
-  .toast {
-    @apply rounded-md border-2 border-solid border-white bg-gray-15 text-white transition-all;
-  }
-
   /* buttons */
   .btn {
     @apply whitespace-nowrap rounded-lg;
@@ -91,6 +86,11 @@
     @apply font-semibold text-[1.75rem] leading-tight lg:text-[2.375rem] text-white 2xl:text-[3rem];
   }
 
+  /* style toast in react hoot toast */
+  .toast {
+    @apply rounded-md border-2 border-solid border-white bg-gray-15 text-white transition-all;
+  }
+
   /* badges */
   .badges-container {
     @apply text-secondary flex flex-wrap gap-1.5 3xl:text-base;
@@ -106,5 +106,9 @@
 
   .badges-container > span {
     @apply badge;
+  }
+
+  .page-spacing {
+    @apply container space-y-20 lg:space-y-30;
   }
 }
