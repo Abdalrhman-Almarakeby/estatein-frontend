@@ -8,7 +8,7 @@ type StarsProps = {
 
 export function Stars({ num, className }: StarsProps) {
   return (
-    <div className={cn("flex gap-2", className)} aria-label={`${num} stars`}>
+    <div className={cn("flex gap-2", className)}>
       {Array.from({ length: num }).map((_, index) => (
         <span
           key={index}
@@ -18,6 +18,7 @@ export function Stars({ num, className }: StarsProps) {
           <StarSVG className="lg:size-5" />
         </span>
       ))}
+      <div className="sr-only">{`${num} stars`}</div>
     </div>
   );
 }
