@@ -10,8 +10,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // base: "/estatein-frontend",
   server: {
     port: 3000,
+  },
+  build: {
+    sourcemap: "inline",
   },
 });
