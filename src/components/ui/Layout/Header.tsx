@@ -30,7 +30,7 @@ export function Header({ showHeader }: HeaderProps) {
         <img
           src={logo}
           alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
-          className="w-[100px] md:hidden"
+          className="w-[100px] md:sr-only"
         />
         <nav
           id="main-menu"
@@ -49,6 +49,7 @@ export function Header({ showHeader }: HeaderProps) {
             src={logo}
             alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
+            aria-hidden="true"
           />
           <HashLink
             onClick={() => isOpen && toggle()}
