@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 import WavesSVG from "@/assets/abstractDesigns/waves-2.svg?react";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 
 type CTACardProps = {
   title: string;

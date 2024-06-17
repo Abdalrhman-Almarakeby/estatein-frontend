@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useThrottle } from "@/lib/hooks/useThrottle";
-import { useWindowSize } from "@/lib/hooks/useWindowSize";
+import { useThrottle, useWindowSize } from "@/lib/hooks";
 
 export function useMenu() {
   const [isOpen, setIsOpen] = useState(false);

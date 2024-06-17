@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ScrollDirection } from "@/lib/types/scrollDirection";
+import { ScrollDirection } from "@/lib/types";
 import { getScrollDirection } from "./getScrollDirection";
 import { useWindowSize } from "@/lib/hooks";
 

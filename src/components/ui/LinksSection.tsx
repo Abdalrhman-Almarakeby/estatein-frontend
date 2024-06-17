@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { IconContainer } from "@/components/ui/IconContainer";
-import { SVGcomponent } from "@/lib/types/svgComponent";
+import { SVGcomponent } from "@/lib/types";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
 type LinkData = {

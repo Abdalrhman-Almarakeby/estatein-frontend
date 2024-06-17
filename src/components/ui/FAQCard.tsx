@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 
 type FAQCardProps = {
   question: string;

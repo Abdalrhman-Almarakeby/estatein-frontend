@@ -1,5 +1,5 @@
 import StarSVG from "@/assets/icons/star.svg?react";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 
 type StarsProps = {
   num: number;

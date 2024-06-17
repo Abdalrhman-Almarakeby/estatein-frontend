@@ -1,4 +1,4 @@
-import { ScrollDirection } from "@/lib/types/scrollDirection";
+import { ScrollDirection } from "@/lib/types";
 
 export function getScrollDirection(
   lastScrollPosition: number,

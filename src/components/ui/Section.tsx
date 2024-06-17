@@ -1,5 +1,5 @@
 import StarsSVG from "@/assets/abstractDesigns/stars.svg?react";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 import { HTMLAttributes } from "react";
 
 type SectionTitleProps = {

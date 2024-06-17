@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { type Property } from "@/lib/types/property";
+import { type Property } from "@/lib/types";
 import { TESTIMONIALS } from "@/constant/testimonials";
 import { FAQS } from "@/constant/faqs";
 import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";

@@ -1,6 +1,6 @@
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { DataCard } from "@/components/ui/DataCard";
-import { SVGcomponent } from "@/lib/types/svgComponent";
+import { SVGcomponent } from "@/lib/types";
 import { CTACard } from "./CTACard";
 
 type ServiceData = {

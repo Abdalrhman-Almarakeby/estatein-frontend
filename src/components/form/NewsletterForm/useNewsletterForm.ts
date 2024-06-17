@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { emailZodSchema, type Email } from "@/lib/schemas/emailSchema";
+import { emailZodSchema, type Email } from "@/lib/schemas";
 
 export function useNewsletter(): {
   register: UseFormRegister<Email>;

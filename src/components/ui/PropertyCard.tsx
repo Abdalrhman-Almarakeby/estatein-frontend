@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { type Property } from "@/lib/types/property";
+import { type Property } from "@/lib/types";
 import BedSVG from "@/assets/icons/bed.svg?react";
 import BathSVG from "@/assets/icons/bath.svg?react";
 import BuildingSVG from "@/assets/icons/building.svg?react";
-import { formatCurrency } from "@/lib/utils/currency";
+import { formatCurrency } from "@/lib/utils";
 
 export function PropertyCard({
   _id,

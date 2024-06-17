@@ -4,8 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { inquiryZodSchema, type Inquiry } from "@/lib/schemas/inquirySchema";
-import { omit } from "@/lib/utils/object";
+import { inquiryZodSchema, type Inquiry } from "@/lib/schemas";
+import { omit } from "@/lib/utils";
 
 type InquirySchema = Omit<Inquiry, "agreeOnTerms">;
 

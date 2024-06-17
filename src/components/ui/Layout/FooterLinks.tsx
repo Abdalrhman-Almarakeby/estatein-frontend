@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 type FooterLinksProps = {

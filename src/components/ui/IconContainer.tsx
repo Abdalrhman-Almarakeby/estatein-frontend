@@ -1,6 +1,6 @@
 import IconContainerSVG from "@/assets/icons/icon-container.svg?react";
-import { SVGcomponent } from "@/lib/types/svgComponent";
-import { cn } from "@/lib/utils/cn";
+import { SVGcomponent } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 type IconContainerProps = {
   Icon: SVGcomponent;

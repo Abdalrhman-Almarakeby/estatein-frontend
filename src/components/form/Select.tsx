@@ -3,7 +3,7 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import ChevronUpSVG from "@/assets/icons/chevron-up.svg?react";
 import ChevronDownSVG from "@/assets/icons/chevron-down.svg?react";
 import CheckSVG from "@/assets/icons/check.svg?react";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 
 const Select = SelectPrimitive.Root;
 

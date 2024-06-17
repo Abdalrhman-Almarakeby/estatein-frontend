@@ -1,5 +1,5 @@
 import { Input } from "@/components/form/Input.tsx";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils";
 import MailPlusIconSVG from "@/assets/icons/email-plus.svg?react";
 import MailSendingIconSVG from "@/assets/icons/mail-sending.svg?react";
 import { useNewsletter } from "./useNewsletterForm";
