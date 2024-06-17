@@ -34,7 +34,6 @@ module.exports = {
       fontFamily: {
         urbanist: ["Urbanist", ...defaultTheme.fontFamily.sans],
       },
-
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -44,10 +43,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "menu-open": {
+          from: { right: "-110%" },
+          to: { right: "0" },
+        },
+        "menu-close": {
+          from: { display: "flex", right: "0" },
+          to: { display: "none", right: "-110%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "menu-open": "menu-open 0.3s ease-in-out",
+        "menu-close": "menu-close 0.3s ease-in-out",
       },
       colors: {
         // purple shades

@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useMenu } from "./useMenu";
@@ -13,11 +12,8 @@ type HeaderProps = {
 
 export function Header({ showHeader }: HeaderProps) {
   const { pathname } = useLocation();
-  const menuRef = useRef<HTMLElement>(null);
 
-  const { isOpen, toggle, menuTransitionEnd } = useMenu(menuRef);
-
-  const isMenuHidden = window.innerWidth < 768 && !isOpen;
+  const { isOpen, toggle, isMenuHidden } = useMenu();
 
   return (
     <header
@@ -38,12 +34,10 @@ export function Header({ showHeader }: HeaderProps) {
           aria-expanded={isOpen}
           aria-hidden={isMenuHidden}
           role="menu"
-          ref={menuRef}
           className={cn(
-            "absolute invisible top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md transition-[right] duration-300 md:!visible md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
-            isOpen ? "right-0" : "-right-[110%]"
+            "absolute top-0 z-50 flex h-svh w-svw flex-col items-center gap-5 self-stretch pt-20 text-3xl backdrop-blur-md md:static md:flex md:size-auto md:flex-row md:gap-1 md:pt-0 md:text-base md:backdrop-blur-none 2xl:gap-1.5",
+            isOpen ? "right-0 flex animate-menu-open" : "-right-[110%] hidden animate-menu-close"
           )}
-          onTransitionEnd={menuTransitionEnd}
         >
           <img
             src={logo}

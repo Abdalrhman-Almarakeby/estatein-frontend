@@ -1,28 +1,19 @@
-import { useEffect } from "react";
-import { useDebounce } from "@/lib/hooks/useDebounce";
+import { useEffect, useState } from "react";
+import { useThrottle } from "@/lib/hooks/useThrottle";
+import { useWindowSize } from "@/lib/hooks/useWindowSize";
 
-export function useMenu(menuRef: React.RefObject<HTMLElement>) {
-  const { debouncedValue: debounceIsOpen, value: isOpen, setValue: setIsOpen } = useDebounce(false);
+export function useMenu() {
+  const [isOpen, setIsOpen] = useState(false);
+  const throttledIsOpen = useThrottle(isOpen);
+  const windowSize = useWindowSize();
+
+  const isMenuHidden = windowSize.width < 768 && !isOpen;
 
   function toggle() {
-    setIsOpen(!debounceIsOpen);
-  }
-
-  function menuTransitionEnd(e: React.TransitionEvent<HTMLElement>) {
-    const target = e.target as Element;
-    if (menuRef.current !== target) return;
-
-    if (isOpen) {
-      target.classList.add("visible");
-      target.classList.remove("invisible");
-    } else {
-      target.classList.add("invisible");
-      target.classList.remove("visible");
-    }
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   }
 
   useEffect(() => {
-    // close the menu when the window is scrolled by down or up more than 50px
     let prevScrollPosition = 0;
 
     function handleScroll() {
@@ -32,7 +23,9 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>) {
       const scrollAmount = Math.abs(currentScrollPosition - prevScrollPosition);
 
       const scrolledALot = scrollAmount > MIN_SCROLL_AMOUNT;
-      if (isOpen && scrolledALot) setIsOpen(false);
+      if (isOpen && scrolledALot) {
+        setIsOpen(false);
+      }
 
       prevScrollPosition = currentScrollPosition;
     }
@@ -43,8 +36,8 @@ export function useMenu(menuRef: React.RefObject<HTMLElement>) {
   }, [isOpen, setIsOpen]);
 
   return {
-    isOpen,
+    isMenuHidden,
+    isOpen: throttledIsOpen,
     toggle,
-    menuTransitionEnd,
   };
 }
