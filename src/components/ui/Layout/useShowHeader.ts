@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ScrollDirection } from "@/lib/types";
-import { getScrollDirection } from "./getScrollDirection";
 import { useWindowSize } from "@/lib/hooks";
+import { getScrollDirection } from "./getScrollDirection";
 
 export function useShowHeader() {
   const [isOnTop, setIsOnTop] = useState(true);

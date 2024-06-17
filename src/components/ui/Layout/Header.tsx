@@ -1,10 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { useMenu } from "./useMenu";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.svg";
 import burgerIcon from "@/assets/icons/burger-menu.svg";
 import xIcon from "@/assets/icons/x-mark.svg";
+import { useMenu } from "./useMenu";
 
 type HeaderProps = {
   showHeader: boolean;

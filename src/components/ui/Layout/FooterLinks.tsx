@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 type FooterLinksProps = {
   pageName: string;
