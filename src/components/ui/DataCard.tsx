@@ -1,5 +1,5 @@
 import { IconContainer } from "@/components/ui/IconContainer";
-import { SVGcomponent } from "@/lib/types";
+import { SVGcomponent } from "@/types";
 import { cn } from "@/lib/utils";
 
 type DataCardProps = {
