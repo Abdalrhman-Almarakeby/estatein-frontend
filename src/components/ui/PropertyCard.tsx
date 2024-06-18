@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { type Property } from "@/types";
 import BedSVG from "@/assets/icons/bed.svg?react";
 import BathSVG from "@/assets/icons/bath.svg?react";
@@ -39,12 +39,12 @@ export function PropertyCard({
             <span className="text-primary">Price</span>
             <span className="text-lg">{formatCurrency(price.listingPrice)}</span>
           </p>
-          <Link
+          <HashLink
             to={`/properties/${_id}`}
             className="btn-primary btn-sm 3xl:btn-md flex-grow text-center 3xl:text-lg"
           >
             View Details
-          </Link>
+          </HashLink>
         </div>
       </div>
     </div>

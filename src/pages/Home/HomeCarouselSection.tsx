@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import {
   Carousel,
@@ -36,12 +36,12 @@ const HomeCarouselSection = memo(
       <Section id={id} className="space-y-10 md:space-y-12 lg:space-y-15">
         <div className="flex justify-between">
           <SectionTitle title={title} paragraph={paragraph} />
-          <Link
+          <HashLink
             to={link}
             className="btn-tertiary btn-sm 3xl:btn-lg  hidden self-end text-center lg:block"
           >
             View All {sectionName}
-          </Link>
+          </HashLink>
         </div>
 
         {!isError ? (
@@ -53,12 +53,12 @@ const HomeCarouselSection = memo(
           >
             <CarouselContent className="md:-ml-5">{children}</CarouselContent>
             <div className="flex flex-wrap items-center justify-between gap-2.5 border-t border-t-gray-15 pt-4 text-sm min-[450px]:flex-nowrap min-[450px]:justify-normal md:justify-end md:gap-5">
-              <Link
+              <HashLink
                 to={link}
                 className="btn-tertiary btn-sm 3xl:btn-lg order-last mr-auto basis-full text-center min-[450px]:order-none min-[450px]:basis-auto lg:hidden"
               >
                 View All {sectionName}
-              </Link>
+              </HashLink>
               <CarouselPrevious className="static translate-x-0 translate-y-0 lg:order-2" />
               <CarouselNext className="static translate-x-0 translate-y-0 lg:order-3" />
             </div>

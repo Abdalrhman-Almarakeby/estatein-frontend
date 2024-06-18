@@ -1,5 +1,4 @@
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
 import { NewsletterForm } from "@/components/form/NewsletterForm";
 import { FooterNav } from "./FooterNav.tsx";
 import { SocialMediaLinks } from "./SocialMediaLinks";
@@ -29,9 +28,9 @@ export function Footer() {
           <small className="mb-2.5 text-base md:order-1 md:mb-0">
             @{year} Estatein. All Rights Reserved.
           </small>
-          <Link to="/" className="md:order-2">
+          <HashLink to="/" className="md:order-2">
             Terms & Conditions
-          </Link>
+          </HashLink>
         </div>
       </div>
     </footer>

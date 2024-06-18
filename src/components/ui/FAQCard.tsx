@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { cn } from "@/lib/utils";
 
 type FAQCardProps = {
@@ -17,12 +17,12 @@ export function FAQCard({ question, answer, className }: FAQCardProps) {
     >
       <p className="text-lg lg:text-xl 3xl:text-2xl">{question}</p>
       <p className="text-primary">{answer}</p>
-      <Link
+      <HashLink
         to="/about#how-it-is-work"
         className="btn-tertiary btn-sm 3xl:btn-md text-center 3xl:text-lg"
       >
         Read More
-      </Link>
+      </HashLink>
     </div>
   );
 }

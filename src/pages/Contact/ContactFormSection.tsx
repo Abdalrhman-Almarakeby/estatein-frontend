@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Controller } from "react-hook-form";
 import { useContactForm } from "./useContactForm";
 import { Section, SectionTitle } from "@/components/ui/Section";
@@ -132,14 +132,14 @@ export function ContactFormSection() {
               <Checkbox {...register("agreeOnTerms")} id="agree-on-terms" />
               <label htmlFor="agree-on-terms" className="text-primary">
                 I agree with<>&nbsp;</>
-                <Link to="/" className="underline">
+                <HashLink to="/" className="underline">
                   Terms of Use
-                </Link>
+                </HashLink>
                 <>&nbsp;</>
                 and<>&nbsp;</>
-                <Link to="/" className="underline">
+                <HashLink to="/" className="underline">
                   Privacy Policy
-                </Link>
+                </HashLink>
               </label>
             </div>
             {errors.agreeOnTerms && (

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { LinksSection } from "@/components/ui/LinksSection";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import { HOME_PAGE_LINKS_DATA } from "@/constant/pageLinksData/home";
@@ -30,20 +30,20 @@ export function HeroSection() {
         </p>
       </section>
       <nav className="flex flex-col gap-4 text-center text-sm sm:flex-row sm:text-base md:col-span-2 lg:order-3 lg:col-span-1 lg:items-start 2xl:mb-12.5 3xl:text-lg">
-        <Link
+        <HashLink
           aria-label="Learn more about Estatein"
           className="btn-secondary btn-sm 3xl:btn-lg flex-grow lg:flex-grow-0"
           to="/about"
         >
           Learn More
-        </Link>
-        <Link
+        </HashLink>
+        <HashLink
           aria-label="Browse properties"
           className="btn-primary btn-sm 3xl:btn-lg flex-grow lg:flex-grow-0"
           to="/properties"
         >
           Browse Properties
-        </Link>
+        </HashLink>
       </nav>
       <section className="grid grid-cols-2 gap-3 text-center sm:grid-cols-3 md:col-span-2 lg:order-4 lg:mb-6 xl:col-span-1 xl:mb-0 2xl:col-span-1 2xl:mb-24.5 2xl:items-center min-[1700px]:mb-0">
         <Achievement achievement="200+" label="Happy Customer" />

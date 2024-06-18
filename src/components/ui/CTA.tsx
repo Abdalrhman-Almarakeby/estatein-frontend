@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import GridDesign1SVG from "@/assets/abstractDesigns/grid-1.svg?react";
 import GridDesign2SVG from "@/assets/abstractDesigns/grid-2.svg?react";
 
@@ -14,12 +14,12 @@ export function CTA() {
           available properties or get in touch with our team for personalized assistance.
         </p>
       </div>
-      <Link
-        to="/properties"
+      <HashLink
+        to="/properties#"
         className="btn-primary btn-sm 3xl:btn-lg z-10 whitespace-nowrap text-center"
       >
         Explore Properties
-      </Link>
+      </HashLink>
       <GridDesign1SVG className="absolute left-0 top-0" />
       <GridDesign2SVG className="absolute bottom-0 right-0" />
     </section>

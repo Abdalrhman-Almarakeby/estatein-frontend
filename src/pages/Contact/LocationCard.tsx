@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Location } from "@/types";
 import MailSVG from "@/assets/icons/mail.svg?react";
 import PhoneSVG from "@/assets/icons/phone.svg?react";
@@ -18,25 +17,27 @@ export function LocationCard({ label, location, description, contact }: Location
       </div>
       <div className="badges-container mt-6 lg:mt-7.5">
         <span>
-          <MailSVG aria-hidden="true" /> <Link to={`mailto:${contact.email}`}>{contact.email}</Link>
+          <MailSVG aria-hidden="true" /> <a href={`mailto:${contact.email}`}>{contact.email}</a>
         </span>
         <span className="flex gap-1 rounded-3xl border bg-gray-10 px-3.5 py-[0.40625rem]">
-          <PhoneSVG aria-hidden="true" /> <Link to={`tel:${contact.phone}`}>{contact.phone}</Link>
+          <PhoneSVG aria-hidden="true" /> <a href={`tel:${contact.phone}`}>{contact.phone}</a>
         </span>
         <span className="flex gap-1 rounded-3xl border bg-gray-10 px-3.5 py-[0.40625rem]">
           <LocationSVG aria-hidden="true" />{" "}
-          <Link to={contact.location.link} target="_blank" rel="noopener noreferrer">
+          <a href={contact.location.link} target="_blank" rel="noreferrer">
             {contact.location.name}
-          </Link>
+          </a>
         </span>
       </div>
-      <Link
-        to={contact.location.link}
-        className="btn-primary btn-sm 3xl:btn-lg mt-6 block text-center lg:mt-7.5"
+      <a
+        href={contact.location.link}
+        target="_blank"
+        rel="noreferrer"
         aria-label="Get Direction"
+        className="btn-primary btn-sm 3xl:btn-lg mt-6 block text-center lg:mt-7.5"
       >
         Get Direction
-      </Link>
+      </a>
     </div>
   );
 }

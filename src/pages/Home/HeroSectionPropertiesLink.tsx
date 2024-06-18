@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { cn } from "@/lib/utils";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
@@ -7,13 +7,13 @@ export function HeroSectionPropertiesLink() {
   const radius = size / 2 - 10;
 
   return (
-    <Link
+    <HashLink
       aria-label="Browse properties"
       className={cn(
         "absolute bottom-0 left-0 size-[130px] translate-y-1/3 rounded-full btn-secondary btn-sm 3xl:btn-lg  md:hidden 2xl:top-[95px] 2xl:block 2xl:-translate-x-1/2",
         "p-4"
       )}
-      to="/properties"
+      to="/properties#"
     >
       <svg
         width={size}
@@ -46,6 +46,6 @@ export function HeroSectionPropertiesLink() {
         <DiagonalArrowIconSVG className="size-5 stroke-white" />
       </span>
       <span className="sr-only">Browse Properties</span>
-    </Link>
+    </HashLink>
   );
 }
