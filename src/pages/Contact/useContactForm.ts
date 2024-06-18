@@ -1,4 +1,4 @@
-import { useState, type BaseSyntheticEvent } from "react";
+import { useDebugValue, useState, type BaseSyntheticEvent } from "react";
 import { useForm, type UseFormRegister, type FieldErrors, Control } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -49,6 +49,11 @@ export function useContactForm(): {
     mutate(omit(data, "agreeOnTerms"));
     reset();
   }
+
+  useDebugValue({
+    formErrors: errors,
+    isPending,
+  });
 
   return {
     register,

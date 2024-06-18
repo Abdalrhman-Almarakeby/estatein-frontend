@@ -1,4 +1,4 @@
-import { useState, type BaseSyntheticEvent } from "react";
+import { useState, useDebugValue, type BaseSyntheticEvent } from "react";
 import { useForm, type UseFormRegister, type FieldErrors } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -48,6 +48,11 @@ export function useNewsletter(): {
     mutate(data.email);
     reset();
   }
+
+  useDebugValue({
+    formErrors: errors,
+    isPending,
+  });
 
   return {
     register,

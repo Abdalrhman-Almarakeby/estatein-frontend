@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useDebugValue } from "react";
 import { useThrottle, useWindowSize } from "@/lib/hooks";
 
 export function useMenu() {
@@ -33,6 +33,12 @@ export function useMenu() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isOpen, setIsOpen]);
+
+  useDebugValue({
+    isMenuHidden,
+    isOpen,
+    throttledIsOpen,
+  });
 
   return {
     isMenuHidden,

@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useDebugValue } from "react";
 
 type WindowSize = {
   width: number;
@@ -20,10 +20,13 @@ export function useWindowSize(): WindowSize {
     }
 
     handleResize();
+
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useDebugValue(size);
 
   return size;
 }

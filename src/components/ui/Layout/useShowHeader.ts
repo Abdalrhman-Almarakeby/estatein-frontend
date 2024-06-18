@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDebugValue } from "react";
 import { ScrollDirection } from "@/types";
 import { useWindowSize } from "@/lib/hooks";
 import { getScrollDirection } from "./getScrollDirection";
@@ -28,7 +28,14 @@ export function useShowHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isSmallScreen, scrollDirection, windowSize.width]);
 
-  if (!isSmallScreen) return false;
+  const showHeader = isSmallScreen && (scrollDirection === "up" || isOnTop);
 
-  return scrollDirection === "up" || isOnTop;
+  useDebugValue({
+    isOnTop,
+    isSmallScreen,
+    scrollDirection,
+    showHeader,
+  });
+
+  return showHeader;
 }
