@@ -142,6 +142,8 @@ const Carousel = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement> & Car
   }
 );
 
+Carousel.displayName = "Carousel";
+
 const CarouselContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
     const { carouselRef, orientation } = useCarousel();
@@ -162,6 +164,8 @@ const CarouselContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement
   }
 );
 
+CarouselContent.displayName = "CarouselContent";
+
 const CarouselItem = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
     const { orientation } = useCarousel();
@@ -181,6 +185,8 @@ const CarouselItem = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     );
   }
 );
+
+CarouselItem.displayName = "CarouselItem";
 
 const CarouselPrevious = forwardRef<HTMLButtonElement, CarouselControlButtonProps>(
   ({ className, ...props }, ref) => {
@@ -207,6 +213,8 @@ const CarouselPrevious = forwardRef<HTMLButtonElement, CarouselControlButtonProp
   }
 );
 
+CarouselPrevious.displayName = "CarouselPrevious";
+
 const CarouselNext = forwardRef<HTMLButtonElement, CarouselControlButtonProps>(
   ({ className, ...props }, ref) => {
     const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -231,6 +239,8 @@ const CarouselNext = forwardRef<HTMLButtonElement, CarouselControlButtonProps>(
     );
   }
 );
+
+CarouselNext.displayName = "CarouselNext";
 
 export {
   type CarouselApi,
