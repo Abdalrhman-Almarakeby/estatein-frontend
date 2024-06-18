@@ -190,7 +190,7 @@ const CarouselPrevious = forwardRef<HTMLButtonElement, CarouselControlButtonProp
       <button
         ref={ref}
         className={cn(
-          "size-11 rounded-full bg-gray-10 border grid place-items-center",
+          "size-11 rounded-full bg-gray-10 border grid place-items-center disabled:opacity-50",
           orientation === "horizontal"
             ? "-left-12 top-1/2 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -215,7 +215,7 @@ const CarouselNext = forwardRef<HTMLButtonElement, CarouselControlButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "size-11 rounded-full border bg-gray-10  grid place-items-center ",
+          "size-11 rounded-full border bg-gray-10  grid place-items-center disabled:opacity-50",
           orientation === "horizontal"
             ? "-right-12 top-1/2 -translate-y-1/2"
             : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
