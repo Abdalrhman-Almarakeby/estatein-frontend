@@ -28,7 +28,7 @@ export function TeamMemberCard({ img, name, role, twitterLink }: TeamMemberCardP
       </div>
       <div className="space-y-2">
         <p className="text-secondary text-lg font-semibold lg:text-xl 3xl:text-2xl">{name}</p>
-        <p className="text-primary text-sm lg:text-base 3xl:text-lg">{role}</p>
+        <p className="text-primary">{role}</p>
       </div>
     </div>
   );
