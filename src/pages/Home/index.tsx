@@ -9,6 +9,7 @@ import { FAQCard } from "@/pages/Home/FAQCard";
 import { HeroSection } from "./HeroSection";
 import { HomeCarouselSection, CarouselItem } from "./HomeCarouselSection";
 import { CTA } from "@/components/ui/CTA";
+import { Helmet } from "react-helmet-async";
 
 const PROPERTIES_TO_DISPLAY = 60;
 
@@ -30,6 +31,17 @@ export function Home() {
 
   return (
     <main className="flex-grow bg-gray-08">
+      <Helmet>
+        <title>Estatein - Your Ultimate Real Estate Destination | Discover Properties</title>
+        <meta
+          name="description"
+          content="Welcome to Estatein! Find your perfect home, explore top property listings, and connect with trusted real estate agents. Your dream property is just a click away."
+        />
+        <meta
+          name="keywords"
+          content="real estate, property listings, home search, real estate agents, dream home"
+        />
+      </Helmet>
       <div className="page-spacing">
         <HeroSection />
 

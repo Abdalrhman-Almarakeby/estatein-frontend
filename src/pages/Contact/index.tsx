@@ -5,10 +5,22 @@ import { CONTACT_PAGE_LINKS_DATA } from "@/constant/pageLinksData/contact";
 import { ContactFormSection } from "./ContactFormSection";
 import { OfficeLocations } from "./OfficeLocations";
 import { Gallery } from "./Gallery";
+import { Helmet } from "react-helmet-async";
 
 export function Contact() {
   return (
     <main className="page-spacing flex-grow">
+      <Helmet>
+        <title>Contact Estatein | Get in Touch for Real Estate Assistance</title>
+        <meta
+          name="description"
+          content="Need help with your property search? Contact Estatein today! Our team is ready to assist with all your real estate needs. Reach out via phone, email, or our contact form."
+        />
+        <meta
+          name="keywords"
+          content="contact Estatein, real estate assistance, customer support, contact form, property inquiries"
+        />
+      </Helmet>
       <div>
         <HeaderSection
           title="Get in Touch with Estatein"

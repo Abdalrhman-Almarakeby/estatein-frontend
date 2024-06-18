@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import { HelmetProvider } from "react-helmet-async";
 import { useShowHeader } from "./useShowHeader";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -21,7 +22,9 @@ export function Layout() {
         }}
       />
       <Header showHeader={showHeader} />
-      <Outlet />
+      <HelmetProvider>
+        <Outlet />
+      </HelmetProvider>
       <Footer />
     </div>
   );

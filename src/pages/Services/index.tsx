@@ -6,10 +6,24 @@ import { PROPERTIES_SERVICES } from "@/constant/services/propertiesServices";
 import { PROPERTY_MANAGEMENT_SERVICES } from "@/constant/services/propertyManagementServices";
 import { ServicesSection } from "./ServicesSection";
 import { InvestmentSection } from "./InvestmentSection";
+import { Helmet } from "react-helmet-async";
 
 export function Services() {
   return (
     <main className="page-spacing flex-grow">
+      <Helmet>
+        <title>
+          Real Estate Services | Estatein - Evaluation, Investment & Property Management
+        </title>
+        <meta
+          name="description"
+          content="Discover Estatein's comprehensive real estate services. Whether you're buying, selling, or renting, our expert team is here to help you navigate the property market."
+        />
+        <meta
+          name="keywords"
+          content="real estate services, properties management, properties evaluation, property management, property market"
+        />
+      </Helmet>
       <div>
         <HeaderSection
           title="Elevate Your Real Estate Experience"
