@@ -18,6 +18,7 @@ type ServicesSectionProps = React.HTMLAttributes<HTMLDivElement> & {
     paragraph: string;
     link: string;
   };
+  id: string;
 };
 
 export function ServicesSection({
@@ -25,9 +26,10 @@ export function ServicesSection({
   paragraph,
   servicesData,
   CTACardData,
+  id,
 }: ServicesSectionProps) {
   return (
-    <Section>
+    <Section id={id}>
       <SectionTitle title={title} paragraph={paragraph} />
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-7.5">
         {servicesData.map((serviceData) => (

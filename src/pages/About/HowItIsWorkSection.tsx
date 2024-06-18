@@ -3,7 +3,7 @@ import { HOW_IT_IS_WORK } from "@/constant/howItIsWork";
 
 export function HowItIsWordSection() {
   return (
-    <Section>
+    <Section id="how-it-is-work">
       <SectionTitle
         title="Navigating the Estatein Experience"
         paragraph="At Estatein, we've designed a straightforward process to help you find and purchase your dream property with ease. Here's a step-by-step guide to how it all works."

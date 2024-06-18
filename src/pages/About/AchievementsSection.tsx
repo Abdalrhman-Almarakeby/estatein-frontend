@@ -3,7 +3,7 @@ import { ACHIEVEMENTS } from "@/constant/achievements";
 
 export function AchievementsSection() {
   return (
-    <Section>
+    <Section id="achievements">
       <SectionTitle
         title="Our Achievements"
         paragraph="Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary."

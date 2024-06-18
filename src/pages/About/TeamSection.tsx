@@ -4,7 +4,7 @@ import { TeamMemberCard } from "./TeamMemberCard";
 
 export function TeamSection() {
   return (
-    <Section>
+    <Section id="team">
       <SectionTitle
         title="Meet the Estatein Team"
         paragraph="At Estatein, our success is driven by the dedication and expertise of our team. Get to know the people behind our mission to make your real estate dreams a reality."

@@ -5,7 +5,7 @@ import { CTACard } from "./CTACard";
 
 export function InvestmentSection() {
   return (
-    <section className="flex flex-col items-center gap-10 xl:flex-row xl:gap-15">
+    <section id="investments" className="flex flex-col items-center gap-10 xl:flex-row xl:gap-15">
       <div className="grid gap-7.5 md:grid-cols-2 xl:grid-cols-1 xl:gap-10">
         <SectionTitle
           title="Smart Investments, Informed Decisions"

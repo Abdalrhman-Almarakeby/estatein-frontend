@@ -18,6 +18,7 @@ export function Services() {
         <LinksSection linksData={SERVICES_PAGE_LINKS_DATA} />
       </div>
       <ServicesSection
+        id="valuation"
         title="Unlock Property Value"
         paragraph="Selling your property should be a rewarding experience, and at Estatein, we make sure it is."
         CTACardData={{
@@ -29,6 +30,7 @@ export function Services() {
         servicesData={PROPERTIES_SERVICES}
       />
       <ServicesSection
+        id="property-management"
         title="Effortless Property Management"
         paragraph="Owning a property should be a pleasure, not a hassle. Estatein's Property Management Service takes the stress out of property ownership."
         CTACardData={{

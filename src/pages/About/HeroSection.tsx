@@ -4,7 +4,10 @@ import heroImg from "@/assets/imgs/about-page-hero.webp";
 
 export function HeroSection() {
   return (
-    <section className="grid gap-14 pt-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 min-[1700px]:gap-y-16 min-[1700px]:pt-24.5">
+    <section
+      id="hero"
+      className="grid gap-14 pt-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 min-[1700px]:gap-y-16 min-[1700px]:pt-24.5"
+    >
       <img src={heroImg} className="aspect-[358/310] w-full md:order-2 xl:row-span-2" />
       <SectionTitle
         title="Our Journey"

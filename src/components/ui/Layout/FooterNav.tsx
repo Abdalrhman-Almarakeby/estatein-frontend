@@ -13,9 +13,9 @@ export function FooterNav() {
       </FooterLinks>
       {/* // TODO: Add the right hash links in about us page   */}
       <FooterLinks pageName="About Us" className="row-span-5 md:order-2">
-        <HashLink to="/about">About Us</HashLink>
-        <HashLink to="/about#story">Our Story</HashLink>
-        <HashLink to="/about#work">Our Works</HashLink>
+        <HashLink to="/about#hero">About Us</HashLink>
+        <HashLink to="/about#hero">Our Story</HashLink>
+        <HashLink to="/about#achievements">Our Achievements</HashLink>
         <HashLink to="/about#how-it-is-work">How It Is Works</HashLink>
         <HashLink to="/about#team">Our Team</HashLink>
         <HashLink to="/about#clients">Our Clients</HashLink>
@@ -29,11 +29,9 @@ export function FooterNav() {
       {/* // TODO: Add the right hash links in services page   */}
       <FooterLinks pageName="Services" className="row-span-5 md:order-3">
         <HashLink to="/services#">Services</HashLink>
-        <HashLink to="/services#valuation">Valuation Mastery</HashLink>
-        <HashLink to="/services#marketing">Strategic Marketing</HashLink>
-        <HashLink to="/services#negotiation">Negotiation Wizardry</HashLink>
-        <HashLink to="/services#closing-success">Closing Success</HashLink>
+        <HashLink to="/services#valuation">Valuation</HashLink>
         <HashLink to="/services#property-management">Property Management</HashLink>
+        <HashLink to="/services#investments">Investments</HashLink>
       </FooterLinks>
       <FooterLinks pageName="Contact Us" className="row-span-3 md:order-5">
         <HashLink to="/contact#">Contact Us</HashLink>
