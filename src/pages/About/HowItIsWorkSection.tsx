@@ -10,7 +10,7 @@ export function HowItIsWordSection() {
       />
       <div className="grid gap-7.5 md:grid-cols-2 xl:grid-cols-3">
         {HOW_IT_IS_WORK.map(({ title, paragraph }, i) => (
-          <div className="flex flex-col">
+          <div key={title} className="flex flex-col">
             <p className="py-3.5 px-4 border border-b-0 border-l-purple-60 lg:text-lg 3xl:text-xl">
               Step {i + 1}
             </p>

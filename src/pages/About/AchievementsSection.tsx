@@ -10,7 +10,10 @@ export function AchievementsSection() {
       />
       <div className="grid gap-5 sm:grid-cols-2 sm:gap-7.5 xl:grid-cols-3 xl:gap-10">
         {ACHIEVEMENTS.map(({ title, paragraph }) => (
-          <div className="border rounded-[10px] shadow-[0_0_0_4px_#191919] p-7.5 flex flex-col gap-4 lg:p-10 lg:gap-6 2xl:p-12.5 2xl:gap-7.5">
+          <div
+            key={title}
+            className="border rounded-[10px] shadow-[0_0_0_4px_#191919] p-7.5 flex flex-col gap-4 lg:p-10 lg:gap-6 2xl:p-12.5 2xl:gap-7.5"
+          >
             <h4 className="text-secondary text-lg font-semibold lg:text-xl 3xl:text-2xl">
               {title}
             </h4>
