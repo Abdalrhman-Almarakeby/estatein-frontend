@@ -2,9 +2,9 @@ import { useDebugValue, useState, type BaseSyntheticEvent } from "react";
 import { useForm, type UseFormRegister, type FieldErrors, Control } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
 import { toast } from "react-hot-toast";
 import { inquiryZodSchema, type Inquiry } from "@/lib/schemas";
+import { axios } from "@/lib/axios";
 import { omit } from "@/lib/utils";
 
 type InquirySchema = Omit<Inquiry, "agreeOnTerms">;
@@ -29,7 +29,7 @@ export function useContactForm(): {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (inquiryData: InquirySchema) =>
-      axios.post("https://estatein-zgvy.onrender.com/inquiries", {
+      axios.post("/inquiries", {
         inquiryData,
       }),
     onMutate: () => setToastId(toast.loading("Sending Your Message...", { className: "toast" })),

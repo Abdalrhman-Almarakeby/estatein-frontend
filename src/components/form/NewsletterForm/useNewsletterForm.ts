@@ -3,7 +3,7 @@ import { useForm, type UseFormRegister, type FieldErrors } from "react-hook-form
 import { toast } from "react-hot-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
+import { axios } from "@/lib/axios";
 import { emailZodSchema, type Email } from "@/lib/schemas";
 
 export function useNewsletter(): {
@@ -24,7 +24,7 @@ export function useNewsletter(): {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (email: string) =>
-      axios.post("https://estatein-zgvy.onrender.com/newsletter", {
+      axios.post("/newsletter", {
         email,
       }),
     onMutate: () => {

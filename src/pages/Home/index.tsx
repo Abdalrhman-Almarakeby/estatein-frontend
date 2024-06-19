@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { type Property } from "@/types";
 import { TESTIMONIALS } from "@/constant/testimonials";
 import { FAQS } from "@/constant/faqs";
@@ -10,6 +9,7 @@ import { HeroSection } from "./HeroSection";
 import { HomeCarouselSection, CarouselItem } from "./HomeCarouselSection";
 import { CTA } from "@/components/ui/CTA";
 import { Helmet } from "react-helmet-async";
+import { axios } from "@/lib/axios";
 
 const PROPERTIES_TO_DISPLAY = 60;
 
@@ -22,9 +22,7 @@ export function Home() {
   } = useQuery({
     queryKey: ["properties"],
     queryFn: async () => {
-      const { data } = await axios.get<Property[]>(
-        `https://estatein-zgvy.onrender.com/properties?limit=${PROPERTIES_TO_DISPLAY}`
-      );
+      const { data } = await axios.get<Property[]>(`/properties?limit=${PROPERTIES_TO_DISPLAY}`);
       return data;
     },
   });
