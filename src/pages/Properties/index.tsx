@@ -1,6 +1,7 @@
 import { CTA } from "@/components/ui/CTA";
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { FilterForm } from "./FilterForm";
+import { PropertiesSection } from "./PropertiesSection";
 
 export function Properties() {
   return (
@@ -12,6 +13,7 @@ export function Properties() {
         />
         <FilterForm />
       </div>
+      <PropertiesSection />
       <CTA />
     </div>
   );
