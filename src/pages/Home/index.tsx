@@ -6,7 +6,7 @@ import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard"
 import { TestimonialCard } from "@/pages/Home/TestimonialCard";
 import { FAQCard } from "@/pages/Home/FAQCard";
 import { HeroSection } from "./HeroSection";
-import { HomeCarouselSection, CarouselItem } from "./HomeCarouselSection";
+import { CarouselSection, CarouselItem } from "../../components/ui/CarouselSection";
 import { CTA } from "@/components/ui/CTA";
 import { Helmet } from "react-helmet-async";
 import { axios } from "@/lib/axios";
@@ -43,7 +43,7 @@ export function Home() {
       <div className="page-spacing">
         <HeroSection />
 
-        <HomeCarouselSection
+        <CarouselSection
           id="featured-properties"
           title="Featured Properties"
           paragraph="Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein."
@@ -67,9 +67,9 @@ export function Home() {
                 <PropertyCardSkelton />
               </CarouselItem>
             ))}
-        </HomeCarouselSection>
+        </CarouselSection>
 
-        <HomeCarouselSection
+        <CarouselSection
           id="testimonials"
           title="What Our Clients Say"
           paragraph="Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs."
@@ -81,9 +81,9 @@ export function Home() {
               <TestimonialCard {...testimonial} />
             </CarouselItem>
           ))}
-        </HomeCarouselSection>
+        </CarouselSection>
 
-        <HomeCarouselSection
+        <CarouselSection
           id="faqs"
           title="Frequently Asked Questions"
           paragraph="Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way."
@@ -95,7 +95,7 @@ export function Home() {
               <FAQCard {...faq} />
             </CarouselItem>
           ))}
-        </HomeCarouselSection>
+        </CarouselSection>
         <CTA />
       </div>
     </main>
