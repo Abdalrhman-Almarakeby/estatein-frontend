@@ -58,3 +58,15 @@ export const FILTERING_DATA = [
     }),
   },
 ] as const;
+
+export const LOCATION_OPTIONS = getOptionsAsTuple("location") || [""];
+export const PROPERTY_TYPE_OPTIONS = getOptionsAsTuple("propertyType") || [""];
+export const PRICING_RANGE_OPTIONS = getOptionsAsTuple("pricingRange") || [""];
+export const PROPERTY_SIZE_OPTIONS = getOptionsAsTuple("propertySize") || [""];
+
+function getOptionsAsTuple(filterName: string): [string, ...string[]] | null {
+  const options = FILTERING_DATA.find(({ name }) => name === filterName)?.options.map(
+    ({ value }) => value
+  );
+  return options && options.length > 0 ? [options[0], ...options.slice(1)] : null;
+}

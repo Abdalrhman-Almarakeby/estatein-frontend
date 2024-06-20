@@ -1,31 +1,29 @@
 import { z } from "zod";
-import { FILTERING_DATA } from "@/constant/filtersData";
-
-function getOptionsAsTuple(filterName: string): [string, ...string[]] | null {
-  const options = FILTERING_DATA.find(({ name }) => name === filterName)?.options.map(
-    ({ value }) => value
-  );
-  return options && options.length > 0 ? [options[0], ...options.slice(1)] : null;
-}
+import {
+  LOCATION_OPTIONS,
+  PROPERTY_TYPE_OPTIONS,
+  PRICING_RANGE_OPTIONS,
+  PROPERTY_SIZE_OPTIONS,
+} from "@/constant/filtersData";
 
 const propertiesFiltersZodSchema = z.object({
   location: z
-    .enum(getOptionsAsTuple("location") || [""], {
+    .enum(LOCATION_OPTIONS, {
       invalid_type_error: "Invalid location",
     })
     .optional(),
   propertyType: z
-    .enum(getOptionsAsTuple("propertyType") || [""], {
+    .enum(PROPERTY_TYPE_OPTIONS, {
       invalid_type_error: "Invalid property type",
     })
     .optional(),
   pricingRange: z
-    .enum(getOptionsAsTuple("pricingRange") || [""], {
+    .enum(PRICING_RANGE_OPTIONS, {
       invalid_type_error: "Invalid pricing range",
     })
     .optional(),
   propertySize: z
-    .enum(getOptionsAsTuple("propertySize") || [""], {
+    .enum(PROPERTY_SIZE_OPTIONS, {
       invalid_type_error: "Invalid property size",
     })
     .optional(),
