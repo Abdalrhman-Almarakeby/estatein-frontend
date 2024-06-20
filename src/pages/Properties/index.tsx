@@ -5,6 +5,7 @@ import { HeaderSection } from "@/components/ui/HeaderSection";
 import { FilterForm } from "./FilterForm";
 import { PropertiesSection } from "./PropertiesSection";
 import { PropertiesFilters, propertiesFiltersZodSchema } from "@/lib/schemas";
+import { PropertiesInquiryForm } from "./PropertiesInquiryForm";
 
 export function Properties() {
   const { control, watch } = useForm<PropertiesFilters>({
@@ -21,6 +22,7 @@ export function Properties() {
         <FilterForm control={control} />
       </div>
       <PropertiesSection filters={watch()} />
+      <PropertiesInquiryForm />
       <CTA />
     </div>
   );

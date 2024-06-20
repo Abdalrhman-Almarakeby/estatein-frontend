@@ -2018,16 +2018,8 @@ input:-webkit-autofill,
   fill: #A685FA !important;
 }
 
-.fill-gray-60 {
-  fill: #999999;
-}
-
 .fill-white {
   fill: #fff;
-}
-
-.\!fill-gray-60 {
-  fill: #999999 !important;
 }
 
 .stroke-gray-30 {
@@ -2265,12 +2257,9 @@ input:-webkit-autofill,
   letter-spacing: 0.1em;
 }
 
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-
-.tracking-wider {
-  letter-spacing: 0.05em;
+.text-gray-60 {
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 .text-red-500 {
@@ -2281,11 +2270,6 @@ input:-webkit-autofill,
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-60 {
-  --tw-text-opacity: 1;
-  color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2902,10 +2886,6 @@ input:-webkit-autofill,
     grid-column: span 2 / span 2;
   }
 
-  .sm\:-mt-\[20px\] {
-    margin-top: -20px;
-  }
-
   .sm\:\!-mt-\[20px\] {
     margin-top: -20px !important;
   }
@@ -3119,10 +3099,6 @@ input:-webkit-autofill,
 
   .md\:place-self-center {
     place-self: center;
-  }
-
-  .md\:self-center {
-    align-self: center;
   }
 
   .md\:border {
@@ -3490,6 +3466,10 @@ input:-webkit-autofill,
     grid-column: span 1 / span 1;
   }
 
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .xl\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -3624,6 +3604,14 @@ input:-webkit-autofill,
     grid-column: span 1 / span 1;
   }
 
+  .\32xl\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .\32xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .\32xl\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -3663,6 +3651,10 @@ input:-webkit-autofill,
   .\32xl\:-translate-x-1\/2 {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\32xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .\32xl\:items-center {
@@ -3970,12 +3962,12 @@ input:-webkit-autofill,
   color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
-.\[\&\>\*\]\:\!fill-purple-75>* {
-  fill: #A685FA !important;
-}
-
 .\[\&\>\*\]\:\!fill-gray-60>* {
   fill: #999999 !important;
+}
+
+.\[\&\>\*\]\:\!fill-purple-75>* {
+  fill: #A685FA !important;
 }
 
 .\[\&\>\*\]\:py-1>* {
