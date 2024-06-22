@@ -4,8 +4,8 @@ import WavesSVG from "@/assets/abstractDesigns/waves.svg?react";
 
 export function Gallery() {
   return (
-    <section className="relative grid grid-cols-4 gap-2.5 rounded-xl border p-6 lg:gap-5 lg:p-15 3xl:p-20">
-      <WavesSVG className="absolute left-0 top-0 h-full w-full" />
+    <section className="relative grid grid-cols-4 gap-2.5 overflow-hidden rounded-xl border p-6 lg:gap-5 lg:p-15 3xl:p-20">
+      <WavesSVG className="absolute left-0 top-0 h-full w-[150%]" />
       {GALLERY_IMAGES.map(({ src, alt }) => (
         <img
           key={src}
