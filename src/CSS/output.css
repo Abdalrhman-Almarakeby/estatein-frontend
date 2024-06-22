@@ -461,7 +461,6 @@ html,
   overflow-x: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(20 20 20 / var(--tw-bg-opacity));
-  font-family: Urbanist, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1522,8 +1521,8 @@ input:-webkit-autofill,
   width: 100px;
 }
 
-.w-\[120\%\] {
-  width: 120%;
+.w-\[150\%\] {
+  width: 150%;
 }
 
 .w-full {
@@ -1532,10 +1531,6 @@ input:-webkit-autofill,
 
 .w-svw {
   width: 100svw;
-}
-
-.w-\[150\%\] {
-  width: 150%;
 }
 
 .min-w-0 {
