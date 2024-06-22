@@ -16,6 +16,7 @@ export function HeroSection() {
           src={heroImg}
           alt="A digital illustration of a group of futuristic blue skyscrapers with a sleek design against a dark background, evoking a sense of advanced urban architecture. The buildings are illuminated with a grid-like pattern that gives them a glowing effect."
           className="aspect-[690/622] w-full rounded-xl"
+          loading="lazy"
           fetchPriority="high"
         />
         <HeroSectionPropertiesLink />

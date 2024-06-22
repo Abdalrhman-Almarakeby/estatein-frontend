@@ -14,6 +14,7 @@ export function TeamMemberCard({ img, name, role, twitterLink }: TeamMemberCardP
         <img
           src={img}
           alt={`${name} personal image`}
+          loading="lazy"
           className="rounded-2xl aspect-[318/253] w-full"
         />
         <a

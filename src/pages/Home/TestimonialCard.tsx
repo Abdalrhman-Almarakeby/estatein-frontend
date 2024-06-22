@@ -19,7 +19,12 @@ export function TestimonialCard({
         <p className="text-primary">{body}</p>
       </div>
       <div className="flex gap-2.5">
-        <img src={avatar} aria-hidden="true" className="aspect-[1/1] size-[50px] rounded-full" />
+        <img
+          src={avatar}
+          aria-hidden="true"
+          loading="lazy"
+          className="aspect-[1/1] size-[50px] rounded-full"
+        />
         <p className="grid lg:text-lg">
           <span>{name}</span>
           <span className="text-primary">{location}</span>

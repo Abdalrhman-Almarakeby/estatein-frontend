@@ -26,6 +26,7 @@ export function Header({ showHeader }: HeaderProps) {
         <img
           src={logo}
           alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+          loading="lazy"
           className="w-[100px] md:sr-only"
         />
         <nav
@@ -42,6 +43,7 @@ export function Header({ showHeader }: HeaderProps) {
           <img
             src={logo}
             alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+            loading="lazy"
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
             aria-hidden="true"
           />
@@ -112,6 +114,7 @@ export function Header({ showHeader }: HeaderProps) {
                 ? "Close navigation menu."
                 : "Menu icon consisting of three horizontal white lines on a black background, which opens the navigation menu when clicked."
             }
+            loading="lazy"
             className="size-10"
           />
           <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>

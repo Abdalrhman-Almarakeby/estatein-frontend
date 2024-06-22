@@ -11,6 +11,7 @@ export function Gallery() {
           key={src}
           src={src}
           alt={alt}
+          loading="lazy"
           fetchPriority="low"
           className="z-10 aspect-[2/1] w-full rounded-[0.625rem] object-cover last-of-type:order-last last-of-type:col-span-4 last-of-type:mt-2.5 last-of-type:object-cover last-of-type:object-top last-of-type:md:col-span-2 last-of-type:md:mt-0 [&:nth-of-type(-n+3)]:col-span-2 [&:nth-of-type(4)]:aspect-square [&:nth-of-type(5)]:aspect-square"
         />

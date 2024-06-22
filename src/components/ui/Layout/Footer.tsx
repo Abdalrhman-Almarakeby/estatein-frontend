@@ -15,6 +15,7 @@ export function Footer() {
             <img
               src={logo}
               alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+              loading="lazy"
               className="w-[100px]"
             />
           </HashLink>

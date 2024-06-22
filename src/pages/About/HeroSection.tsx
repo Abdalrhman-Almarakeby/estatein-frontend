@@ -8,7 +8,13 @@ export function HeroSection() {
       id="hero"
       className="grid gap-14 pt-10 md:grid-cols-2 md:gap-y-16 lg:gap-y-10 xl:gap-y-16 xl:pt-24.5 2xl:gap-x-15 2xl:gap-y-0 min-[1700px]:gap-y-16 min-[1700px]:pt-24.5"
     >
-      <img src={heroImg} className="aspect-[358/310] w-full md:order-2 xl:row-span-2" />
+      <img
+        src={heroImg}
+        alt="Hand holding a miniature model of a modern two-story house with a dark roof, large windows, and a contemporary design, against a dark background."
+        fetchPriority="low"
+        loading="lazy"
+        className="aspect-[358/310] w-full md:order-2 xl:row-span-2"
+      />
       <SectionTitle
         title="Our Journey"
         paragraph="Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary. Over the years, we've expanded our reach, forged valuable partnerships, and gained the trust of countless clients."

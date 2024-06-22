@@ -16,7 +16,12 @@ export function PropertyCard({
 }: Property) {
   return (
     <div className="flex flex-col gap-4 rounded-xl border p-5 lg:gap-5 lg:p-7.5">
-      <img src={image} alt="property image" className="aspect-[31/21] rounded-[0.625rem]" />
+      <img
+        src={image}
+        alt="property image"
+        loading="lazy"
+        className="aspect-[31/21] rounded-[0.625rem]"
+      />
 
       <div className="space-y-5">
         <div className="space-y-1">
