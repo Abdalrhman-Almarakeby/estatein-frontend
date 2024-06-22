@@ -9,22 +9,22 @@ const SOCIAL_LINKS: {
   name: string;
 }[] = [
   {
-    href: "https://facebook.com",
+    href: "https://github.com/Abdalrhman-Almarakeby/estatein-frontend/",
     icon: <FacebookLogoSVG className="size-5 fill-white" />,
     name: "Facebook",
   },
   {
-    href: "https://linkedin.com",
+    href: "https://github.com/Abdalrhman-Almarakeby/estatein-frontend/",
     icon: <LinkedinLogoSVG className="size-5 fill-white" />,
     name: "Linkedin",
   },
   {
-    href: "https://x.com",
+    href: "https://github.com/Abdalrhman-Almarakeby/estatein-frontend/",
     icon: <XLogoSVG className="size-5 fill-white" />,
     name: "X",
   },
   {
-    href: "https://youtube.com",
+    href: "https://github.com/Abdalrhman-Almarakeby/estatein-frontend/",
     icon: <YoutubeLogoSVG className="size-5 fill-white" />,
     name: "Youtube",
   },
