@@ -5,7 +5,7 @@
 
 # Estatein
 
-A website for the real estate company Estatein. Featuring information about it like there journey, achievements, clients and more and it is properties.
+A website for the real estate company Estatein. Featuring information about it like there journey, achievements, clients and more and there properties.
 
 ![Screen shot of the Where In The World app on desktop screen size](./images//1.jpeg)
 
