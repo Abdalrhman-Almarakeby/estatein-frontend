@@ -44,6 +44,7 @@ export function Header({ showHeader }: HeaderProps) {
           <HashLink
             to="/#"
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
+            role="menuitem"
           >
             <img
               src={logo}
