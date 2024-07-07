@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { CTA } from "@/components/ui/CTA";
 import { HeroSection } from "./HeroSection";
 import { ValuesSection } from "./ValuesSection";
@@ -5,7 +6,6 @@ import { AchievementsSection } from "./AchievementsSection";
 import { HowItIsWordSection } from "./HowItIsWorkSection.tsx";
 import { TeamSection } from "./TeamSection.tsx";
 import { ClientsSection } from "./ClientsSection";
-import { Helmet } from "react-helmet-async";
 
 export function About() {
   return (

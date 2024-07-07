@@ -1,9 +1,9 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
+import { cn } from "@/lib/utils";
 import ChevronUpSVG from "@/assets/icons/chevron-up.svg?react";
 import ChevronDownSVG from "@/assets/icons/chevron-down.svg?react";
 import CheckSVG from "@/assets/icons/check.svg?react";
-import { cn } from "@/lib/utils";
 
 const Select = SelectPrimitive.Root;
 

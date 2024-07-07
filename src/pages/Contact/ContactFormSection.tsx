@@ -1,6 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 import { Controller } from "react-hook-form";
-import { useContactForm } from "./useContactForm";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { Input } from "@/components/form/Input";
 import {
@@ -14,6 +13,7 @@ import { Textarea } from "@/components/form/Textarea";
 import { Checkbox } from "@/components/form/Checkbox";
 import { HEAR_ABOUT_US } from "@/constant/hearAboutUs";
 import { INQUIRY_TYPES } from "@/constant/inquiryTypes";
+import { useContactForm } from "./useContactForm";
 
 export function ContactFormSection() {
   const { register, errors, onSubmit, control } = useContactForm();

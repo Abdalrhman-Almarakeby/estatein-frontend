@@ -1,10 +1,10 @@
+import { z } from "zod";
 import {
   LOCATION_OPTIONS,
   PRICING_RANGE_OPTIONS,
   PROPERTY_SIZE_OPTIONS,
   PROPERTY_TYPE_OPTIONS,
 } from "@/constant/filtersData";
-import { z } from "zod";
 
 const propertiesInquiryZodSchema = z.object({
   firstName: z

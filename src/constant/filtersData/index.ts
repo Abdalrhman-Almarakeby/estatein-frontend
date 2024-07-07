@@ -1,3 +1,4 @@
+import { formatWithComma, upperFirst } from "@/lib/utils";
 import LocationIconSVG from "@/assets/icons/location.svg?react";
 import PropertyIconSVG from "@/assets/icons/property.svg?react";
 import CashIconSVG from "@/assets/icons/cash.svg?react";
@@ -6,7 +7,6 @@ import { LOCATIONS } from "./locations";
 import { PROPERTIES_TYPES } from "./propertiesTypes";
 import { PRICING_RANGES } from "./pricingRanges";
 import { PROPERTY_SIZES } from "./propertySizes";
-import { formatWithComma, upperFirst } from "@/lib/utils";
 
 export const FILTERING_DATA = [
   {

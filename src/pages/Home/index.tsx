@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import { type Property } from "@/types";
+import { Helmet } from "react-helmet-async";
+import { CarouselSection, CarouselItem } from "@/components/ui/CarouselSection";
+import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
+import { CTA } from "@/components/ui/CTA";
 import { TESTIMONIALS } from "@/constant/testimonials";
 import { FAQS } from "@/constant/faqs";
-import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
-import { TestimonialCard } from "@/pages/Home/TestimonialCard";
-import { FAQCard } from "@/pages/Home/FAQCard";
-import { HeroSection } from "./HeroSection";
-import { CarouselSection, CarouselItem } from "../../components/ui/CarouselSection";
-import { CTA } from "@/components/ui/CTA";
-import { Helmet } from "react-helmet-async";
+import { type Property } from "@/types";
 import { axios } from "@/lib/axios";
+import { TestimonialCard } from "./TestimonialCard";
+import { FAQCard } from "./FAQCard";
+import { HeroSection } from "./HeroSection";
 
 const PROPERTIES_TO_DISPLAY = 60;
 

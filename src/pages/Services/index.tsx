@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { LinksSection } from "@/components/ui/LinksSection";
 import { CTA } from "@/components/ui/CTA";
@@ -6,7 +7,6 @@ import { PROPERTIES_SERVICES } from "@/constant/services/propertiesServices";
 import { PROPERTY_MANAGEMENT_SERVICES } from "@/constant/services/propertyManagementServices";
 import { ServicesSection } from "./ServicesSection";
 import { InvestmentSection } from "./InvestmentSection";
-import { Helmet } from "react-helmet-async";
 
 export function Services() {
   return (

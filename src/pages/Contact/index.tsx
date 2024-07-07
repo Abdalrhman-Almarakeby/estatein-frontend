@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { HeaderSection } from "@/components/ui/HeaderSection";
 import { LinksSection } from "@/components/ui/LinksSection";
 import { CTA } from "@/components/ui/CTA";
@@ -5,7 +6,6 @@ import { CONTACT_PAGE_LINKS_DATA } from "@/constant/pageLinksData/contact";
 import { ContactFormSection } from "./ContactFormSection";
 import { OfficeLocations } from "./OfficeLocations";
 import { Gallery } from "./Gallery";
-import { Helmet } from "react-helmet-async";
 
 export function Contact() {
   return (

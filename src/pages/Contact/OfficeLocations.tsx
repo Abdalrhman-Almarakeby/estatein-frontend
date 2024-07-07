@@ -1,8 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import { LOCATIONS, LOCATIONS_TYPE } from "@/constant/locations";
 import { Section, SectionTitle } from "@/components/ui/Section";
-import { LocationCard } from "./LocationCard";
 import { cn } from "@/lib/utils";
+import { LocationCard } from "./LocationCard";
 
 type LocationsType = (typeof LOCATIONS_TYPE)[number];
 

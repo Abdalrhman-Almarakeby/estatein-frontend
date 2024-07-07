@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Helmet } from "react-helmet-async";
 import { CTA } from "@/components/ui/CTA";
 import { HeaderSection } from "@/components/ui/HeaderSection";
+import { PropertiesFilters, propertiesFiltersZodSchema } from "@/lib/schemas";
 import { FilterForm } from "./FilterForm";
 import { PropertiesSection } from "./PropertiesSection";
-import { PropertiesFilters, propertiesFiltersZodSchema } from "@/lib/schemas";
 import { PropertiesInquiryForm } from "./PropertiesInquiryForm";
-import { Helmet } from "react-helmet-async";
 
 export function Properties() {
   const { control, watch } = useForm<PropertiesFilters>({

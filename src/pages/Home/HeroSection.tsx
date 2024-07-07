@@ -2,8 +2,8 @@ import { HashLink } from "react-router-hash-link";
 import { LinksSection } from "@/components/ui/LinksSection";
 import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import { HOME_PAGE_LINKS_DATA } from "@/constant/pageLinksData/home";
-import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
 import { Achievement } from "@/components/ui/Achievement";
+import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
 
 export function HeroSection() {
   return (

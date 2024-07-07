@@ -1,6 +1,6 @@
 import { forwardRef, InputHTMLAttributes } from "react";
-import CheckSVG from "@/assets/icons/check.svg?react";
 import { cn } from "@/lib/utils";
+import CheckSVG from "@/assets/icons/check.svg?react";
 
 export type CheckboxProps = InputHTMLAttributes<HTMLInputElement>;
 

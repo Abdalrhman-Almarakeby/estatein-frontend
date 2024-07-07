@@ -1,8 +1,8 @@
 import { HashLink } from "react-router-hash-link";
 import { NewsletterForm } from "@/components/form/NewsletterForm";
+import logo from "@/assets/logo.svg";
 import { FooterNav } from "./FooterNav.tsx";
 import { SocialMediaLinks } from "./SocialMediaLinks";
-import logo from "@/assets/logo.svg";
 
 export function Footer() {
   const year = new Date().getFullYear();

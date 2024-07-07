@@ -1,6 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 import { Controller } from "react-hook-form";
-import { usePropertiesInquiryForm } from "./usePropertiesInquiryForm";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { Input } from "@/components/form/Input";
 import {
@@ -19,6 +18,7 @@ import {
   PROPERTY_TYPE_OPTIONS,
 } from "@/constant/filtersData";
 import { formatWithComma } from "@/lib/utils";
+import { usePropertiesInquiryForm } from "./usePropertiesInquiryForm";
 
 export function PropertiesInquiryForm() {
   const { register, errors, onSubmit, control } = usePropertiesInquiryForm();
