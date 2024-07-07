@@ -25,6 +25,7 @@ export function PropertiesSection({ filters }: PropertiesSectionProps) {
 
   function filterProperties(properties: Property[], filters: PropertiesFilters): Property[] | null {
     // TODO: Implement real client side validation
+    // eslint-disable-next-line no-console
     console.log(filters);
     return properties;
   }
