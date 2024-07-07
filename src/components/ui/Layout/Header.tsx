@@ -23,13 +23,13 @@ export function Header({ showHeader }: HeaderProps) {
       )}
     >
       <div className="container flex items-center justify-between md:block">
-        <HashLink to="/#" className="w-[100px] md:sr-only">
-          <img
-            src={logo}
-            alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
-            loading="lazy"
-          />
-        </HashLink>
+        <img
+          src={logo}
+          alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
+          loading="lazy"
+          className="w-[100px] md:sr-only"
+          aria-hidden="true"
+        />
         <nav
           id="main-menu"
           aria-label="Main menu"
@@ -44,10 +44,8 @@ export function Header({ showHeader }: HeaderProps) {
           <HashLink
             to="/#"
             className="mr-auto hidden w-[100px] md:block lg:w-[110px] xl:w-[130px] 2xl:w-[160px]"
-            aria-hidden="true"
           >
             <img
-              aria-hidden="true"
               src={logo}
               alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
               loading="lazy"
