@@ -3,7 +3,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Helmet } from "react-helmet-async";
 import { CTA } from "@/components/ui/CTA";
 import { HeaderSection } from "@/components/ui/HeaderSection";
-import { PropertiesFilters, propertiesFiltersZodSchema } from "@/lib/schemas";
+import {
+  PropertiesFilters,
+  propertiesFiltersZodSchema,
+} from "@/lib/schemas/propertiesFiltersSchema";
 import { FilterForm } from "./FilterForm";
 import { PropertiesSection } from "./PropertiesSection";
 import { PropertiesInquiryForm } from "./PropertiesInquiryForm";

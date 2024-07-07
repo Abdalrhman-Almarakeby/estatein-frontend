@@ -1,5 +1,5 @@
 import { HashLink } from "react-router-hash-link";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/cn";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
 export function HeroSectionPropertiesLink() {

@@ -17,7 +17,7 @@ import {
   PROPERTY_SIZE_OPTIONS,
   PROPERTY_TYPE_OPTIONS,
 } from "@/constant/filtersData";
-import { formatWithComma } from "@/lib/utils";
+import { formatWithComma } from "@/lib/utils/string";
 import { usePropertiesInquiryForm } from "./usePropertiesInquiryForm";
 
 export function PropertiesInquiryForm() {

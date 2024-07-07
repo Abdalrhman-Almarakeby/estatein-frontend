@@ -1,4 +1,4 @@
-import { Testimonial } from "@/types";
+import { Testimonial } from "@/types/testimonial";
 import { Stars } from "@/components/ui/Stars";
 
 type TestimonialCardProps = Testimonial;

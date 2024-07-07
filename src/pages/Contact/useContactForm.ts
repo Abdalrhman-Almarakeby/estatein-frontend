@@ -3,9 +3,9 @@ import { useForm, type UseFormRegister, type FieldErrors, Control } from "react-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
-import { inquiryZodSchema, type Inquiry } from "@/lib/schemas";
+import { inquiryZodSchema, type Inquiry } from "@/lib/schemas/inquirySchema";
 import { axios } from "@/lib/axios";
-import { omit } from "@/lib/utils";
+import { omit } from "@/lib/utils/object";
 
 type InquirySchema = Omit<Inquiry, "agreeOnTerms">;
 

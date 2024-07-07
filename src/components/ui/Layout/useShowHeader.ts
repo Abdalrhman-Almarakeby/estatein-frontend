@@ -1,6 +1,6 @@
 import { useState, useEffect, useDebugValue } from "react";
-import { ScrollDirection } from "@/types";
-import { useWindowSize } from "@/lib/hooks";
+import { ScrollDirection } from "@/types/scrollDirection";
+import { useWindowSize } from "@/lib/hooks/useWindowSize";
 import { getScrollDirection } from "./getScrollDirection";
 
 export function useShowHeader() {

@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 import { IconContainer } from "@/components/ui/IconContainer";
-import { SVGcomponent } from "@/types";
+import { SVGcomponent } from "@/types/svgComponent";
 import DiagonalArrowIconSVG from "@/assets/icons/diagonal-arrow.svg?react";
 
 type LinkData = {

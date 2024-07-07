@@ -1,4 +1,4 @@
-import { Location } from "@/types";
+import { Location } from "@/types/location";
 import MailSVG from "@/assets/icons/mail.svg?react";
 import PhoneSVG from "@/assets/icons/phone.svg?react";
 import LocationSVG from "@/assets/icons/location.svg?react";

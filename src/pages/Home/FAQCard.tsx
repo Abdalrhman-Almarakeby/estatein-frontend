@@ -1,5 +1,5 @@
 import { HashLink } from "react-router-hash-link";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/cn";
 
 type FAQCardProps = {
   question: string;

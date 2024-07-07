@@ -5,7 +5,7 @@ import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard"
 import { CTA } from "@/components/ui/CTA";
 import { TESTIMONIALS } from "@/constant/testimonials";
 import { FAQS } from "@/constant/faqs";
-import { type Property } from "@/types";
+import { type Property } from "@/types/property";
 import { axios } from "@/lib/axios";
 import { TestimonialCard } from "./TestimonialCard";
 import { FAQCard } from "./FAQCard";

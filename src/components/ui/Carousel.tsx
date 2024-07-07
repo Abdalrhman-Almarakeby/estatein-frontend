@@ -9,7 +9,7 @@ import {
   KeyboardEvent,
 } from "react";
 import useMelbaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/cn";
 import ArrowLeftSVG from "@/assets/icons/arrow-left.svg?react";
 import ArrowRightSVG from "@/assets/icons/arrow-right.svg?react";
 

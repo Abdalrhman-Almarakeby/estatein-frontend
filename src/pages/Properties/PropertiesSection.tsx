@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { CarouselItem, CarouselSection } from "@/components/ui/CarouselSection";
 import { axios } from "@/lib/axios";
-import { Property } from "@/types";
+import { Property } from "@/types/property";
 import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
-import { PropertiesFilters } from "@/lib/schemas";
+import { PropertiesFilters } from "@/lib/schemas/propertiesFiltersSchema";
 
 type PropertiesSectionProps = {
   filters: PropertiesFilters;

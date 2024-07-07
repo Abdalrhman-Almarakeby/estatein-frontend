@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
-import { type Property } from "@/types";
-import { formatCurrency } from "@/lib/utils";
+import { type Property } from "@/types/property";
+import { formatCurrency } from "@/lib/utils/currency";
 import BedSVG from "@/assets/icons/bed.svg?react";
 import BathSVG from "@/assets/icons/bath.svg?react";
 import BuildingSVG from "@/assets/icons/building.svg?react";
