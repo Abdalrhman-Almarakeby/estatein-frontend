@@ -1,6 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 import { LinksSection } from "@/components/ui/LinksSection";
-import heroImg from "@/assets/imgs/landing-page-hero.webp";
 import { HOME_PAGE_LINKS_DATA } from "@/constant/pageLinksData/home";
 import { Achievement } from "@/components/ui/Achievement";
 import { HeroSectionPropertiesLink } from "./HeroSectionPropertiesLink";
@@ -13,7 +12,7 @@ export function HeroSection() {
     >
       <section className="relative mb-4 2xl:mr-break-out min-[1700px]:container lg:order-2 lg:row-span-2 xl:row-span-3 xl:mb-0 min-[1700px]:!p-0">
         <img
-          src={heroImg}
+          src="/landing-page-hero.webp"
           alt="A digital illustration of a group of futuristic blue skyscrapers with a sleek design against a dark background, evoking a sense of advanced urban architecture. The buildings are illuminated with a grid-like pattern that gives them a glowing effect."
           className="aspect-[690/622] w-full rounded-xl"
           fetchPriority="high"
