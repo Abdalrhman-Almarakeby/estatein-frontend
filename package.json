@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://abdalrhman-almarakeby.github.io/estatein",
+  "homepage": "http://estatein--app.vercel.app",
   "scripts": {
     "dev": "vite",
     "tailwindcss": "npx tailwindcss -i ./src/CSS/input.css -o ./src/CSS/output.css --watch",
