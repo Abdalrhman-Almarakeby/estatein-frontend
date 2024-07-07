@@ -47,6 +47,7 @@ export function Header({ showHeader }: HeaderProps) {
             aria-hidden="true"
           >
             <img
+              aria-hidden="true"
               src={logo}
               alt="Logo of Estatein, consisting of a purple abstract geometric shape that suggests a dynamic, folded form, set against a black background."
               loading="lazy"
