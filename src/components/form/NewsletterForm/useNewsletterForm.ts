@@ -1,63 +1,10 @@
-import { useState, useDebugValue, type BaseSyntheticEvent } from "react";
-import { useForm, type UseFormRegister, type FieldErrors } from "react-hook-form";
-import { toast } from "react-hot-toast";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
+import { useFormHandler } from "@/lib/hooks/useFormHandler";
+import { Email, emailZodSchema } from "@/lib/schemas/emailSchema";
 import { axios } from "@/lib/axios";
-import { emailZodSchema, type Email } from "@/lib/schemas/emailSchema";
 
-export function useNewsletter(): {
-  register: UseFormRegister<Email>;
-  onSubmit: (e?: BaseSyntheticEvent<object> | undefined) => Promise<void>;
-  errors: FieldErrors<Email>;
-  isPending: boolean;
-} {
-  const [toastId, setToastId] = useState<string | null>(null);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<Email>({
-    resolver: zodResolver(emailZodSchema),
+export function useNewsletter() {
+  return useFormHandler<Email>({
+    schema: emailZodSchema,
+    mutationFn: async ({ email }) => axios.post("/newsletter", { email }),
   });
-
-  const { mutate, isPending } = useMutation({
-    mutationFn: async (email: string) =>
-      axios.post("/newsletter", {
-        email,
-      }),
-    onMutate: () => {
-      setToastId(toast.loading("subscribing to the newsletter...", { className: "toast" }));
-    },
-    onSuccess: () => {
-      toast.success("subscribed successfully!", {
-        id: toastId || undefined,
-        className: "toast",
-      });
-    },
-    onError: () => {
-      toast.error("something went wrong, please try again later!", {
-        id: toastId || undefined,
-        className: "toast",
-      });
-    },
-  });
-
-  function onSubmit(data: Email) {
-    mutate(data.email);
-    reset();
-  }
-
-  useDebugValue({
-    formErrors: errors,
-    isPending,
-  });
-
-  return {
-    register,
-    onSubmit: handleSubmit(onSubmit),
-    errors,
-    isPending,
-  };
 }
