@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
+import { useProperties } from "@/lib/hooks/useProperties";
 import { CarouselItem, CarouselSection } from "@/components/ui/CarouselSection";
-import { axios } from "@/lib/axios";
 import { Property } from "@/types/property";
 import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
 import { PropertiesFilters } from "@/lib/schemas/propertiesFiltersSchema";
@@ -15,13 +14,7 @@ export function PropertiesSection({ filters }: PropertiesSectionProps) {
     isLoading,
     isError,
     refetch,
-  } = useQuery({
-    queryKey: ["properties"],
-    queryFn: async () => {
-      const { data } = await axios.get<Property[]>(`/properties`);
-      return data;
-    },
-  });
+  } = useProperties()
 
   function filterProperties(properties: Property[], filters: PropertiesFilters): Property[] | null {
     // TODO: Implement real client side validation

@@ -1,12 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
+import { useProperties } from "@/lib/hooks/useProperties";
 import { CarouselSection, CarouselItem } from "@/components/ui/CarouselSection";
 import { PropertyCard, PropertyCardSkelton } from "@/components/ui/PropertyCard";
 import { CTA } from "@/components/ui/CTA";
 import { TESTIMONIALS } from "@/constant/testimonials";
 import { FAQS } from "@/constant/faqs";
-import { type Property } from "@/types/property";
-import { axios } from "@/lib/axios";
 import { TestimonialCard } from "./TestimonialCard";
 import { FAQCard } from "./FAQCard";
 import { HeroSection } from "./HeroSection";
@@ -19,13 +17,7 @@ export function Home() {
     isLoading,
     isError,
     refetch,
-  } = useQuery({
-    queryKey: ["properties"],
-    queryFn: async () => {
-      const { data } = await axios.get<Property[]>(`/properties?limit=${PROPERTIES_TO_DISPLAY}`);
-      return data;
-    },
-  });
+  } = useProperties(PROPERTIES_TO_DISPLAY)
 
   return (
     <main className="flex-grow bg-gray-08">
